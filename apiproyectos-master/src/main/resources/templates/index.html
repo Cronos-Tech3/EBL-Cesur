@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos</title>
+    <style>
+        div{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<div>
+<ul th:each="proyecto : ${proyectos}" style="list-style: none">
+  <li ><a th:href="@{/proyectos/{id} (id = ${proyecto.IdProyecto})}"><img th:src="${proyecto.imagen}"></a></li>
+</ul>
+</div>
+
+
+
+</body>
+</html>

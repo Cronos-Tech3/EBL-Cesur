@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img th:src="${proyecto.imagen}">
+<h1 th:text="${proyecto.nombre}"></h1>
+<br>
+<p th:text="${proyecto.descripcion}"> </p>
+<ul th:each="lenguaje  : ${proyecto.lenguajes}">
+    <li><img th:src="${lenguaje.imagen}" style="width: 100px"></li>
+</ul>
+<a th:href="${proyecto.url}"> <p th:text="${proyecto.url}"></p></a>
+
+
+</body>
+</html>
