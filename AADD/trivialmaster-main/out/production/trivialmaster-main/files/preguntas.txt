@@ -1,0 +1,50 @@
+¿Cuál de los siguientes lenguajes de programación es conocido por su uso en desarrollo web?
+JavaScript
+Java
+Python
+C++
+¿Qué significa HTML?
+HyperText Markup Language
+HighText Machine Language
+HyperTool Markup Language
+HighTool Machine Language
+¿Cuál es el sistema operativo más utilizado en servidores web?
+Linux
+macOS
+Windows
+FreeBSD
+¿Qué empresa desarrolló el lenguaje de programación Swift?
+Apple
+Microsoft
+Google
+IBM
+¿Cuál de los siguientes es un sistema de control de versiones distribuido?
+Git
+SVN
+CVS
+Mercurial
+¿Qué significa CSS en el contexto del desarrollo web?
+Cascading Style Sheets
+Creative Style Sheets
+Computer Style Sheets
+Colorful Style Sheets
+¿Cuál de los siguientes lenguajes de programación es conocido por su uso en inteligencia artificial y aprendizaje automático?
+Python
+Ruby
+PHP
+Java
+¿Qué empresa es conocida por desarrollar el sistema operativo Android?
+Google
+Microsoft
+Apple
+Samsung
+¿Cuál de los siguientes es un marco de trabajo (framework) de JavaScript para el desarrollo de aplicaciones web?
+React
+Flask
+Django
+Laravel
+¿Qué protocolo se utiliza principalmente para la transferencia segura de archivos a través de Internet?
+SFTP
+HTTP
+FTP
+SMTP

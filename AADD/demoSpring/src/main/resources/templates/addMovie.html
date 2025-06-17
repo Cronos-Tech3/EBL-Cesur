@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/CSS/styles.css" rel="stylesheet"/>
+    <title>Añadir Película</title>
+</head>
+<body>
+<h1>Añadir Película</h1>
+<hr>
+<form action="/addMovie" method="post">
+    <label for="movie_name">Nombre de la película:</label>
+    <input type="text" id="movie_name" name="movie_name" required>
+    <button type="submit">Añadir</button>
+</form>
+<p th:if="${message != null}" th:text="${message}"></p>
+<a href="/">Volver al índice</a>
+</body>
+</html>

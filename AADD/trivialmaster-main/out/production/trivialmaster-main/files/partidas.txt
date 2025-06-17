@@ -1,0 +1,4 @@
+Fecha: Sun Feb 23 00:18:48 CET 2025, Jugador: player1, Puntuación: 0
+Fecha: Mon Feb 24 19:31:08 CET 2025, Jugador: player1, Puntuación: 0
+Fecha: Tue Feb 25 20:22:39 CET 2025, Jugador: Juan, Puntuación: 5
+Fecha: Tue Feb 25 20:42:26 CET 2025, Jugador: c, Puntuación: 3
