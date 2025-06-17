@@ -1,0 +1,24 @@
+2025-05-29 10:40:06.490019+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]ID"; se esperaba "INSERT"
+Syntax error in SQL statement "[*]ID"; expected "INSERT"; SQL statement:
+ID [42001-232]
+2025-05-29 10:40:08.664835+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]ID PRODUCTO_OTAKU"; se esperaba "INSERT"
+Syntax error in SQL statement "[*]ID PRODUCTO_OTAKU"; expected "INSERT"; SQL statement:
+ID PRODUCTO_OTAKU [42001-232]
+2025-05-29 10:40:42.265872+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM PRODUCTO_OTAKU WHERE ID [*]""1"""
+Syntax error in SQL statement "SELECT * FROM PRODUCTO_OTAKU WHERE ID [*]""1"""; SQL statement:
+SELECT * FROM PRODUCTO_OTAKU WHERE ID "1" [42000-232]
+2025-05-29 10:40:54.113994+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]ID"; se esperaba "INSERT"
+Syntax error in SQL statement "[*]ID"; expected "INSERT"; SQL statement:
+ID [42001-232]
+2025-05-29 10:40:54.881304+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]ID"; se esperaba "INSERT"
+Syntax error in SQL statement "[*]ID"; expected "INSERT"; SQL statement:
+ID [42001-232]
+2025-05-29 10:41:00.713732+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]ACTION_ORIENTATION"; se esperaba "ALTER, ANALYZE"
+Syntax error in SQL statement "[*]ACTION_ORIENTATION"; expected "ALTER, ANALYZE"; SQL statement:
+ACTION_ORIENTATION [42001-232]

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akihabara Market - Gestión de Productos Otaku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        form input[type="text"],
+        form input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button {
+            grid-column: span 2;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .actions button {
+            padding: 8px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .actions .edit-btn {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .actions .edit-btn:hover {
+            background-color: #e0a800;
+        }
+        .actions .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .actions .delete-btn:hover {
+            background-color: #c82333;
+        }
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: none; /* Oculto por defecto */
+        }
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Akihabara Market</h1>
+    <h2>Gestión de Productos Otaku</h2>
+
+    <div id="message" class="message"></div>
+
+    <h3>Agregar/Actualizar Producto</h3>
+    <form id="productForm">
+        <input type="hidden" id="productId">
+
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        </div>
+
+        <div>
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" required>
+        </div>
+
+        <div>
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" step="0.01" required>
+        </div>
+
+        <div>
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" required>
+        </div>
+
+        <button type="submit">Guardar Producto</button>
+        <button type="button" id="cancelUpdate" style="display: none; background-color: #6c757d;" onclick="resetForm()">Cancelar</button>
+    </form>
+
+    <h3>Lista de Productos</h3>
+    <table id="productsTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const API_BASE_URL = 'http://localhost:8080/productos';
+    const productForm = document.getElementById('productForm');
+    const productIdInput = document.getElementById('productId');
+    const nombreInput = document.getElementById('nombre');
+    const categoriaInput = document.getElementById('categoria');
+    const precioInput = document.getElementById('precio');
+    const stockInput = document.getElementById('stock');
+    const productsTableBody = document.querySelector('#productsTable tbody');
+    const messageDiv = document.getElementById('message');
+    const cancelUpdateButton = document.getElementById('cancelUpdate');
+
+    // --- Funciones de Utilidad ---
+    function showMessage(msg, isError = false) {
+        messageDiv.textContent = msg;
+        messageDiv.className = 'message'; // Reset classes
+        if (isError) {
+            messageDiv.classList.add('error-message');
+        }
+        messageDiv.style.display = 'block';
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 3000); // Ocultar mensaje después de 3 segundos
+    }
+
+    function resetForm() {
+        productIdInput.value = '';
+        nombreInput.value = '';
+        categoriaInput.value = '';
+        precioInput.value = '';
+        stockInput.value = '';
+        productForm.querySelector('button[type="submit"]').textContent = 'Guardar Producto';
+        cancelUpdateButton.style.display = 'none';
+    }
+
+    // --- Operaciones CRUD ---
+
+    // READ: Obtener todos los productos
+    async function fetchProducts() {
+        try {
+            const response = await fetch(API_BASE_URL);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const products = await response.json();
+            renderProducts(products);
+        } catch (error) {
+            console.error('Error al obtener productos:', error);
+            showMessage('Error al cargar los productos.', true);
+        }
+    }
+
+    // Renderizar productos en la tabla
+    function renderProducts(products) {
+        productsTableBody.innerHTML = ''; // Limpiar tabla
+        if (products.length === 0) {
+            productsTableBody.innerHTML = '<tr><td colspan="6">No hay productos disponibles.</td></tr>';
+            return;
+        }
+        products.forEach(product => {
+            const row = productsTableBody.insertRow();
+            row.insertCell(0).textContent = product.id;
+            row.insertCell(1).textContent = product.nombre;
+            row.insertCell(2).textContent = product.categoria;
+            row.insertCell(3).textContent = product.precio.toFixed(2); // Formatear precio
+            row.insertCell(4).textContent = product.stock;
+
+            const actionsCell = row.insertCell(5);
+            actionsCell.classList.add('actions');
+
+            const editButton = document.createElement('button');
+            editButton.textContent = 'Editar';
+            editButton.classList.add('edit-btn');
+            editButton.onclick = () => editProduct(product);
+            actionsCell.appendChild(editButton);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Eliminar';
+            deleteButton.classList.add('delete-btn');
+            deleteButton.onclick = () => deleteProduct(product.id);
+            actionsCell.appendChild(deleteButton);
+        });
+    }
+
+    // CREATE/UPDATE: Enviar formulario (agregar o actualizar)
+    productForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Evitar el envío por defecto del formulario
+
+        const productData = {
+            nombre: nombreInput.value,
+            categoria: categoriaInput.value,
+            precio: parseFloat(precioInput.value),
+            stock: parseInt(stockInput.value, 10)
+        };
+
+        const productId = productIdInput.value;
+        let url = API_BASE_URL;
+        let method = 'POST';
+        let successMsg = 'Producto agregado exitosamente.';
+        let errorMsg = 'Error al agregar el producto.';
+
+        if (productId) {
+            url = `${API_BASE_URL}/${productId}`;
+            method = 'PUT';
+            successMsg = 'Producto actualizado exitosamente.';
+            errorMsg = 'Error al actualizar el producto.';
+        }
+
+        try {
+            const response = await fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(productData)
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            await fetchProducts(); // Recargar la lista de productos
+            resetForm(); // Limpiar el formulario
+            showMessage(successMsg);
+
+        } catch (error) {
+            console.error(errorMsg, error);
+            showMessage(errorMsg, true);
+        }
+    });
+
+    // EDIT: Cargar datos del producto en el formulario para editar
+    function editProduct(product) {
+        productIdInput.value = product.id;
+        nombreInput.value = product.nombre;
+        categoriaInput.value = product.categoria;
+        precioInput.value = product.precio;
+        stockInput.value = product.stock;
+
+        productForm.querySelector('button[type="submit"]').textContent = 'Actualizar Producto';
+        cancelUpdateButton.style.display = 'inline-block'; // Mostrar botón de cancelar
+    }
+
+    // DELETE: Eliminar un producto
+    async function deleteProduct(id) {
+        if (!confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+            return;
+        }
+        try {
+            const response = await fetch(`${API_BASE_URL}/${id}`, {
+                method: 'DELETE'
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            await fetchProducts(); // Recargar la lista de productos
+            showMessage('Producto eliminado exitosamente.');
+
+        } catch (error) {
+            console.error('Error al eliminar producto:', error);
+            showMessage('Error al eliminar el producto.', true);
+        }
+    }
+
+    // Cargar productos al cargar la página
+    document.addEventListener('DOMContentLoaded', fetchProducts);
+
+</script>
+</body>
+</html>
