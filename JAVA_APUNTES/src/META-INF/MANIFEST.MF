@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+JAVA_APUNTES.BIBLIOTECA_JAVA_PROYECTO.b_Jorge.Main-Class: JAVA_APUNTES.Proyect_BATTLEROYALE.BattleRoyale
+
