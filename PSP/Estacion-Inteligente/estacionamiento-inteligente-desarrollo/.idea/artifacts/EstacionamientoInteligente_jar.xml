@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EstacionamientoInteligente:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/EstacionamientoInteligente_jar</output-path>
+    <root id="archive" name="EstacionamientoInteligente.jar">
+      <element id="module-output" name="EstacionamientoInteligente" />
+    </root>
+  </artifact>
+</component>

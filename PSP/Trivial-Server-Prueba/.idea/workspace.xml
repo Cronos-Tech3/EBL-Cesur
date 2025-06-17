@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7317d60d-9279-4860-ba8b-29a55f83104e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivial-Server-Prueba.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/MySQLConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modelo/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modelo/Partida.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modelo/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modelo/Pregunta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modelo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pspTrivial/ClienteTrivial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pspTrivial/ManejadorHilosServidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pspTrivial/ServidorTrivial.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2uXDxh3DfLEpMmHrDR8wX63V7oG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ServidorTrivial.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Kike/CRONOSH/Proyectos-Cron/InteliJ-Java/Trivial-JBDC/TRIVIAL",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Kike/CRONOSH/Proyectos-Cron/InteliJ-Java/PSP/Trivial-Server-Prueba/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7317d60d-9279-4860-ba8b-29a55f83104e" name="Changes" comment="" />
+      <created>1742386275887</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742386275887</updated>
+      <workItem from="1742386276849" duration="3661000" />
+      <workItem from="1742668634920" duration="10235000" />
+      <workItem from="1742727798793" duration="3363000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
