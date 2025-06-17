@@ -1,0 +1,110 @@
+<!-- 
+ 
+
+En JavaScript, las variables son fundamentales para almacenar y manipular datos. Aquí tienes una explicación detallada de los tipos de variables y cómo se utilizan:
+
+Declaración de Variables
+En JavaScript, hay tres formas principales de declarar variables: var, let, y const.
+
+var:
+
+Ámbito: Tiene un ámbito de función, lo que significa que es accesible dentro de la función en la que se declara.
+Hoisting: Las variables declaradas con var se elevan (hoisting) al inicio de su ámbito, pero su inicialización no.
+Reasignación: Se puede reasignar y redeclarar dentro de su ámbito.
+var nombre = "Juan";
+function saludar() {
+    var saludo = "Hola";
+    console.log(saludo + " " + nombre);
+}
+saludar(); // Salida: Hola Juan
+let:
+
+Ámbito: Tiene un ámbito de bloque, lo que significa que es accesible solo dentro del bloque {} en el que se declara.
+Hoisting: Las variables declaradas con let también se elevan, pero no se inicializan hasta que la declaración es evaluada.
+Reasignación: Se puede reasignar pero no redeclarar dentro del mismo ámbito.
+let edad = 25;
+if (edad > 18) {
+    let mensaje = "Eres mayor de edad.";
+    console.log(mensaje); // Salida: Eres mayor de edad.
+}
+// console.log(mensaje); // Error: mensaje no está definido
+const:
+
+Ámbito: Tiene un ámbito de bloque, similar a let.
+Hoisting: Las variables declaradas con const también se elevan, pero no se inicializan hasta que la declaración es evaluada.
+Reasignación: No se puede reasignar ni redeclarar. Debe ser inicializada en el momento de su declaración.
+const PI = 3.14159;
+// PI = 3.14; // Error: Asignación a una constante
+console.log(PI); // Salida: 3.14159
+Tipos de Datos
+Las variables en JavaScript pueden almacenar diferentes tipos de datos:
+
+Primitivos:
+
+Number: Representa tanto números enteros como de punto flotante.
+let numero = 42;
+let precio = 19.99;
+String: Representa una cadena de caracteres.
+let saludo = "Hola, mundo!";
+Boolean: Representa un valor verdadero (true) o falso (false).
+let esMayor = true;
+Null: Representa la ausencia intencional de cualquier valor.
+let vacio = null;
+Undefined: Representa una variable que ha sido declarada pero no inicializada.
+let indefinido;
+console.log(indefinido); // Salida: undefined
+Symbol: Representa un valor único e inmutable.
+let simbolo = Symbol('descripcion');
+Objetos:
+
+Object: Representa una colección de propiedades y métodos.
+let persona = {
+    nombre: "Juan",
+    edad: 30
+};
+console.log(persona.nombre); // Salida: Juan
+Array: Representa una lista ordenada de valores.
+let numeros = [1, 2, 3, 4, 5];
+console.log(numeros[0]); // Salida: 1
+Function: Representa una función.
+function saludar() {
+    console.log("Hola!");
+}
+saludar(); // Salida: Hola!
+Conversión de Tipos
+JavaScript permite la conversión de tipos de datos de manera implícita y explícita.
+
+Implícita:
+
+let resultado = "5" + 2; // "52" (concatenación)
+let suma = "5" - 2; // 3 (conversión a número)
+Explícita:
+
+let numero = Number("5"); // 5
+let texto = String(5); // "5"
+Scope y Hoisting
+Scope: El ámbito de una variable determina dónde se puede acceder a ella. var tiene ámbito de función, mientras que let y const tienen ámbito de bloque.
+Hoisting: Las declaraciones de variables y funciones se elevan al inicio de su ámbito. Sin embargo, solo las declaraciones se elevan, no las inicializaciones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

@@ -1,0 +1,23 @@
+<SistemaDePedidos>
+    <Cliente>
+        <Nombre>Juan Perez</Nombre>
+        <Direccion>123 Calle Principal</Direccion>
+        <Telefono>555-1234</Telefono>
+    </Cliente>
+
+    <Pedidos>
+        <Pedido>
+            <ID>1</ID>
+            <Producto>Laptop</Producto>
+            <Cantidad>1</Cantidad>
+            <Precio>1000</Precio>
+        </Pedido>
+
+        <Pedido>
+            <ID>2</ID>
+            <Producto>Mouse</Producto>
+            <Cantidad>2</Cantidad>
+            <Precio>25</Precio>
+        </Pedido>
+    </Pedidos>
+</SistemaDePedidos>

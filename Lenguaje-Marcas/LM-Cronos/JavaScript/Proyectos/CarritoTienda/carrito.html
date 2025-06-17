@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de la Compra</title>
+    <style>
+        #carro h4 {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrito de la Compra</h1>
+    <div id="carro"></div>
+    <div id="total"></div>
+    <button onclick="agregarProducto({ nombre: 'Teclado', precio: 20 }, 1)">Agregar Teclado</button>
+    <button onclick="eliminarProducto('Teclado')">Eliminar Teclado</button>
+    <br>
+    <button onclick="agregarProducto({ nombre: 'Ratón', precio: 15 }, 1)">Agregar Ratón</button>
+    <button onclick="eliminarProducto('Ratón')">Eliminar Ratón</button>
+    <br>
+    <button onclick="agregarProducto({ nombre: 'Monitor', precio: 150 }, 1)">Agregar Monitor</button>
+    <button onclick="eliminarProducto('Monitor')">Eliminar Monitor</button>
+    <br>
+    <button onclick="agregarProducto({ nombre: 'Portátil', precio: 700 }, 1)">Agregar Portátil</button>
+    <button onclick="eliminarProducto('Portátil')">Eliminar Portátil</button>
+
+    <script>
+        const carrito = [];
+
+        function agregarProducto(producto, cantidad) {
+            const productoInsertado = carrito.find(pro => pro.nombre === producto.nombre);
+            if (productoInsertado) {
+                productoInsertado.cantidad += cantidad;
+                document.getElementById('carro').innerHTML = "";
+            } else {
+                carrito.push({ ...producto, cantidad });
+                document.getElementById('carro').innerHTML = "";
+            }
+
+            mostrarCarrito();
+            totalCarrito();
+        }
+
+        function eliminarProducto(nombre) {
+            const productoInsertado = carrito.find(pro => pro.nombre === nombre);
+            if (productoInsertado) {
+                if (productoInsertado.cantidad > 1) {
+                    productoInsertado.cantidad -= 1;
+                } else {
+                    const index = carrito.findIndex(pro => pro.nombre === nombre);
+                    carrito.splice(index, 1);
+                }
+                document.getElementById('carro').innerHTML = "";
+                mostrarCarrito();
+                totalCarrito();
+            }
+        }
+
+        function mostrarCarrito() {
+            document.getElementById('carro').innerHTML = "";
+            carrito.forEach(prod => {
+                document.getElementById('carro').innerHTML += `<h4>${prod.nombre} - ${prod.cantidad} unidades - ${(prod.cantidad * prod.precio).toFixed(2)}€</h4>`;
+            });
+        }
+
+        function totalCarrito() {
+            let sumaTotal = 0;
+            let cantidadPro = 0;
+            carrito.forEach(elementoCarro => {
+                sumaTotal += (elementoCarro.cantidad * elementoCarro.precio);
+                cantidadPro += elementoCarro.cantidad;
+            });
+
+            document.getElementById('total').innerHTML = `TOTAL - ${sumaTotal.toFixed(2)}€`;
+        }
+
+        // Ejemplo de uso
+        agregarProducto({ nombre: 'Teclado', precio: 20 }, 1);
+        agregarProducto({ nombre: 'Ratón', precio: 15 }, 1);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,199 @@
+<!--
+
+1.- Indica si el siguiente código funcionará, explica todo lo posible sobre este tipo de funciones y para qué sirven. 2 puntos.
+
+	function lectura(){
+		const informacion = await fetch(“info.json”);
+		cons datos = await informacion.json();
+}
+--------------------------------------------------------------
+-------------------RESPUESTA 1 --------------------------------------------------------------------
+            El código que has proporcionado tiene algunos errores y no funcionará correctamente. Aquí está el análisis detallado:
+
+            **Errores en el código**:
+            - La palabra clave `await` solo puede ser utilizada dentro de funciones `async`. Por lo tanto, la función `lectura` debe ser declarada como `async`.
+            - Hay un error tipográfico en la declaración de la variable `datos`, debería ser `const` en lugar de `cons`.
+            - Las comillas utilizadas en `fetch("info.json")` son incorrectas. Deberían ser comillas dobles estándar (`"`).
+
+            **Corrección del código**:
+            ```javascript
+            async function lectura() {
+                const informacion = await fetch("info.json");
+                const datos = await informacion.json();
+                return datos;
+            }
+            ```
+
+            **Explicación de las funciones `async` y `await`**:
+            - **Funciones `async`**: Son funciones asíncronas que permiten escribir código asíncrono de manera más sencilla y legible. Una función `async` siempre devuelve una promesa.
+            - **`await`**: Se utiliza dentro de funciones `async` para esperar a que una promesa se resuelva. Esto permite que el código se ejecute de manera secuencial, como si fuera síncrono, aunque en realidad está manejando operaciones asíncronas.
+
+            **Uso y utilidad**:
+            - Estas funciones son especialmente útiles cuando se trabaja con operaciones que pueden tardar en completarse, como la lectura de archivos, consultas a bases de datos, o solicitudes a APIs. Permiten que el código no se bloquee mientras espera la respuesta, mejorando la eficiencia y la experiencia del usuario.
+
+            ¿Te gustaría saber más sobre cómo manejar errores en funciones asíncronas?
+---------------------------------------------------------------------------------------------------
+
+2.- Explica en profundidad, qué diferencia hay entre la ejecución de una web en el servidor o directamente con clic en el navegador. 2 puntos.
+
+------------------------RESOUESTA 2-----------------------------------------------------------------------------
+            Ejecución en el Servidor
+            - **Proceso**: El servidor procesa la solicitud, ejecuta scripts y genera HTML antes de enviarlo al navegador.
+            - **Ventajas**: Mejor seguridad, SEO optimizado, y compatibilidad universal.
+            - **Desventajas**: Mayor latencia y carga en el servidor.
+
+            Ejecución en el Navegador
+            - **Proceso**: El navegador carga HTML básico y ejecuta JavaScript para manipular el DOM y realizar solicitudes asíncronas.
+            - **Ventajas**: Mayor interactividad, reducción de carga del servidor, y experiencia de usuario más dinámica.
+            - **Desventajas**: SEO más complicado, posibles problemas de seguridad, y compatibilidad variable.
+------------------------------------------------------------------------------------------------------------------
+
+3.- Que hace cada una de la siguientes líneas de código:
+
+a.- elemento[2].titulo = “El principito”;
+b.- elemento[1].titulo === “La historia interminable”
+c.- elementos.forEach( elemento -> { 
+	document.getElementById(“muestra”).innerText += elemento.titulo + “<br>”; 
+})
+
+---------------------------RESPUESTA 3-------------------------------------------
+
+            a. `elemento[2].titulo = “El principito”;`
+            - **Descripción**: Esta línea asigna el valor `"El principito"` a la propiedad `titulo` del tercer elemento (índice 2) del array `elemento`.
+            - **Función**: Modifica el título del tercer elemento en el array `elemento`.
+
+            b. `elemento[1].titulo === “La historia interminable”`
+            - **Descripción**: Esta línea compara si la propiedad `titulo` del segundo elemento (índice 1) del array `elemento` es igual a `"La historia interminable"`.
+            - **Función**: Realiza una comparación estricta (incluyendo tipo y valor) y devuelve `true` o `false` según el resultado.
+
+            c. 
+            javascript
+            elementos.forEach(elemento => { 
+                document.getElementById("muestra").innerText += elemento.titulo + "<br>"; 
+            });
+            ```
+            - **Descripción**: Esta línea itera sobre cada elemento del array `elementos` y agrega el valor de la propiedad `titulo` de cada elemento al contenido de texto del elemento 
+            HTML con el id `"muestra"`, seguido de una etiqueta de salto de línea (`<br>`).
+            - **Función**: Muestra los títulos de todos los elementos del array `elementos` en el elemento HTML con id `"muestra"`, cada uno en una nueva línea.
+----------------------------------------------------------------------------------------------------
+
+4.- Explica con tus palabras que hace y para qué sirve, la interpolación en javascript. Pon un ejemplo de uso
+
+-----------------------RESPUESTA 4----------------------------------------------------------
+            La interpolación en JavaScript es una técnica que permite insertar variables y expresiones dentro de cadenas de texto de manera sencilla y legible. 
+            Esto se logra utilizando las plantillas de cadena (template literals), que se delimitan con comillas invertidas (`) en lugar de comillas simples o dobles.
+
+            ¿Para qué sirve?
+                - Facilidad de Lectura: Hace que el código sea más fácil de leer y escribir, especialmente cuando se necesita combinar texto con variables.
+                - Flexibilidad: Permite incluir expresiones complejas directamente dentro de las cadenas de texto.
+                - Evita Errores: Reduce la posibilidad de errores que pueden ocurrir al concatenar cadenas y variables manualmente.
+
+            Ejemplo 1: Saludo Personalizado
+            const nombre = "Carlos";
+            const saludo = `Hola, ${nombre}! ¿Cómo estás hoy?`;
+
+            console.log(saludo); // Salida: Hola, Carlos! ¿Cómo estás hoy?
+            En este ejemplo, estamos creando un saludo personalizado utilizando la variable nombre.
+
+            Ejemplo 2: Información de Producto
+            const producto = "Cámara";
+            const precio = 300;
+
+            const mensaje = `El precio de la ${producto} es $${precio}.`;
+
+            console.log(mensaje); // Salida: El precio de la Cámara es $300.
+--------------------------------------------------------------------------------------------------
+
+5. Con el array peliculas = [“El señor de los anillos”,”Las dos torres”,”El retorno del rey”,“El hobbit”], 
+crea una lista desordenada con todos los elementos del array, deben tener el color de letra blanca, el fondo de los li gris 
+y el texto en mayúsculas. La lista estará en el centro de la pantalla en la parte superior de la misma
+
+-------------------------RESPUESTA 5---------------------------------------------------------
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Películas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: gray;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="lista-peliculas"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
+
+En un archivo aparte llamado "scrpt.js"
+
+const peliculas = ["El señor de los anillos", "Las dos torres", "El retorno del rey", "El hobbit"];
+const listaPeliculas = document.getElementById("lista-peliculas");
+
+peliculas.forEach(pelicula => {
+    const li = document.createElement("li");
+    li.textContent = pelicula;
+    listaPeliculas.appendChild(li);
+});
+
+////////////opción 2////////////////////////////
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Películas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: gray;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="lista-peliculas"></ul>
+    <script>
+        const peliculas = ["El señor de los anillos", "Las dos torres", "El retorno del rey", "El hobbit"];
+        const listaPeliculas = document.getElementById("lista-peliculas");
+
+        peliculas.forEach(pelicula => {
+            const li = document.createElement("li");
+            li.textContent = pelicula;
+            listaPeliculas.appendChild(li);
+        });
+    </script>
+</body>
+</html>

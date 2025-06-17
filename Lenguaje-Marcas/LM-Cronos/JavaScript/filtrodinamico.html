@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros Dinámicos</title>
+</head>
+
+<body>
+    <input type="text" id="filtro" placeholder="Escribe para filtrar">
+    <div id="tarjetas">
+        <div class="tarjeta">
+            <h3>FILEMÓN</h3>
+            <p>La TIA es una agencia de detectives</p>
+        </div>
+        <div class="tarjeta">
+            <h3>MORTADELO</h3>
+            <p>Es un personaje de comic</p>
+        </div>
+        <div class="tarjeta">
+            <h3>BACTERIO</h3>
+            <p>Es el cientifico de la agencia</p>
+        </div>
+        <div class="tarjeta">
+            <h3>EL SUPER</h3>
+            <p>Un personaje del comic</p>
+        </div>
+        <div class="tarjeta">
+            <h3>OFELIA</h3>
+            <p>La secretaria de la TIA</p>
+        </div>
+        <div class="tarjeta">
+            <h3>ROMPETECHOS</h3>
+            <p>Uno de los villanos de la historia</p>
+        </div>
+    </div>
+
+
+    <!-- 
+             Declaración de Variables:
+        console.log('empieza funcion');
+        const filtroinput = document.getElementById('filtro');
+        const tarjetascontenedor = document.getElementById('tarjetas');
+        const tarjetas = tarjetascontenedor.querySelectorAll('.tarjeta'); //para seleccionar todas las tarjetas de golpe
+        console.log('fin variables');
+    -->
+
+    <script>
+        console.log('empieza funcion');
+        const filtroinput = document.getElementById('filtro');
+        const tarjetascontenedor = document.getElementById('tarjetas');
+        const tarjetas = tarjetascontenedor.querySelectorAll('.tarjeta'); //para seleccionar todas las tarjetas de golpe
+        //PARA ESCUCHAR TODOS LOS EVENTOS CREADOS POR EL FILTRO
+        console.log('fin variables');
+
+        /**
+            filtroinput: Selecciona el campo de entrada donde el usuario escribirá el texto para filtrar.
+            tarjetascontenedor: Selecciona el contenedor que agrupa todas las tarjetas. 
+            tarjetas: Selecciona todas las tarjetas dentro del contenedor.
+        */
+        filtroinput.addEventListener( 'keyup', function() {
+                console.log('estas dentro del event listener');
+                const filtrotexto = filtroinput.value.toLowerCase();
+
+                tarjetas.foreach( tarjeta => {
+                    const titulo = tarjeta.querySelector('h3').textContent.toLowerCase(); //contenido del h3
+                    const contenido = tarjeta.querySelector('p').textContent.toLowerCase(); //contenido del p
+                    if (titulo.includes(filtrotexto) || contenido.includes(filtrotexto)) { 
+                        tarjeta.style.display = "block";
+                    } else {
+                        tarjeta.style.display = "none";
+                    };
+
+                    /*
+                    -addEventListener('keyup', function() {...}): Añade un evento que se dispara cada vez que el usuario suelta una tecla en el campo de entrada.
+                    -filtrotexto: Obtiene el valor del campo de entrada y lo convierte a minúsculas para hacer la comparación insensible a mayúsculas/minúsculas.
+                    -tarjetas.forEach(tarjeta => {...}): Itera sobre cada tarjeta.
+                    -titulo: Obtiene el texto del título (h3) de la tarjeta y lo convierte a minúsculas.
+                    -contenido: Obtiene el texto del contenido (p) de la tarjeta y lo convierte a minúsculas.
+                    -Condicional: Si el texto del título o del contenido incluye el texto del filtro, la tarjeta se muestra (display: block), de lo contrario, se oculta (display: none).
+                    */
+                });
+            }
+        );
+    </script>
+</body>
+
+</html>
+
+<!--placeholder= para que en el input salga algo
+textContent= contenido del h3-->

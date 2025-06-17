@@ -1,0 +1,70 @@
+<!--
+
+La inmutabilidad de objetos es un concepto importante en la programación, especialmente en el contexto de JavaScript. Se refiere a la idea de que una vez que un objeto ha sido creado, no se puede modificar. En lugar de cambiar el objeto original, se crea una nueva copia del objeto con los cambios deseados. Aquí tienes una explicación detallada:
+
+¿Qué es la Inmutabilidad?
+La inmutabilidad significa que el estado de un objeto no puede cambiar después de su creación. Esto es útil para evitar efectos secundarios no deseados y hacer que el código sea más predecible y fácil de depurar.
+
+Beneficios de la Inmutabilidad
+Previsibilidad: Los objetos inmutables no cambian, lo que facilita el seguimiento del estado de la aplicación.
+Seguridad: Evita efectos secundarios no deseados, ya que los objetos no pueden ser modificados accidentalmente.
+Facilita el Debugging: Al no cambiar los objetos, es más fácil rastrear y entender el flujo de datos en la aplicación.
+Optimización: Algunos frameworks y bibliotecas pueden optimizar mejor el rendimiento cuando trabajan con datos inmutables.
+Cómo Lograr la Inmutabilidad en JavaScript
+JavaScript no tiene soporte nativo para la inmutabilidad de objetos, pero hay varias técnicas y herramientas que puedes usar para lograrla.
+
+Uso de Object.freeze
+Object.freeze es una función que congela un objeto, impidiendo que se le añadan, eliminen o modifiquen propiedades.
+
+let persona = { nombre: "Juan", edad: 30 };
+Object.freeze(persona);
+
+persona.edad = 31; // No tiene efecto
+console.log(persona.edad); // Salida: 30
+Limitaciones: Object.freeze solo congela el objeto en el nivel superficial. Si el objeto contiene otros objetos, estos no serán congelados.
+Creación de Nuevos Objetos
+En lugar de modificar el objeto original, puedes crear una nueva copia del objeto con los cambios deseados.
+
+let persona = { nombre: "Juan", edad: 30 };
+let nuevaPersona = { ...persona, edad: 31 };
+
+console.log(persona.edad); // Salida: 30
+console.log(nuevaPersona.edad); // Salida: 31
+Operador de Propagación (...): Crea una copia superficial del objeto.
+Librerías de Inmutabilidad
+Existen librerías que facilitan el trabajo con datos inmutables, como Immutable.js y Immer.
+
+Immutable.js
+Immutable.js proporciona estructuras de datos inmutables que son eficientes y fáciles de usar.
+
+const { Map } = require('immutable');
+
+let persona = Map({ nombre: "Juan", edad: 30 });
+let nuevaPersona = persona.set('edad', 31);
+
+console.log(persona.get('edad')); // Salida: 30
+console.log(nuevaPersona.get('edad')); // Salida: 31
+Immer
+Immer permite trabajar con estructuras de datos inmutables de una manera más natural y menos verbosa.
+
+const produce = require('immer');
+
+let persona = { nombre: "Juan", edad: 30 };
+let nuevaPersona = produce(persona, draft => {
+    draft.edad = 31;
+});
+
+console.log(persona.edad); // Salida: 30
+console.log(nuevaPersona.edad); // Salida: 31
+Ejemplo Práctico
+Imagina que tienes una lista de tareas y quieres agregar una nueva tarea sin modificar la lista original:
+
+let tareas = ["Comprar leche", "Pagar facturas"];
+let nuevasTareas = [...tareas, "Llamar al médico"];
+
+console.log(tareas); // Salida: ["Comprar leche", "Pagar facturas"]
+console.log(nuevasTareas); // Salida: ["Comprar leche", "Pagar facturas", "Llamar al médico"]
+Resumen
+La inmutabilidad de objetos en JavaScript es una práctica que ayuda a mantener el código más seguro, predecible y fácil de mantener. Aunque JavaScript no soporta la inmutabilidad de manera nativa, puedes lograrla utilizando técnicas como Object.freeze, la creación de nuevos objetos, y librerías como Immutable.js y Immer.
+
+-->

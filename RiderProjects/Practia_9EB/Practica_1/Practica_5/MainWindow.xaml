@@ -1,0 +1,21 @@
+﻿<Window x:Class="Practica_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Practica_5.Controls"
+        Title="Lista de Tareas" Height="400" Width="400">
+    <StackPanel Margin="10">
+        <!-- Título de la lista de tareas -->
+        <TextBlock Text="CheckList" FontSize="20" FontWeight="Bold" Margin="0,0,0,0" TextAlignment="Center"/>
+        
+        <!-- ItemsControl para mostrar la lista de tareas -->
+        <ItemsControl ItemsSource="{Binding Tasks}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <!-- Control personalizado para cada tarea -->
+                    <local:TaskItem TaskName="{Binding Name}"
+                                    IsCompleted="{Binding IsCompleted, Mode=TwoWay}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Window>

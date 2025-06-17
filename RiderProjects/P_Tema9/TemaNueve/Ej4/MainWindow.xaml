@@ -1,0 +1,25 @@
+﻿<Window x:Class="Ej4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Ej4"
+        Title="MiniApp" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Lista de productos -->
+        <ListView ItemsSource="{Binding Products}"
+                  SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"
+                  DisplayMemberPath="Name"
+                  Margin="5" Grid.Column="0">
+        </ListView>
+
+        <!-- Detalles del producto seleccionado -->
+        <local:ProductCard ProductName="{Binding SelectedProduct.Name}"
+                           Price="{Binding SelectedProduct.Price}"
+                           ImageSource="{Binding SelectedProduct.Image}"
+                           Margin="5" Grid.Column="1" />
+    </Grid>
+</Window>

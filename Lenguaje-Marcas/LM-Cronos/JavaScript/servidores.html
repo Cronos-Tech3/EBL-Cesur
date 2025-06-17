@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidores</title>
+</head>
+
+<body>
+    <h1>LECTURA API</h1>
+    <p id="salida"></p>
+    <script>
+        async function leerApi() {
+            const url = "https://swapi.dev/api/people/";
+            for (n = 1; n < 11; n++) {
+                const respuesta = await fetch(`${url}${n}`); //funcion de conexion 
+                const datos = await respuesta.json();
+                document.getElementById('salida').innerHTML += datos.name + "-" + datos.height + "<br>";
+            };
+        };
+        leerApi();
+    </script>
+</body>
+
+</html>
+
+<!--
+    async function = funciones asíncronas
+    cont = si no va a cambiar
+    let = si va a cambiar
+    ${} = interpolacion
+-->

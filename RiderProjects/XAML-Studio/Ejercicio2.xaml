@@ -1,0 +1,19 @@
+
+    <Grid>
+        <Button Content="Haz Clic"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="LightGray">
+                    <Button.Triggers>
+                        <EventTriggers RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+                                        To="Red" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTriggers>
+                    </Button.Triggers>
+        </Button>
+
+    </Grid>

@@ -1,0 +1,150 @@
+<!--
+
+Los operadores en JavaScript son símbolos que se utilizan para realizar operaciones sobre valores y variables. Aquí tienes una explicación detallada de los diferentes tipos de operadores en JavaScript:
+
+1. Operadores Aritméticos
+Los operadores aritméticos se utilizan para realizar operaciones matemáticas.
+
+Suma (+): Suma dos números.
+
+let a = 5;
+let b = 3;
+console.log(a + b); // Salida: 8
+Resta (-): Resta un número de otro.
+
+console.log(a - b); // Salida: 2
+Multiplicación (*): Multiplica dos números.
+
+console.log(a * b); // Salida: 15
+División (/): Divide un número por otro.
+
+console.log(a / b); // Salida: 1.6666666666666667
+Módulo (%): Devuelve el resto de la división de dos números.
+
+console.log(a % b); // Salida: 2
+Exponenciación (**): Eleva un número a la potencia de otro.
+
+console.log(a ** b); // Salida: 125
+Incremento (++): Incrementa el valor de una variable en 1.
+
+a++;
+console.log(a); // Salida: 6
+Decremento (--): Decrementa el valor de una variable en 1.
+
+b--;
+console.log(b); // Salida: 2
+2. Operadores de Asignación
+Los operadores de asignación se utilizan para asignar valores a las variables.
+
+Asignación (=): Asigna un valor a una variable.
+
+let x = 10;
+Asignación de Suma (+=): Suma un valor a una variable y asigna el resultado.
+
+x += 5; // Equivalente a x = x + 5
+console.log(x); // Salida: 15
+Asignación de Resta (-=): Resta un valor a una variable y asigna el resultado.
+
+x -= 3; // Equivalente a x = x - 3
+console.log(x); // Salida: 12
+Asignación de Multiplicación (*=): Multiplica una variable por un valor y asigna el resultado.
+
+x *= 2; // Equivalente a x = x * 2
+console.log(x); // Salida: 24
+Asignación de División (/=): Divide una variable por un valor y asigna el resultado.
+
+x /= 4; // Equivalente a x = x / 4
+console.log(x); // Salida: 6
+Asignación de Módulo (%=): Calcula el módulo de una variable y un valor, y asigna el resultado.
+
+x %= 5; // Equivalente a x = x % 5
+console.log(x); // Salida: 1
+Asignación de Exponenciación (**=): Eleva una variable a la potencia de un valor y asigna el resultado.
+
+x **= 3; // Equivalente a x = x ** 3
+console.log(x); // Salida: 1
+3. Operadores de Comparación
+Los operadores de comparación se utilizan para comparar dos valores y devuelven un valor booleano (true o false).
+
+Igualdad (==): Compara dos valores para ver si son iguales (sin tener en cuenta el tipo).
+
+console.log(5 == '5'); // Salida: true
+Igualdad Estricta (===): Compara dos valores para ver si son iguales (teniendo en cuenta el tipo).
+
+console.log(5 === '5'); // Salida: false
+Desigualdad (!=): Compara dos valores para ver si son diferentes (sin tener en cuenta el tipo).
+
+console.log(5 != '5'); // Salida: false
+Desigualdad Estricta (!==): Compara dos valores para ver si son diferentes (teniendo en cuenta el tipo).
+
+console.log(5 !== '5'); // Salida: true
+Mayor Que (>): Comprueba si un valor es mayor que otro.
+
+console.log(5 > 3); // Salida: true
+Mayor o Igual Que (>=): Comprueba si un valor es mayor o igual que otro.
+
+console.log(5 >= 5); // Salida: true
+Menor Que (<): Comprueba si un valor es menor que otro.
+
+console.log(3 < 5); // Salida: true
+Menor o Igual Que (<=): Comprueba si un valor es menor o igual que otro.
+
+console.log(3 <= 5); // Salida: true
+4. Operadores Lógicos
+Los operadores lógicos se utilizan para combinar expresiones booleanas.
+
+AND Lógico (&&): Devuelve true si ambas expresiones son verdaderas.
+
+console.log(true && false); // Salida: false
+OR Lógico (||): Devuelve true si al menos una de las expresiones es verdadera.
+
+console.log(true || false); // Salida: true
+NOT Lógico (!): Invierte el valor booleano de una expresión.
+
+console.log(!true); // Salida: false
+5. Operadores de Tipo
+Los operadores de tipo se utilizan para determinar el tipo de una variable o valor.
+
+typeof: Devuelve una cadena que indica el tipo de una variable.
+
+console.log(typeof 42); // Salida: "number"
+console.log(typeof 'Hola'); // Salida: "string"
+instanceof: Comprueba si un objeto es una instancia de una clase o constructor.
+
+let fecha = new Date();
+console.log(fecha instanceof Date); // Salida: true
+6. Operadores de Bits
+Los operadores de bits realizan operaciones a nivel de bits en números.
+
+AND a Nivel de Bits (&): Realiza una operación AND a nivel de bits.
+
+console.log(5 & 1); // Salida: 1
+OR a Nivel de Bits (|): Realiza una operación OR a nivel de bits.
+
+console.log(5 | 1); // Salida: 5
+XOR a Nivel de Bits (^): Realiza una operación XOR a nivel de bits.
+
+console.log(5 ^ 1); // Salida: 4
+NOT a Nivel de Bits (~): Invierte los bits de un número.
+
+console.log(~5); // Salida: -6
+Desplazamiento a la Izquierda (<<): Desplaza los bits de un número a la izquierda.
+
+console.log(5 << 1); // Salida: 10
+Desplazamiento a la Derecha (>>): Desplaza los bits de un número a la derecha.
+
+console.log(5 >> 1); // Salida: 2
+Desplazamiento a la Derecha sin Signo (>>>): Desplaza los bits de un número a la derecha sin conservar el signo.
+
+console.log(5 >>> 1); // Salida: 2
+7. Operador Condicional (Ternario)
+El operador condicional (? :) es una forma concisa de escribir una declaración if...else.
+
+Ejemplo:
+let edad = 18;
+let mensaje = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+console.log(mensaje); // Salida: Eres mayor de edad
+Resumen
+Estos son los operadores más importantes en JavaScript. Conocer y entender cómo funcionan te permitirá escribir código más eficiente y expresivo.
+
+-->

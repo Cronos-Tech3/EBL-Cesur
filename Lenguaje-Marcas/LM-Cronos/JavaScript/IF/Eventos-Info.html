@@ -1,0 +1,94 @@
+<!--
+
+Los eventos en JavaScript son acciones o sucesos que ocurren en el navegador y que pueden ser detectados y manejados mediante código JavaScript. Los eventos permiten que las páginas web respondan a las interacciones del usuario, como clics, movimientos del ratón, entradas de teclado, y más. Aquí tienes una explicación detallada de cómo funcionan los eventos en JavaScript:
+
+¿Qué es un Evento?
+Un evento es cualquier acción que ocurre en el navegador, como:
+
+Un usuario hace clic en un botón.
+Una página se carga completamente.
+Un usuario mueve el ratón sobre un elemento.
+Un usuario presiona una tecla.
+Modelo de Eventos
+JavaScript utiliza un modelo de eventos basado en el DOM (Document Object Model), donde los eventos se propagan a través de una jerarquía de elementos. Los eventos pueden ser capturados y manejados en diferentes fases de esta propagación.
+
+Tipos de Eventos
+Algunos de los eventos más comunes en JavaScript incluyen:
+
+Eventos de ratón: click, dblclick, mouseover, mouseout, mousemove, mousedown, mouseup
+Eventos de teclado: keydown, keyup, keypress
+Eventos de formulario: submit, change, focus, blur
+Eventos de documento: DOMContentLoaded, load, unload, resize, scroll
+Manejo de Eventos
+Para manejar eventos en JavaScript, puedes usar tres métodos principales:
+
+Atributos HTML: Añadir el manejador de eventos directamente en el HTML.
+Propiedades del DOM: Asignar una función a una propiedad de evento del elemento.
+Método addEventListener: Añadir un manejador de eventos utilizando el método addEventListener.
+Atributos HTML
+<button onclick="saludar()">Haz clic aquí</button>
+
+<script>
+function saludar() {
+    alert("¡Hola!");
+}
+</script>
+onclick="saludar()": Añade el manejador de eventos directamente en el HTML.
+Propiedades del DOM
+<button id="miBoton">Haz clic aquí</button>
+
+<script>
+document.getElementById("miBoton").onclick = function() {
+    alert("¡Hola!");
+};
+</script>
+document.getElementById("miBoton").onclick: Asigna una función a la propiedad onclick del botón.
+Método addEventListener
+<button id="miBoton">Haz clic aquí</button>
+
+<script>
+document.getElementById("miBoton").addEventListener("click", function() {
+    alert("¡Hola!");
+});
+</script>
+addEventListener("click", function() {...}): Añade un manejador de eventos para el evento click.
+Propagación de Eventos
+Los eventos en JavaScript se propagan a través del DOM en dos fases principales:
+
+Captura: El evento se propaga desde el elemento raíz del DOM hacia el elemento objetivo.
+Burbuja: El evento se propaga desde el elemento objetivo de vuelta hacia el elemento raíz.
+Puedes controlar la propagación de eventos utilizando los métodos stopPropagation y preventDefault.
+
+Ejemplo de Propagación
+<div id="contenedor">
+    <button id="miBoton">Haz clic aquí</button>
+</div>
+
+<script>
+document.getElementById("contenedor").addEventListener("click", function() {
+    alert("Contenedor clicado");
+}, true); // true para captura
+
+document.getElementById("miBoton").addEventListener("click", function(event) {
+    alert("Botón clicado");
+    event.stopPropagation(); // Detiene la propagación del evento
+});
+</script>
+event.stopPropagation(): Detiene la propagación del evento hacia los elementos padres.
+Prevención del Comportamiento por Defecto
+Algunos eventos tienen comportamientos por defecto que pueden ser prevenidos utilizando preventDefault.
+
+Ejemplo de Prevención
+<a href="https://www.example.com" id="miEnlace">Haz clic aquí</a>
+
+<script>
+document.getElementById("miEnlace").addEventListener("click", function(event) {
+    event.preventDefault(); // Previene la navegación
+    alert("Enlace clicado, pero no se navega");
+});
+</script>
+event.preventDefault(): Previene el comportamiento por defecto del evento.
+Resumen
+Los eventos en JavaScript son fundamentales para crear páginas web interactivas. Puedes manejar eventos utilizando atributos HTML, propiedades del DOM, o el método addEventListener. Además, puedes controlar la propagación de eventos y prevenir comportamientos por defecto para crear experiencias de usuario más ricas y dinámicas.
+
+-->

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Nombres</title>
+  <style>
+    /* ==================== Estilos CSS ==================== */
+ 
+    /* Estilos generales para el cuerpo de la página */
+    body {
+      font-family: sans-serif; /* Define la fuente de letra para todo el cuerpo */
+      display: flex; /* Utiliza Flexbox para organizar los elementos hijos (los contenedores) */
+      justify-content: space-around; /* Distribuye el espacio de forma equitativa alrededor de los contenedores */
+      padding: 20px; /* Añade un espacio de 20 píxeles alrededor del contenido del body */
+      background-color: #4c4848; /* Establece un color de fondo gris oscuro para la página */
+    }
+ 
+    /* Estilos para los contenedores de las listas (los cuadros) */
+    .contenedor {
+      background-color: #813f3f; /* Fondo rojo oscuro para los contenedores */
+      border: 1px solid #ccc; /* Borde gris claro de 1 píxel */
+      border-radius: 5px; /* Bordes ligeramente redondeados para un aspecto más suave */
+      padding: 10px; /* Espacio interno de 10 píxeles dentro de los contenedores */
+      width: 30%; /* Establece el ancho de cada contenedor al 30% del ancho de su padre */
+    }
+ 
+    /* Estilos para los títulos de los contenedores ("Nombres Disponibles", "Nombres Seleccionados") */
+    .contenedor h2 {
+      text-align: center; /* Centra el texto del título dentro del contenedor */
+      margin-bottom: 10px; /* Añade un margen inferior de 10 píxeles al título */
+    }
+ 
+    /* Estilos para las listas desordenadas (<ul>) */
+    ul {
+      list-style-type: none; /* Elimina los marcadores de lista (los puntos o números) */
+      padding: 0; /* Elimina el relleno interno de la lista */
+      margin: 0; /* Elimina el margen externo de la lista */
+    }
+ 
+    /* Estilos para los elementos de la lista (<li>) que contienen los nombres */
+    li {
+      padding: 8px; /* Espacio interno de 8 píxeles dentro de cada elemento de la lista */
+      border-bottom: 1px solid #eee; /* Línea de separación gris muy clara en la parte inferior de cada elemento */
+      cursor: pointer; /* Cambia el cursor del ratón a una mano para indicar que el elemento es क्लिकable */
+    }
+ 
+    /* Estilo para el último elemento de la lista (para que no tenga un borde inferior adicional) */
+    li:last-child {
+      border-bottom: none; /* Elimina el borde inferior del último elemento de la lista */
+    }
+ 
+    /* Estilo para los elementos vacíos en la lista izquierda (después de mover un nombre) */
+    .vacio {
+      color: #aaa; /* Color de texto gris claro */
+      font-style: italic; /* Texto en cursiva */
+      text-align: center; /* Centra el texto "Vacío" */
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="contenedor">
+    <h2>Nombres Disponibles</h2>
+    <ul id="listaIzquierda">
+      </ul>
+  </div>
+ 
+  <div class="contenedor">
+    <h2>Nombres Seleccionados</h2>
+    <ul id="listaDerecha">
+      </ul>
+  </div>
+ 
+  <script>
+    /* ==================== Código JavaScript ==================== */
+ 
+    // 1. Definición del array con los nombres iniciales
+    const personas = ["Alberto", "Ana", "Pedro", "Luisa", "Andrés", "Laura", "Carlos", "Carlota"];
+ 
+    // 2. Obtención de referencias a los elementos del DOM (Document Object Model)
+    const listaIzquierda = document.getElementById("listaIzquierda"); // Obtiene la lista izquierda por su ID
+    const listaDerecha = document.getElementById("listaDerecha"); // Obtiene la lista derecha por su ID
+ 
+    // 3. Creación de copias de los arrays para trabajar con las listas
+    let nombresIzquierda = [...personas]; // Crea una copia del array 'personas' para la lista izquierda
+    let nombresDerecha = []; // Inicializa un array vacío para la lista derecha
+ 
+    // 4. Función para mostrar los nombres en la lista izquierda del HTML
+    function mostrarIzquierda() {
+      listaIzquierda.innerHTML = ""; // Limpia cualquier contenido previo dentro de la lista izquierda
+      nombresIzquierda.forEach((nombre, indice) => { // Itera sobre cada nombre y su índice en el array 'nombresIzquierda'
+        const itemLista = document.createElement("li"); // Crea un nuevo elemento de lista (<li>)
+        if (nombre === null) { // Comprueba si el nombre es null (indicando una posición vacía)
+          itemLista.textContent = "Vacío"; // Si es null, muestra el texto "Vacío"
+          itemLista.classList.add("vacio"); // Añade la clase CSS 'vacio' para darle un estilo especial
+        } else {
+          itemLista.textContent = nombre; // Si hay un nombre, lo establece como el texto del elemento de lista
+          itemLista.addEventListener("click", () => moverDerecha(indice)); // Añade un evento de clic para mover el nombre a la derecha
+        }
+        listaIzquierda.appendChild(itemLista); // Añade el elemento de lista creado a la lista izquierda en el HTML
+      });
+    }
+ 
+    // 5. Función para mostrar los nombres en la lista derecha del HTML
+    function mostrarDerecha() {
+      listaDerecha.innerHTML = ""; // Limpia cualquier contenido previo dentro de la lista derecha
+      nombresDerecha.forEach((nombre, indice) => { // Itera sobre cada nombre y su índice en el array 'nombresDerecha'
+        const itemLista = document.createElement("li"); // Crea un nuevo elemento de lista (<li>)
+        itemLista.textContent = nombre; // Establece el nombre como el texto del elemento de lista
+        itemLista.addEventListener("click", () => moverIzquierda(indice)); // Añade un evento de clic para mover el nombre a la izquierda
+        itemLista.addEventListener("dblclick", () => moverIzquierda(indice)); // Añade un evento de doble clic para mover el nombre a la izquierda
+        listaDerecha.appendChild(itemLista); // Añade el elemento de lista creado a la lista derecha en el HTML
+      });
+    }
+ 
+    // 6. Función para mover un nombre de la lista izquierda a la lista derecha
+    function moverDerecha(indice) {
+      const nombre = nombresIzquierda[indice]; // Obtiene el nombre del array 'nombresIzquierda' en el índice क्लिकado
+      if (nombre !== null) { // Comprueba si hay un nombre en esa posición (no está vacío)
+        nombresDerecha.push(nombre); // Añade el nombre al final del array 'nombresDerecha'
+        nombresIzquierda[indice] = null; // Marca la posición en el array 'nombresIzquierda' como null (vacía)
+        mostrarIzquierda(); // Actualiza la visualización de la lista izquierda
+        mostrarDerecha(); // Actualiza la visualización de la lista derecha
+      }
+    }
+ 
+    // 7. Función para mover un nombre de la lista derecha a la lista izquierda
+    function moverIzquierda(indice) {
+      const nombre = nombresDerecha[indice]; // Obtiene el nombre del array 'nombresDerecha' en el índice क्लिकado
+      if (nombre) { // Comprueba si hay un nombre para mover
+        nombresIzquierda.push(nombre); // Añade el nombre al final del array 'nombresIzquierda'
+        nombresDerecha.splice(indice, 1); // Elimina el nombre del array 'nombresDerecha' en el índice क्लिकado
+        mostrarIzquierda(); // Actualiza la visualización de la lista izquierda
+        mostrarDerecha(); // Actualiza la visualización de la lista derecha
+      }
+    }
+ 
+    // 8. Llamadas iniciales a las funciones de renderizado para mostrar las listas al cargar la página
+    mostrarIzquierda(); // Muestra los nombres iniciales en la lista izquierda
+    mostrarDerecha(); // Asegura que la lista derecha esté inicialmente vacía
+  </script>
+ 
+</body>
+</html>
+ 

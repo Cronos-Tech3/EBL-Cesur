@@ -1,0 +1,212 @@
+<!--  
+  
+            ¿Qué es JavaScript?
+JavaScript es un lenguaje de programación interpretado, de alto nivel y dinámico. Se utiliza principalmente para crear contenido interactivo en las páginas web, como formularios, animaciones y otros elementos dinámicos.
+
+Historia
+JavaScript fue creado en 1995 por Brendan Eich mientras trabajaba en Netscape Communications. Originalmente se llamaba Mocha, luego LiveScript, y finalmente JavaScript. A pesar de su nombre, no está relacionado con Java.
+
+Características Principales
+Lenguaje Interpretado: No necesita ser compilado, el navegador web lo interpreta directamente.
+Dinámico: Permite cambiar el tipo de las variables en tiempo de ejecución.
+Orientado a Objetos: Aunque no es un lenguaje puramente orientado a objetos, soporta la programación orientada a objetos.
+Event-Driven: Responde a eventos como clics de ratón, movimientos del ratón, y entradas de teclado.
+Sintaxis Básica
+Variables: Se pueden declarar usando var, let, o const.
+
+let nombre = "Juan";
+const edad = 30;
+var ciudad = "Madrid";
+Funciones: Se definen usando la palabra clave function.
+
+function saludar() {
+  console.log("Hola, mundo!");
+}
+saludar();
+Condicionales: Se utilizan if, else if, y else.
+
+if (edad > 18) {
+  console.log("Eres mayor de edad.");
+} else {
+  console.log("Eres menor de edad.");
+}
+Bucles: Los más comunes son for, while, y do...while.
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+Uso en el Desarrollo Web
+JavaScript se utiliza junto con HTML y CSS para crear páginas web interactivas. HTML proporciona la estructura, CSS el estilo, y JavaScript la interactividad.
+
+Librerías y Frameworks
+Existen muchas librerías y frameworks que facilitan el desarrollo con JavaScript, como:
+
+jQuery: Simplifica la manipulación del DOM.
+React: Biblioteca para construir interfaces de usuario.
+Angular: Framework para aplicaciones web robustas.
+Vue.js: Framework progresivo para construir interfaces de usuario.
+Ejemplo Práctico
+Aquí tienes un ejemplo simple de cómo JavaScript puede cambiar el contenido de una página web:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+</head>
+<body>
+  <h1 id="titulo">Hola, mundo!</h1>
+  <button onclick="cambiarTexto()">Haz clic aquí</button>
+
+  <script>
+    function cambiarTexto() {
+      document.getElementById("titulo").innerText = "¡Has cambiado el texto!";
+    }
+  </script>
+
+</body>
+</html>
+
+¿Qué es la Asincronía?
+La asincronía permite que ciertas operaciones se realicen en segundo plano, sin bloquear la ejecución del resto del código. Esto es especialmente útil para tareas que pueden tardar en completarse, como solicitudes a servidores, operaciones de lectura/escritura de archivos, o temporizadores.
+
+Callbacks
+Un callback es una función que se pasa como argumento a otra función y se ejecuta después de que la operación asincrónica haya terminado.
+
+function hacerAlgo(callback) {
+  setTimeout(() => {
+    console.log("Tarea completada");
+    callback();
+  }, 1000);
+}
+
+function despuesDeHacerAlgo() {
+  console.log("Esto se ejecuta después de la tarea");
+}
+
+hacerAlgo(despuesDeHacerAlgo);
+
+
+Promesas
+Las promesas son una forma más moderna y manejable de trabajar con operaciones asincrónicas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
+
+let promesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Tarea completada");
+  }, 1000);
+});
+
+promesa.then((mensaje) => {
+  console.log(mensaje);
+}).catch((error) => {
+  console.error(error);
+});
+Async/Await
+async y await son palabras clave que simplifican el uso de promesas, haciendo que el código asincrónico se vea y se comporte de manera más sincrónica.
+
+async function hacerAlgo() {
+  try {
+    let mensaje = await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("Tarea completada");
+      }, 1000);
+    });
+    console.log(mensaje);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+hacerAlgo();
+Ejemplo Práctico
+Imagina que quieres obtener datos de una API y luego procesarlos. Aquí tienes un ejemplo usando fetch con async/await:
+
+async function obtenerDatos() {
+  try {
+    let respuesta = await fetch('https://api.example.com/datos');
+    let datos = await respuesta.json();
+    console.log(datos);
+  } catch (error) {
+    console.error("Error al obtener los datos:", error);
+  }
+}
+
+obtenerDatos();
+En este ejemplo, fetch realiza una solicitud HTTP y devuelve una promesa. Usamos await para esperar a que la promesa se resuelva y obtener la respuesta.
+
+Ventajas de la Asincronía
+Mejora la Experiencia del Usuario: Las aplicaciones no se bloquean mientras esperan que se completen las operaciones largas.
+Eficiencia: Permite que el navegador realice otras tareas mientras espera que se completen las operaciones asincrónicas.
+
+
+Las promesas encadenadas en JavaScript permiten manejar múltiples operaciones asincrónicas de manera secuencial y ordenada. Esto se logra utilizando los métodos .then() y .catch(), que se pueden encadenar para ejecutar una serie de tareas una tras otra. Aquí tienes una explicación detallada:
+
+Concepto Básico
+Cuando una promesa se resuelve, puedes encadenar otra operación que se ejecutará después de que la primera haya terminado. Cada llamada a .then() devuelve una nueva promesa, lo que permite seguir encadenando más operaciones.
+
+Ejemplo Básico
+Imagina que tienes tres operaciones asincrónicas que deben ejecutarse en secuencia:
+
+let promesa1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Operación 1 completada");
+  }, 1000);
+});
+
+promesa1.then((resultado1) => {
+  console.log(resultado1);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Operación 2 completada");
+    }, 1000);
+  });
+}).then((resultado2) => {
+  console.log(resultado2);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Operación 3 completada");
+    }, 1000);
+  });
+}).then((resultado3) => {
+  console.log(resultado3);
+}).catch((error) => {
+  console.error("Error:", error);
+});
+Explicación del Ejemplo
+Primera Promesa: Se crea promesa1 que se resuelve después de 1 segundo.
+Primer .then(): Cuando promesa1 se resuelve, se ejecuta el primer .then(), que imprime el resultado y devuelve una nueva promesa.
+Segunda Promesa: La nueva promesa se resuelve después de otro segundo.
+Segundo .then(): Cuando la segunda promesa se resuelve, se ejecuta el segundo .then(), que imprime el resultado y devuelve otra nueva promesa.
+Tercera Promesa: La tercera promesa se resuelve después de un segundo más.
+Tercer .then(): Cuando la tercera promesa se resuelve, se ejecuta el tercer .then(), que imprime el resultado final.
+.catch(): Si alguna de las promesas falla, se ejecuta el .catch() para manejar el error.
+Ventajas de Encadenar Promesas
+Legibilidad: El código es más fácil de leer y entender en comparación con los callbacks anidados.
+Manejo de Errores: Puedes manejar errores en un solo lugar usando .catch().
+Secuencialidad: Garantiza que las operaciones se ejecuten en el orden correcto.
+Ejemplo Práctico con fetch
+Aquí tienes un ejemplo práctico de cómo encadenar promesas para realizar varias solicitudes HTTP:
+
+fetch('https://api.example.com/datos1')
+  .then((respuesta) => respuesta.json())
+  .then((datos1) => {
+    console.log(datos1);
+    return fetch('https://api.example.com/datos2');
+  })
+  .then((respuesta) => respuesta.json())
+  .then((datos2) => {
+    console.log(datos2);
+    return fetch('https://api.example.com/datos3');
+  })
+  .then((respuesta) => respuesta.json())
+  .then((datos3) => {
+    console.log(datos3);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+En este ejemplo, cada solicitud fetch se realiza después de que la anterior se haya completado, y los datos se procesan en secuencia.
+
+
+
+
+-->

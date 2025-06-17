@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection</title>
+</head>
+
+<body>
+    <p id="salida">HOLA</p>
+    <p class="rellenos">HOLA</p>
+    <p class="rellenos">HOLA</p>
+    <p class="rellenos">HOLA</p>
+    <p class="rellenos">HOLA</p>
+    <div id="contenido"></div>
+    <script>
+        let parrafo = document.getElementById("salida"); //seleccion por id
+        //parrafo.innerText="<h1>Hola</h1>"; //enlazar texto que tiene el parrafo pero sin detectar las etiquetas de h1 ya que interpreta todo como texto
+        //parrafo.innerHTML="<h1>Hola</h1>"; //te detecta las etiquetas de html
+        //parrafo.textContent="Hola"; //para insertar contenido. Tampoco detecta las etiquetas de html
+        
+        const elementos = document.getElementsByTagName("p"); //selecciona elementos
+        console.log(elementos);
+        elementos[0].style.color="red"; //selecciona el primero de los elementos, en este caso el parrafo 1
+        //elementos.style.color="red"; //no se puede cambiar todos los elementos globalmente sin serializarlos
+        Array.from(elementos).forEach((elemento, index) => { //selecciona el array de elementos. Index es la posicion del array
+            if(index==1){
+                elemento.innerText=`${index} UNO`;
+            } else if(index==3){
+                elemento.innerText=`${index} TRES`;
+            }else if (index==0){
+                elemento.innerText=`${index} INICIO`;
+            }else{
+                elemento.innerText=`${index} OTRO`;
+            }
+        });
+
+        /*
+        elementos.forEach(element => {
+            element.innerHTML ="Adios";
+        });
+        */
+        
+
+    </script>
+</body>
+
+</html>
+
+<!--va = variable global que no se utiliza
+let = declara en el ambito en el que se esta
+const = valores constantes que no van a cambiar a la hora de ejecutar el programa
+document (doom)
+parrafo.innerHTML=""; se usa para vaciar contenedores
+serializar = pasar un grupo por un sitio de uno en uno 
+-->

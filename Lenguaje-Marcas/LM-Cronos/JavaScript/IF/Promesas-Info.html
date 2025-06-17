@@ -1,0 +1,97 @@
+<!--
+
+Las promesas en JavaScript son una característica fundamental para manejar operaciones asincrónicas de manera más eficiente y legible. Aquí tienes una explicación detallada:
+
+¿Qué es una Promesa?
+Una promesa es un objeto que representa la eventual finalización (o falla) de una operación asincrónica y su valor resultante. Las promesas permiten encadenar operaciones asincrónicas y manejar errores de manera más clara y estructurada.
+
+Estados de una Promesa
+Una promesa puede estar en uno de los siguientes estados:
+
+Pendiente (Pending): El estado inicial de una promesa. La operación asincrónica aún no ha completado.
+Cumplida (Fulfilled): La operación asincrónica se completó con éxito y la promesa tiene un valor resultante.
+Rechazada (Rejected): La operación asincrónica falló y la promesa tiene una razón de falla.
+Creación de una Promesa
+Puedes crear una promesa utilizando el constructor Promise, que toma una función con dos parámetros: resolve y reject.
+
+let miPromesa = new Promise((resolve, reject) => {
+    // Operación asincrónica
+    let exito = true; // Simula el resultado de la operación
+
+    if (exito) {
+        resolve("Operación completada con éxito");
+    } else {
+        reject("Operación fallida");
+    }
+});
+Manejo de Promesas
+Para manejar el resultado de una promesa, puedes usar los métodos .then(), .catch(), y .finally().
+
+.then()
+El método .then() se utiliza para manejar una promesa cumplida.
+
+miPromesa.then((resultado) => {
+    console.log(resultado); // Salida: Operación completada con éxito
+});
+.catch()
+El método .catch() se utiliza para manejar una promesa rechazada.
+
+miPromesa.catch((error) => {
+    console.error(error); // Salida: Operación fallida
+});
+.finally()
+El método .finally() se ejecuta independientemente de si la promesa se cumplió o se rechazó.
+
+miPromesa.finally(() => {
+    console.log("Operación finalizada");
+});
+Encadenamiento de Promesas
+Las promesas pueden encadenarse para manejar una serie de operaciones asincrónicas de manera secuencial.
+
+let promesa1 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Promesa 1 cumplida"), 1000);
+});
+
+promesa1.then((resultado1) => {
+    console.log(resultado1);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve("Promesa 2 cumplida"), 1000);
+    });
+}).then((resultado2) => {
+    console.log(resultado2);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve("Promesa 3 cumplida"), 1000);
+    });
+}).then((resultado3) => {
+    console.log(resultado3);
+}).catch((error) => {
+    console.error("Error:", error);
+});
+Promesas y async/await
+Las promesas se integran perfectamente con las funciones asíncronas utilizando async y await, lo que hace que el código asincrónico sea más legible.
+
+async function manejarPromesas() {
+    try {
+        let resultado1 = await promesa1;
+        console.log(resultado1);
+
+        let resultado2 = await new Promise((resolve, reject) => {
+            setTimeout(() => resolve("Promesa 2 cumplida"), 1000);
+        });
+        console.log(resultado2);
+
+        let resultado3 = await new Promise((resolve, reject) => {
+            setTimeout(() => resolve("Promesa 3 cumplida"), 1000);
+        });
+        console.log(resultado3);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+manejarPromesas();
+Resumen
+Las promesas en JavaScript son una herramienta poderosa para manejar operaciones asincrónicas de manera más eficiente y legible. Permiten encadenar operaciones, manejar errores y trabajar con funciones asíncronas utilizando async y await.
+
+
+-->

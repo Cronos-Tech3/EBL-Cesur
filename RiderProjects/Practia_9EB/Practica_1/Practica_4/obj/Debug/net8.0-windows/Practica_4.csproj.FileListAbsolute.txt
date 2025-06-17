@@ -1,0 +1,46 @@
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Controls\ProductCard4.baml
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Controls\ProductCard4.g.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4_MarkupCompile.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4_MarkupCompile.lref
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.dll
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\refint\Practica_4.dll
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.pdb
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.exe
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.deps.json
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.runtimeconfig.json
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.dll
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.pdb
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.g.resources
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.AssemblyInfoInputs.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.AssemblyInfo.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.csproj.CoreCompileInputs.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.genruntimeconfig.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\Tema 9\Practica_1\Practica_4\obj\Debug\net8.0-windows\ref\Practica_4.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.exe
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.deps.json
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.runtimeconfig.json
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\bin\Debug\net8.0-windows\Practica_4.pdb
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Controls\ProductCard4.baml
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Controls\ProductCard4.g.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4_MarkupCompile.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4_MarkupCompile.lref
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.g.resources
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.AssemblyInfoInputs.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.AssemblyInfo.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.csproj.CoreCompileInputs.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\refint\Practica_4.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.pdb
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\Practica_4.genruntimeconfig.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practia_9EB\Practica_1\Practica_4\obj\Debug\net8.0-windows\ref\Practica_4.dll

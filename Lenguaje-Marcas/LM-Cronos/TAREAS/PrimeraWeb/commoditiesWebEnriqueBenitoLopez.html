@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--creamos el documento con <exclamacion--  -->
+<html lang="es">
+<!--cambiamos el lenguaje-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commoditie</title>
+
+    <!--Añadimos el estilo a nuestra pagina en head-->
+
+    <style>
+        body {
+            background-color: grey;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #contenedor {
+            /*#contenedor porque es un id, y le añadimos su css,
+             dentro de este id iran otros id, siendo este el principal */
+
+            background-color: aliceblue;
+            width: 75vw;
+            height: auto;
+            margin: auto;
+            padding: 25px;
+            margin-right: auto;
+            margin-bottom: 0%;
+        }
+
+        /* Le damos estilo al h1 */
+
+        h1 {
+            color: red;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        /* Le damos estilo al primer id del contenedor del parrafo 1 */
+
+        #ParrafoTitulo1 {
+            width: auto;
+            height: auto;
+            padding: 45px;
+            align-items: center;
+            text-align: justify;
+            text-indent: 60px;
+        }
+
+        /* segundo id   */
+
+        #ParrafoTitulo2 {
+            align-items: center;
+        }
+
+        /* Damos estilo al h4, que tenemos 2   */
+
+        h4 {
+            color: red;
+            font-size: 25px;
+            padding: 10px;
+            margin-bottom: 0%;
+        }
+
+        /* damos estilo al hr que es la linea roja horizontal   */
+
+        hr {
+
+            height: 3px;
+            width: auto;
+            background-color: red;
+            padding-top: 0%;
+            margin-top: 0%;
+        }
+
+        /* Estilo al tercer id que engloba parrafo3   */
+
+        #Parrafo3 {
+            width: auto;
+            height: auto;
+            align-items: center;
+        }
+
+        /* estilo al cuarto id, este estara separado en distintos id
+        para su colocacion como queremos   */    
+        #Parrafo4 {
+            width: auto;
+            height: auto;
+            align-items: center;
+        }
+
+        /* En estos textos de bloque llevaran una linea
+        roja vertical a su izquierda  */
+
+        #Textobloque1 {
+            border-left: 3px solid red;
+            height: 50px;
+            position: relative;
+            left: 15%;
+            text-align: justify;
+            width: 850px;        
+            padding: 0%;
+        }
+
+        #Textobloque2 {
+            border-left: 3px solid red;
+            height: 50px;
+            position: relative;
+            left: 15%;
+            text-align: justify;
+            width: 850px;
+        }
+
+        #Textobloque3 {
+            border-left: 3px solid red;
+            height: 50px;
+            position: relative;
+            left: 15%;
+            text-align: justify;
+            width: 850px;
+        }
+
+        #Parrafo5 {
+            width: auto;
+            height: auto;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+
+        <!--Añadimos un Div contenedor, donde dentro ira nuestro parrafo-->
+
+        <h1>Art Commodities: otro mercado del arte es posible.</h1>
+        <div id="ParrafoTitulo1">
+            <p1>
+                <span lang=it style="color: red;">Paolo Cirio</span> es un artista y hacker cuyo trabajo se ha centrado
+                en los
+                últimos años en el análisis y subversión de los sistemas que rigen nuestra
+                sociedad, ya sea el sistema económico, las grandes empresas que dominan
+                Internet, las redes sociales o los medios de comunicación. Su proyecto
+                <span lang="en" style="color:red">Loophole 4 All </span>(2013), premiado con el <span lang="en"
+                    style="color: red;">Golden Nica</span> en <em>Ars
+                    Electronica</em> este
+                año, proponía a cualquier usuario evadir impuestos falsificando la
+                identidad de una filial de una gran empresa en un paraíso fiscal. Cirio ha
+                centrado su atención en los últimos meses en el mercado del arte (otro
+                sistema marcado por grandes intereses económicos y una notoria opacidad),
+                dando lugar a un proyecto que ha lanzado hace unos días:
+                <span lang="en" style="color:red">Art Commodities</span> .
+        </div>
+
+
+        <div id="ParrafoTitulo2">
+            <p2>
+                Aún en fase beta, <span lang="en" style="color:red">Art Commodities</span> es de momento una propuesta
+                teórica que
+                el
+                artista promete desarrollar con
+                una plataforma de venta de obras de arte digital a finales de este año. El modelo que plantea Cirio se
+                basa
+                en la posibilidad de comprar obras de arte en formato de archivo digital, de tal manera que puedan ser
+                duplicadas sin limitación alguna, pero al mismo tiempo sólo puedan tener un único propietario.
+            </p2>
+        </div>
+
+        <h4>Objetos de arte inteligentes, contratos inteligentes</h4>
+        <hr>
+        <div id="Parrafo3">
+            <p3>
+                <span>Art Commodities</span> se basa en el concepto de <strong>Objeto de Arte Digital
+                    Inteligente</strong> <span lang="en" style="color: red;"> (Smart Digital Art Object)</span>,
+                creado por Cirio y basado en la idea de <strong>Contratos Inteligentes</strong> <span lang="em"
+                    style="color: red;">(Smart Contracts)</span> desarrollada por <span lang="en"
+                    style="color: red;">Nick
+                    Szabo</span>
+                entre 1994 y 1997. Se trata de <strong>&#171un protocolo de transacción computerizada que ejecuta los
+                    términos de un
+                    contrato&#187</strong>. Una aplicación de este tipo de contratos es insertarlos en objetos físicos
+                (bienes) que
+                puedan
+                verse afectados por el protocolo de tal manera que se convierten en<strong> &#171propiedad
+                    inteligente&#187 </strong> : un ejemplo
+                de
+                esto sería un coche equipado con un sistema que comprueba si se han pagado los plazos del préstamo al
+                banco
+                y no arranca si hay un impagado, o bien si se ha denunciado el robo del coche, o bien si tiene un modo
+                de
+                identificar al conductor como propietario del mismo.
+                <br>
+                <br>
+                Para asegurar el funcionamiento de estos <strong>&#171contratos inteligentes&#187</strong> y evitar el
+                fraude, se emplean
+                protocolos
+                de criptografía como <abbr title="Pretty Good Privacy">PGP</abbr>, basado en el uso de una clave privada
+                y una clave
+                pública.
+                La clave privada es mantenida en secreto por el usuario, mientras que la clave pública es accesible a
+                cualquier persona que desee codificar un mensaje para que sólo pueda sea leído por dicho usuario con su
+                clave privada. Si bien la clave pública y la privada están relacionadas, es imposible conseguir la
+                segunda a
+                partir de la primera.
+                <br>
+                <br>
+                De esta manera se puede elaborar también lo que se conoce como <strong>Propiedad Virtual
+                    Transferible</strong>. Un
+                problema
+                que encontramos con los productos que adquirimos en formato digital es que dependen de una autoridad
+                central: <span style="color: red;">ebooks</span>, revistas, videojuegos y objetos adquiridos en entornos
+                virtuales no pueden, en la
+                mayoría
+                de los casos, trasladarse a otro entorno o soporte, sino que dependen en todo momento de una conexión
+                con el
+                servidor de la empresa, que verifica la posesión del artículo en cuestión. Un sistema de codificación
+                inserto en el propio producto permitiría transferirlo a otra plataforma, puesto que siempre conservaría
+                la
+                información de su propietario/a y podría así ser conservado o incluso vendido a otra persona, de la
+                misma
+                manera en que esto es posible con un objeto físico.
+                <br>
+                <br>
+                Partiendo de estas ideas, <span lang="it" style="color: red;">Paolo Cirio</span> desarrolla el
+                <strong>Objeto de Arte Digital Inteligente</strong>, que define como
+                <strong>&#171una obra de arte digital en forma de archivo digital certificado por el
+                    artista&#187</strong>. La diferencia entre el
+                <strong>Objeto
+                    Inteligente</strong> y un archivo digital cualquiera es que permite <strong>&#171autentificar y
+                    certificar que se trata de un
+                    objeto digital único al adjuntarle firmas y contratos digitales por medio de algoritmos
+                    criptográficos.&#187</strong>
+            </p3>
+        </div>
+
+        <h4>Hacia la propiedad híbrida: otro mercado del arte es posible</h4>
+
+        <hr>
+        </hr>
+
+        <div id="Parrafo4">
+            <p4>
+                El sistema descrito no se diferencia, en principio, de la práctica habitual de certificar la
+                autenticidad de
+                una obra por medio de un documento firmado por el artista. Con todo, estos documentos tienen sus
+                limitaciones, según indica <span style="color: red;">Nick Szabo</span>, y se han empleado principalmente
+                en el intercambio de obras basadas
+                en objetos físicos, cuya posesión y distribución puede ser controlada. Los archivos digitales plantean
+                el
+                problema de su fácil duplicación y distribución, algo que empresas como <span lang="en">Sedition</span>
+                han procurado resolver por
+                medio de una plataforma controlada y la emisión de <strong>&#171certificados de autenticidad
+                    digitales&#187</strong>, que resultan
+                <abbr title="como he mostrado en este proyecto y he comentado en esta entrevista y esta otra
+            entrevista">totalmente inefectivos.</abbr>
+                <br>
+                <br>
+                Cirio integra este certificado de manera segura en el propio archivo, con lo cual podría resolver el
+                problema planteado por la necesidad de asegurar la propiedad de la obra pese a su reproductibilidad. Con
+                todo, su proyecto no se limita a este fin. Según afirma:
+            </p4>
+            <br>
+            <br>
+        </div>
+
+
+        <div id="Textobloque1">
+            <p5>
+                &nbsp;&nbsp;&nbsp;El potencial de la certificación criptográfica también permite que estos objetos de
+                arte digital se
+                intercambien como bienes (de la &nbsp;&nbsp;&nbsp;misma manera que cualquier otro objeto de arte) cuya
+                propiedad pueden
+                ser
+                demostrada por medio de la posesión de las claves &nbsp;&nbsp;&nbsp;criptográficas de dicho objeto.
+            </p5>
+        </div>
+        <br>
+        <div id="Textobloque2">
+            <p6>
+                &nbsp;&nbsp;&nbsp;Este tipo de propiedad es diferente de la que solemos conocer. El objeto puede aún
+                duplicarse
+                infinitamente,
+                es fácilmente &nbsp;&nbsp;&nbsp;transferible y puede ser usado por cualquiera, sin embargo tiene un
+                propietario definido.
+            </p6>
+        </div>
+        <br>
+
+
+        <div id="Textobloque3">
+            <p7>
+                &nbsp;&nbsp;&nbsp;Esta noción evolucionada e híbrida de propiedad privada libera el potencial para que
+                un bien sea
+                propiedad
+                de una persona y de &nbsp;&nbsp;&nbsp;todos a la vez…
+            </p7>
+        </div>
+        <br>
+        <div id="#Parrafo5">
+            <p8>
+                Dicho potencial conduce a <span lang="it" style="color: red;">Paolo Cirio</span> a proponer lo que
+                denomina un
+                <strong>Mercado del Arte Inteligente para el
+                    Arte Crítico</strong> (<span lang="en" Style="color: red;">Smart Art Market for Critical
+                    Art</span>). Este nuevo modelo
+                de mercado del arte no se basa en la
+                escasez, que determina el elitismo del arte contemporáneo y las elevadas sumas que se pagan por las
+                obras,
+                sino en la abundancia, que idealmente conduce a una mayor repercusión social de la obra, lo cual según
+                el
+                artista redunda en un mayor beneficio económico para el coleccionista (al ser la obra más conocida, esta
+                debería aumentar su valor).
+                <br>
+                <br>
+                Las tecnologías digitales han logrado democratizar muchos aspectos de nuestro acceso a la información,
+                la
+                capacidad de crear y publicar contenidos, comunicarnos y crear comunidades, comprar y vender bienes de
+                todo
+                tipo. El mercado del arte se ha mantenido notablemente ajeno a estas transformaciones, y es sólo en los
+                últimos años cuando se han multiplicado las plataformas de venta y difusión de arte, con algunos modelos
+                que
+                transforman la propia concepción de la obra y su posesión, pero siempre asentado en las mismas bases en
+                las
+                que se ha ido desarrollando durante más de un siglo. Si es posible otro mercado del arte, y si será un
+                nuevo
+                modelo de certificación de autenticidad el que lo transforme, sigue siendo un interrogante.
+            </p8>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombres =["PEDRO","ANA","LUIS","ANDREA","ANDRÉS","BORJA","FATIMA","CARLOS"];
+        /*
+        nombres.pop(); //saca el ultimo elemento del array. Este borra CARLOS
+        let elemento = nombres.pop(); //muestra el último elemento borrado. Este borra FATIMA y lo guarda
+        console.log(elemento);
+        console.log(nombres);
+        */
+
+        /*
+        let elemento = nombres.shift(); //elimina el primer elemento de un array y lo guarda
+        console.log(elemento);
+        console.log(nombres);
+        */
+        
+        /*
+        //let elemento = nombres.splice(2,2, "IVAN"); //desde la segunda posicion coge 2 (LUIS Y ANDREA) e inserta a IVAN en esa posicion
+        let elemento = nombres.splice(2,1); //quita solo luis
+        console.log(elemento);
+        console.log(nombres);
+        console.log(elemento[1]);//muestra el elemento del splice que esta en la posicion 1
+        */
+
+        /*
+        let elemento = nombres.filter(nombre => nombre!="ANA"); //filtra y saca a ANA del array. Si ponemos =="ANA", muestra solo a ANA
+        console.log(elemento);
+        console.log(nombres);
+        */
+
+        /*
+        let elemento = nombres.find(nombre => nombre=="ANA"); //Busca a ANA en el array y lo muestra fuera del array
+        console.log(elemento);
+        console.log(nombres);
+        */
+
+        let elemento = delete(nombres[2]); //borra la segunda posición y lo deja como empty
+        console.log(elemento);
+        console.log(nombres);
+
+    </script>
+</body>
+</html>
+<!--
+    MÉTODOS DE LOS ARRAYS
+    pop() - elimina último elemento del array
+    shift() - elimina primer elemento del array
+    splice() 
+    filter() - filtra elementos del array
+    find() - busca dentro del array
+    push() - añadir al final del array
+    delete() - borra una posición específica
+-->

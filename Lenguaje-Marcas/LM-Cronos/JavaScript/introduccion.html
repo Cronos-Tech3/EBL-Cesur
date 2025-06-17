@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion</title>
+
+
+</head>
+
+<body onload="alert('bienvenido')">
+    <!-- body onload cargara la alerta al iniciar la pagina y una vez aceptes muestra la pagina -->
+    <!-- innerHTML significa inyecta HTML inner sirve para inyectar estructuras  -->
+    <p onclick="this.innerHTML = 'HOLA'" onmouseover="this.innerHTML='HE PASADO'">PULSA</p>
+
+    <h1 id="salida"> </h1>
+
+    <!-- Vamos a crear un input y un label, es solo un cuadro, y no tiene etiqueta de cierre -->
+    <label>NOMBRE</label>
+    <input type="text" id="nombre">
+    <br>
+    <labeñ>CIUDAD</labe>
+    <input type="text" id="ciudad">
+    <br>
+    <label>TELÉFONO</label>
+    <input type="number" id="telefono">
+    <br>
+    <button onclick="mostrar()">Contacto</button>
+    <p id="contenido"></p>
+
+
+
+    <script>
+        // Javascript es un lenguaje interpretado
+        // Una forma de poner javascrip
+        // API es una fuente de datos externo que sirve para dar servicios, una libreria
+        // RSS fuente de sindicacion de noticias, fichero XML para enlazar a las RSS 
+
+        // alert('Eres el visitante 999.999');    //Esto crea una alerta cada vez que se carga la pagina
+
+        //DOM document objet Manage  Para seleccionar objetos del DOM
+        //Este script debe estar debajo del h1 porque si lo ponemos encima no existe el id salida porque lo estamos añadiendo en h1 y no estaria funcionando porque la ejecucion es lineal
+        document.getElementById('salida').innerHTML = "HOLA AMIGOS";
+
+        function mostrar(){
+           // console.log( document.getElementById('nombre').value);  Este codigo sirve para mostrarlo en la consola en la pagina web
+           document.getElementById('contenido').innerHTML = "Bienvenido señor del futuro " + "<strong>" + document.getElementById('nombre').value.toUpperCase() + "</strong>" + "<br>" + document.getElementById('ciudad').value.toUpperCase() + "<br>" + document.getElementById('telefono').value.toUpperCase();   //el valor del input ponlo en el parrafo cuando pulse el boton
+           
+           document.getElementById('contenido').style.color = "red"; 
+        };
+        
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

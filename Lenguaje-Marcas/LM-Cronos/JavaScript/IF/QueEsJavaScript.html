@@ -1,0 +1,71 @@
+<!--
+
+¿Qué es JavaScript?
+JavaScript es un lenguaje de programación interpretado, de alto nivel y dinámico. Se utiliza principalmente para crear contenido interactivo en las páginas web, como formularios, animaciones y otros elementos dinámicos.
+
+Historia
+JavaScript fue creado en 1995 por Brendan Eich mientras trabajaba en Netscape Communications. Originalmente se llamaba Mocha, luego LiveScript, y finalmente JavaScript. A pesar de su nombre, no está relacionado con Java.
+
+Características Principales
+Lenguaje Interpretado: No necesita ser compilado, el navegador web lo interpreta directamente.
+Dinámico: Permite cambiar el tipo de las variables en tiempo de ejecución.
+Orientado a Objetos: Aunque no es un lenguaje puramente orientado a objetos, soporta la programación orientada a objetos.
+Event-Driven: Responde a eventos como clics de ratón, movimientos del ratón, y entradas de teclado.
+Sintaxis Básica
+Variables: Se pueden declarar usando var, let, o const.
+
+let nombre = "Juan";
+const edad = 30;
+var ciudad = "Madrid";
+Funciones: Se definen usando la palabra clave function.
+
+function saludar() {
+  console.log("Hola, mundo!");
+}
+saludar();
+Condicionales: Se utilizan if, else if, y else.
+
+if (edad > 18) {
+  console.log("Eres mayor de edad.");
+} else {
+  console.log("Eres menor de edad.");
+}
+Bucles: Los más comunes son for, while, y do...while.
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+Uso en el Desarrollo Web
+JavaScript se utiliza junto con HTML y CSS para crear páginas web interactivas. HTML proporciona la estructura, CSS el estilo, y JavaScript la interactividad.
+
+Librerías y Frameworks
+Existen muchas librerías y frameworks que facilitan el desarrollo con JavaScript, como:
+
+jQuery: Simplifica la manipulación del DOM.
+React: Biblioteca para construir interfaces de usuario.
+Angular: Framework para aplicaciones web robustas.
+Vue.js: Framework progresivo para construir interfaces de usuario.
+Ejemplo Práctico
+Aquí tienes un ejemplo simple de cómo JavaScript puede cambiar el contenido de una página web:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+</head>
+<body>
+  <h1 id="titulo">Hola, mundo!</h1>
+  <button onclick="cambiarTexto()">Haz clic aquí</button>
+
+  <script>
+    function cambiarTexto() {
+      document.getElementById("titulo").innerText = "¡Has cambiado el texto!";
+    }
+  </script>
+</body>
+</html>
+Este ejemplo muestra cómo un botón puede cambiar el texto de un encabezado cuando se hace clic en él.
+
+
+
+-->

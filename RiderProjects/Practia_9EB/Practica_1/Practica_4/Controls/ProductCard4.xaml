@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Practica_4.Controls.ProductCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <!-- Imagen del producto con enlace a la propiedad ImagePath -->
+        <Image Source="{Binding ImagePath}" Width="100" Height="100"/>
+        <!-- Nombre del producto en negrita y tamaño de fuente 16 -->
+        <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"/>
+        <!-- Precio del producto en color verde y tamaño de fuente 14 -->
+        <TextBlock Text="{Binding Price}" FontSize="14" Foreground="Green"/>
+    </StackPanel>
+</UserControl>

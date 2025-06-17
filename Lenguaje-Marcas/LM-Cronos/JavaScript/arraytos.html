@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+</head>
+<body>
+    
+    <img onclick="cambioImagen()" id="imagen" src="https://www.muyinteresante.com/wp-content/uploads/sites/5/2023/10/04/651cffc2141bc.jpeg" style="width:400px;height: 300px;">
+    <br>
+    <input type="text" id="url">
+    <input type="button" value="cargar" onclick="insertarUrl()">
+    <script>
+
+        let animales = ["https://www.portalveterinaria.com/upload/20200204085416hedgehog-child-1759027_1920.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiT8XXmitwpb7dUo1lNHDpqB1z9jlbr-LatA&shttps://scout.es/wp-content/uploads/2018/06/2.jpg","https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/F76F/production/_101934336_hi001487062.jpg.webp"]
+
+        function cambioImagen(){        
+            document.getElementById("imagen").src = animales[Math.floor(Math.random()*animales.length)];
+            //console.log(Math.floor(Math.random()*3));
+        };
+
+        
+        function insertarUrl(){
+
+            animales.push(document.getElementById("url").value);
+            document.getElementById("url").value = "";
+            console.log(animales);
+
+        };
+
+        /*
+         Esto es del Carrito 
+
+        const productoInsertado = carrito.find (pro => pro.nombre===producto.nombre)
+        if (productoInsertado) {
+            productoInsertado.cantidad += cantidad;
+            document.getElementById('carro').innerHTML="";
+        } else {
+            carrito.push(producto);
+            document.getElementBy('carro').innerHTML="";
+        }; 
+        
+        mostrarCarrito();
+
+        function mostrarCarrito(){
+        carrito.forEach(prod => 
+        document.getElementById('carro').innerHTML += "<h4>" + prod.nombre + "-" prod.cantidad + "unidades" (prod.cantidad*prod.precio).toFixed(2)+"€" + " </h4>")
+        
+        });
+
+        function totalCarrito(){
+            sumatotal = 0;
+            cantidad = 0;
+            carrito.forEach(elementoCarro => {
+                symaTotal += (elementoCarro.cantidad*elementoCarro.precio)
+                cantidadPro += elementoCarro.cantidad;
+            });
+
+            document.getElementById('total').innerHTML= "TOTAL -" + sumaTotaltoFixed(2) + "€";
+        }
+
+        */
+
+        //cambioImagen();
+
+    </script>
+
+</body>
+</html>

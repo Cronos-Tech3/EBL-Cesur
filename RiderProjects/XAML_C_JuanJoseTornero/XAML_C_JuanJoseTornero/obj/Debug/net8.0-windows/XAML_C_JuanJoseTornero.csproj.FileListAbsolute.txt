@@ -1,0 +1,38 @@
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.exe
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.deps.json
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.runtimeconfig.json
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.dll
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.pdb
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero_MarkupCompile.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.g.resources
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.AssemblyInfoInputs.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.AssemblyInfo.cs
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.csproj.CoreCompileInputs.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.dll
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\refint\XAML_C_JuanJoseTornero.dll
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.pdb
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.genruntimeconfig.cache
+C:\Users\Nitropc\OneDrive - Cesur-GCoremsa\Asignaturas\DISEÑO DE INTERFACES\RIDER\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\ref\XAML_C_JuanJoseTornero.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.exe
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.deps.json
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.runtimeconfig.json
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\bin\Debug\net8.0-windows\XAML_C_JuanJoseTornero.pdb
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero_MarkupCompile.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.g.resources
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.AssemblyInfoInputs.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.AssemblyInfo.cs
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.csproj.CoreCompileInputs.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\refint\XAML_C_JuanJoseTornero.dll
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.pdb
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\XAML_C_JuanJoseTornero.genruntimeconfig.cache
+C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\XAML_C_JuanJoseTornero\XAML_C_JuanJoseTornero\obj\Debug\net8.0-windows\ref\XAML_C_JuanJoseTornero.dll

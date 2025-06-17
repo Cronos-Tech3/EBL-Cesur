@@ -1,0 +1,10 @@
+﻿<Window x:Class="Practica_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Practica_1"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <!-- Uso del UserControl ProductCard -->
+        <local:ProductCard ProductName="Peugeot 508" Price="25000" ImageSource="C:\Users\Kike\CRONOSH\Proyectos-Cron\RiderProjects\Practica_Tema9\TemaNueve\Ej1\images\peugeot-3008-hibrido.jpg" Description="El Peugeot 508 del 2017 es un elegante sedán de 4 puertas que combina estilo y rendimiento. Equipado con motores de gasolina y diésel, ofrece una conducción suave y eficiente. Destaca por su diseño sofisticado, interiores cómodos y tecnología avanzada, incluyendo un sistema de infoentretenimiento con pantalla táctil de 7 pulgadas y control de clima automático. Ideal para quienes buscan un vehículo con clase y funcionalidad."/>
+    </Grid>
+</Window>

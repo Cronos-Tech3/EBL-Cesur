@@ -1,0 +1,31 @@
+﻿<Window x:Class="Ej3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Ej3"
+        Title="Custom Button" Height="300" Width="400">
+    <Grid Background="Silver">
+        <Button Content="Click Me" Width="150" Height="50" Command="{Binding ButtonClickCommand}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border" Background="DarkSalmon" CornerRadius="13" Padding="7"
+                            BorderThickness="3" BorderBrush="DimGray">
+                        <TextBlock Text="{TemplateBinding Content}"
+                                   Foreground="Bisque"
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"></TextBlock>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="CadetBlue"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="Yellow"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

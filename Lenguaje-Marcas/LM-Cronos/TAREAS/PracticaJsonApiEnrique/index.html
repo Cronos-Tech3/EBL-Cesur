@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héroes y Villanos</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .row {
+            text-align: center;
+            align-content: center;
+            color: white;
+            font-size: 50px;
+            background-position: center;
+        }
+
+        hr {
+            height: 3px;
+            background-color: black;
+        }
+
+        h2 {
+            color: rgb(169, 167, 33);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="row" id="marvel"
+            style="height: 200px;  background-image: url(https://erikstore.com/blog/wp-content/uploads/2023/10/Villanos-mas-poderosos-marvel.webp);">
+            <div class="col alert alert-primary text-center fs-1">
+                MARVEL-DC
+            </div>
+        </div>
+        <br>
+        <a href="starwars.html" style="text-decoration: none;">
+            <div url="starwars.html" class="row" id="starwars"
+                style="height: 100px; background-image: url(https://lafrikileria.com/blog/wp-content/uploads/2023/05/palpatine-star-wars-1024x689.jpg);">
+                <div class="col alert alert-primary text-center fs-1">
+                    STARWARS
+                </div>
+            </div>
+        </a>
+        <br>
+        <h2>MARVEL</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div class="row " id="fotosMarvel"
+                    style="text-align:center; align-content:center; margin: auto; display:flex; justify-content: space-between; flex-wrap: wrap;">
+                    <!--PERSONAJES DE MARVEL-->
+                </div>
+            </div>
+        </div>
+        <br>
+        <h2>DC</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div class="row " id="fotosDC"
+                    style="text-align:center; align-content:center; margin: auto; display:flex; justify-content: space-between; flex-wrap: wrap;">
+                    <!--PERSONAJES DE DC-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        async function lecturaJSON() {
+            const respuesta = await fetch('super.json');
+            const datos = await respuesta.json();
+          
+
+            datos.forEach(dato => {
+                if (dato.grupo == 'marvel' && dato.id < 13) {
+
+                    document.getElementById("fotosMarvel").innerHTML +=
+                            `
+                        <div class="col" id="personajes"  >
+                            <img src="${dato.imagen1}" style="width:400px; height: 400px;">
+                            <h2 style="color: black; font-size:20px">${dato.nombre}</h2>
+                        </div>
+                    `;
+                }
+            });
+
+            datos.forEach(dato => {
+                if (dato.grupo == 'dc' && dato.id > 3 && dato.id < 10) {
+
+                    document.getElementById("fotosDC").innerHTML +=
+                            `
+                        <div class="col" id="personajes"  >
+                            <img src="${dato.imagen1}" style="width:400px; height: 400px;">
+                            <h2 style="color: black; font-size:20px">${dato.nombre}</h2>
+                        </div>
+                    `;
+                }
+            });
+
+        };
+        lecturaJSON();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!--
+
+Object.assign es una función en JavaScript que se utiliza para copiar los valores de todas las propiedades enumerables de uno o más objetos fuente a un objeto destino. Aquí tienes una explicación detallada de cómo se usa Object.assign para crear copias de objetos:
+
+Sintaxis Básica
+Object.assign(destino, ...fuentes);
+destino: El objeto al que se copiarán las propiedades.
+...fuentes: Uno o más objetos fuente cuyas propiedades se copiarán al objeto destino.
+Ejemplo Básico
+let objetoOriginal = { nombre: "Juan", edad: 30 };
+let copia = Object.assign({}, objetoOriginal);
+
+console.log(copia); // Salida: { nombre: "Juan", edad: 30 }
+console.log(copia === objetoOriginal); // Salida: false
+En este ejemplo, {} es el objeto destino vacío.
+objetoOriginal es el objeto fuente.
+copia es una nueva copia del objeto original.
+Copia Superficial
+Es importante notar que Object.assign realiza una copia superficial. Esto significa que si el objeto fuente contiene propiedades que son objetos o arrays, solo se copiarán las referencias a esos objetos o arrays, no sus valores.
+
+Ejemplo de Copia Superficial
+let objetoOriginal = { nombre: "Juan", direccion: { ciudad: "Madrid" } };
+let copia = Object.assign({}, objetoOriginal);
+
+copia.direccion.ciudad = "Barcelona";
+
+console.log(objetoOriginal.direccion.ciudad); // Salida: Barcelona
+console.log(copia.direccion.ciudad); // Salida: Barcelona
+Cambiar la propiedad ciudad en copia también afecta a objetoOriginal porque ambos objetos comparten la misma referencia a direccion.
+Combinación de Objetos
+Object.assign también se puede usar para combinar múltiples objetos en uno solo.
+
+let objeto1 = { a: 1, b: 2 };
+let objeto2 = { b: 3, c: 4 };
+let combinado = Object.assign({}, objeto1, objeto2);
+
+console.log(combinado); // Salida: { a: 1, b: 3, c: 4 }
+Las propiedades de objeto2 sobrescriben las propiedades de objeto1 si tienen el mismo nombre.
+Uso con Object.freeze
+Puedes usar Object.assign junto con Object.freeze para crear objetos inmutables.
+
+let objetoOriginal = { nombre: "Juan", edad: 30 };
+let copiaInmutable = Object.freeze(Object.assign({}, objetoOriginal));
+
+copiaInmutable.edad = 31; // No tiene efecto
+console.log(copiaInmutable.edad); // Salida: 30
+Resumen
+Object.assign es una herramienta poderosa para copiar y combinar objetos en JavaScript. Sin embargo, recuerda que realiza una copia superficial, por lo que si necesitas una copia profunda, deberás usar otras técnicas o librerías.
+-->

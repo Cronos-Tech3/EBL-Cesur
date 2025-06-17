@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visión</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div id="imagen">
+
+        </div>
+        <div id="texto">
+
+        </div>
+    </div>
+    <script>
+        async function lecturaJSON() {
+            const respuesta = await fetch('superhero.json');
+            const datos = await respuesta.json();
+
+            datos.forEach(dato => {
+
+                if (dato.grupo == 'marvel' && dato.id ==13) {
+
+                    document.getElementById("imagen").innerHTML +=
+                        `
+                            <div style="text-align:center; align-content:center;display:flex; flex-direction: column; align-items: center;"  id="contenedor">
+                                <div class="col" id="personajes"  >
+                                    <h2 style="color: black; font-size:40px">${dato.nombre}</h2>
+                                    <img src="${dato.imagen2}" style="width:600px; height: 600px;">
+                                </div>
+                                <div class="col" id="texto">
+                                    <p style="text-align:center; width:750px; justify-content:center; background-color:#FAF0E6; border-radius:5px;">${dato.resumen}</p>
+                                </div>
+                            </div>
+                        
+                    `;
+                }
+            });
+        };
+        lecturaJSON();
+    </script>
+</body>
+
+</html>

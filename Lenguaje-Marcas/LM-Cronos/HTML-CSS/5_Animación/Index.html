@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            background-image: url(Imagenes/background-7967705_1280.png);
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+        }
+
+        #Fantasma {
+            position: absolute;
+            left: -25%;
+            top: 60%;
+            -webkit-animation: movimiento 7s linear infinite;
+            -webkit-animation-delay: 1s;
+
+        }
+
+        #zombi {
+            position: absolute;
+            left: -25%;
+            top: 60%;
+            -webkit-animation: movimiento 7s linear infinite;
+                    
+        }
+        #rosquilla {
+            position:absolute;
+            width: 15%;
+            height: 15%;
+            left: -25%;
+            top: 30%;
+            -webkit-animation: movimiento 5s linear infinite, giroros 1s linear infinite ;
+        }
+
+        #homero {
+            position: absolute;
+            width: 10%;
+            height: 10%;
+            left: -25%;
+            top: 15%;
+            -webkit-animation: movimiento 7s linear infinite;
+        }
+
+        @-webkit-keyframes movimiento {
+            to {left: 110%;}
+        }
+
+        @-webkit-keyframes giroros {
+            to {-webkit-transform: rotate(360deg) ;}
+        }
+
+
+    </style>
+</head>
+<body>
+
+    
+    <img id="Fantasma" src="Imagenes/682182_5c28c.gif">
+
+    <img id="zombi" src="Imagenes/ec7ff2b422fef7ac7a68da009e30abd5_w200.gif">
+
+    <img id="rosquilla" src="Imagenes/0c7131ba96b9958673f598ba09aed2ee.png">
+
+    <img id="homero" src="Imagenes/HomeloChinoIdle.png">
+    
+</body>
+</html>

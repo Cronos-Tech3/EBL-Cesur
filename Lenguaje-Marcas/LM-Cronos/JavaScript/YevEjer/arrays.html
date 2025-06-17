@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <img onclick="cambiarImagen()" src="https://petalesespaña.org/wp-content/uploads/2017/08/El-apego-y-los-patos-1.jpg"
+        id="imagen" style="width: 450px; height: 450px;">
+        <br>
+        <input type="text" id="url">
+        <input type="button" onclick="insertarURL()" value="INSERTAR">
+    <script>
+        let imagenes = ['https://as01.epimg.net/epik/imagenes/2017/03/01/portada/1488364857_544034_1488365547_noticia_normal_recorte1.jpg', 'https://mivet.com/wp-content/uploads/fly-images/696/MI_PERRO_TAMBALEA_1-1760x992-c.jpg', 'https://cdn0.expertoanimal.com/es/posts/3/6/7/donde_viven_las_ardillas_25763_orig.jpg'];
+        
+        function cambiarImagen() {
+            document.getElementById("imagen").src = imagenes[Math.floor(Math.random() * imagenes.length)];
+            //console.log(Math.floor(Math.random()*3));
+        }
+        //cambiarImagen();
+        function insertarURL(){
+            imagenes.push(document.getElementById('url').value);
+            document.getElementById('url').value="";
+            //console.log(document.getElementById("url").value);
+        }
+    </script>
+</body>
+</html>
+
+<!--
+    let gente =[]; ARRAY VACIO SIN CONSTRUCTOR
+    let amigos = new Array();ARRAY VACIO CON CONSTRUCTOR
+    Math.floor => quita las partes decimales
+
+-->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let etiqueta</title>
+</head>
+
+<body onload="alert('Hola usuario')">
+    <p onmouseover="this.innerHTML = 'from the lost to the river'" onmouseout="this.innerHTML = 'DE PERDIDOS AL RIO'">DE
+        PERDIDOS AL RIO</p> <!--this se refiere a p e innerHTML es insertar la frase entre las comillas simples-->
+    <br>
+    <h1 id="salida"></h1>
+    <script>
+
+        //document.getElementById('salida').innerHTML="PACO ES EL PROFESOR";
+        document.getElementById('salida').style.color = "red";
+        //alert('Hola eres el visitante 1 millón');
+        console.log('Esto sale por consola');
+        let etiqueta = document.getElementById('salida'); //se crea un objeto llamado etiqueta para luego acceder más facil a él y poder crear varios más rápido
+        etiqueta.innerHTML = 'Contenido final';
+
+    </script>
+
+</body>
+
+</html>
+
+<!--
+    getElementById = COGER EL ELEMENTO QUE TENGA EL ID ('')
+    alert = para generar ventanas de alerta
+    F12 en la página web para abrir la consola
+    variables explícitas 
+-->

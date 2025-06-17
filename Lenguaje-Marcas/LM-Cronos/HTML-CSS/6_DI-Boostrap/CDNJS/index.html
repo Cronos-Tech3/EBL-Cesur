@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aframe</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script> <!--Estamos cogiendo aframe página CDNJS-->
+</head>
+
+<body>
+    <a-scene> <!-- Lenguaje de marcas de un framework  la escena puede contener diferentes elementos -->
+
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="5" height="5" color="red"
+            text="value: HOLAQUEASE;color:green;align:center;width:15px;">
+            <a-image src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.warpforge40k.com%2F&psig=AOvVaw3OrifBUjTAF4nP7K9GE-7R&ust=1731662339046000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiOnYa_24kDFQAAAAAdAAAAABAE width: 20px"></a-image>
+
+        </a-plane> <!--representamos un plano en el espacio-->
+
+        <a-plane position="-2 2 -4" rotation="0 45 0" width="4" height="3" color="green"
+            text="value: LENGUAO;color:yellow;align:center;width:20px;">
+            <a-image
+                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.laputasuegra.com%2Fqraccess&psig=AOvVaw0b5KUALndFuOLUmvBg6ndL&ust=1731661863886000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJjyuaO924kDFQAAAAAdAAAAABBh width: 20px;"
+                ></a-image>
+        </a-plane>
+
+        <a-plane position="2 2 -4" rotation="0 -45 0" width="4" height="3" color="yellow"
+            text="value: SOYTUPADRE;color:red;align:center;width:10px;">
+
+
+        </a-plane>
+
+
+
+
+
+
+
+
+
+        <a-sky color="skyblue"> <!--El color del fondo de la camara-->
+
+
+        </a-sky>
+
+
+
+        <a-camera> <!--Insertamos una camara en la parte de abajo de la escena-->
+
+
+            <a-cursor color="blue"> <!--El cursor donde enfocara nuestra camara-->
+
+
+            </a-cursor>
+
+
+        </a-camera>
+    </a-scene>
+
+
+
+</body>
+
+</html>

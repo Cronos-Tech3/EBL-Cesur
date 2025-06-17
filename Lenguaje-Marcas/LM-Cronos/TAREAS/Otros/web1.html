@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu {
+        width: 97%;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        flex-direction: row;
+        gap: 10px;
+        cursor: pointer;
+
+
+
+        .inicio,
+        .contenido,
+        .contacto {
+
+            border: 2px solid black;
+            font-size: 20px;
+            padding: 5px 35px;
+            border-radius: 15px;
+            margin-top: 7px;
+
+        }
+    }
+
+    .box1 {
+        background-image: url(asiaInfinita.webp);
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box2 {
+        background-image: url(imagenes/best-travel-desktop-8imayiwrluek2ad0.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .parte2,
+    .parte3,
+    .box1__container .box2__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .box1__texto,
+    .box2__texto {
+        display: flex;
+        border: 3px solid black;
+        padding: 0.8rem;
+        margin-top: -0.10rem;
+    }
+
+    hr {
+        border: none;
+        /* Elimina el estilo predeterminado del navegador */
+        height: 1px;
+        /* Grosor de la línea */
+        background-color: black;
+        /* Color de la línea */
+        margin: 10px 0;
+    }
+
+    .parte4 {
+        margin-top: auto;
+        /* Empuja esta sección hacia la parte baja */
+        text-align: center;
+        /* Centra el texto horizontalmente */
+
+        padding: 10px 0;
+        /* Espaciado vertical */
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <hr>
+    <nav class="menu">
+        <a href="" class="inicio">Inicio</a>
+        <a href="" class="contenido">Contenido</a>
+        <a href="" class="contacto">Contacto</a>
+    </nav>
+
+    <hr>
+    <div class="parte2">
+        <div class="box1__container">
+            <div class="box1">
+                <h2>ASIA INFINITA</h2>
+            </div>
+            <p class="box1__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti, in voluptas
+                facere, animi magnam commodi id tempore at fuga laboriosam rerum asperiores doloribus nostrum porro
+                labore
+                quidem, voluptatum odit.
+                Beatae accusantium dolore rerum necessitatibus vel ea, laborum ipsum accusamus hic, ullam facere?
+                Quibusdam
+                nobis libero repudiandae quo. Eum, adipisci. Rem ipsam temporibus rerum dolore! Temporibus magni fugiat
+                at
+                animi.
+                Incidunt, quis? Voluptates natus inventore et tempora dolore voluptatibus hic rem commodi odit nam
+                aspernatur totam quae dolorem sit tenetur aliquid cumque excepturi nemo corrupti dicta, ea harum soluta
+                blanditiis.</p>
+
+        </div>
+
+    </div>
+    <div class="parte3">
+        <div class="box2__container">
+            <div class="box2">
+                <h2>ASIA INFINITA</h2>
+            </div>
+            <p class="box2__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti, in voluptas
+                facere, animi magnam commodi id tempore at fuga laboriosam rerum asperiores doloribus nostrum porro
+                labore quidem, voluptatum odit.
+                Beatae accusantium dolore rerum necessitatibus vel ea, laborum ipsum accusamus hic, ullam facere?
+                Quibusdam nobis libero repudiandae quo. Eum, adipisci. Rem ipsam temporibus rerum dolore! Temporibus
+                magni fugiat at animi.
+                Incidunt, quis? Voluptates natus inventore et tempora dolore voluptatibus hic rem commodi odit nam
+                aspernatur totam quae dolorem sit tenetur aliquid cumque excepturi nemo corrupti dicta, ea harum soluta
+                blanditiis.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <p class="parte4" style="align-content: center;">&copy; COPYRIGHT 2022</p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!--
+
+ El DOM (Document Object Model) es una interfaz de programación que permite a los desarrolladores interactuar con y manipular documentos HTML y XML. Aquí tienes una explicación detallada:
+
+¿Qué es el DOM?
+El DOM es una representación estructurada del documento que se carga en el navegador. Proporciona una forma de acceder y modificar el contenido, la estructura y el estilo de los documentos. En esencia, convierte el documento en un árbol de nodos, donde cada nodo representa una parte del documento (como un elemento, un atributo o un texto).
+
+Estructura del DOM
+El DOM organiza el documento en una estructura jerárquica de nodos. Los tipos de nodos más comunes son:
+
+Elementos: Representan las etiquetas HTML (por ejemplo, <div>, <p>, <a>).
+Atributos: Representan los atributos de los elementos (por ejemplo, class, id).
+Texto: Representa el contenido textual dentro de los elementos.
+Comentarios: Representan los comentarios en el código HTML.
+Ejemplo de Estructura del DOM
+Considera el siguiente HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <p>Este es un párrafo.</p>
+</body>
+</html>
+La estructura del DOM para este documento sería algo así:
+
+- Document
+  - html
+    - head
+      - title
+        - "Mi Página"
+    - body
+      - h1
+        - "Bienvenido"
+      - p
+        - "Este es un párrafo."
+Acceso y Manipulación del DOM
+JavaScript proporciona varias formas de acceder y manipular el DOM. Aquí tienes algunas de las más comunes:
+
+Acceso a Elementos
+getElementById: Selecciona un elemento por su id.
+
+let encabezado = document.getElementById("miEncabezado");
+getElementsByClassName: Selecciona todos los elementos con una clase específica.
+
+let elementos = document.getElementsByClassName("miClase");
+getElementsByTagName: Selecciona todos los elementos con una etiqueta específica.
+
+let parrafos = document.getElementsByTagName("p");
+querySelector: Selecciona el primer elemento que coincide con un selector CSS.
+
+let primerParrafo = document.querySelector("p");
+querySelectorAll: Selecciona todos los elementos que coinciden con un selector CSS.
+
+let todosLosParrafos = document.querySelectorAll("p");
+Manipulación de Elementos
+Cambiar el contenido de texto:
+
+let encabezado = document.getElementById("miEncabezado");
+encabezado.textContent = "Nuevo Título";
+Cambiar el contenido HTML:
+
+let parrafo = document.querySelector("p");
+parrafo.innerHTML = "Nuevo <strong>contenido</strong> del párrafo.";
+Cambiar atributos:
+
+let enlace = document.querySelector("a");
+enlace.setAttribute("href", "https://www.example.com");
+Añadir y eliminar clases:
+
+let elemento = document.querySelector(".miClase");
+elemento.classList.add("nuevaClase");
+elemento.classList.remove("miClase");
+Crear y añadir nuevos elementos:
+
+let nuevoParrafo = document.createElement("p");
+nuevoParrafo.textContent = "Este es un nuevo párrafo.";
+document.body.appendChild(nuevoParrafo);
+Eventos del DOM
+El DOM también permite manejar eventos, como clics, movimientos del ratón, y entradas de teclado. Puedes añadir manejadores de eventos a los elementos del DOM para responder a las interacciones del usuario.
+
+Ejemplo de Manejador de Eventos
+let boton = document.querySelector("button");
+boton.addEventListener("click", function() {
+    alert("¡Botón clicado!");
+});
+Resumen
+El DOM es una interfaz crucial para interactuar con documentos HTML y XML en el navegador. Permite acceder y manipular la estructura del documento, cambiar el contenido y los estilos, y manejar eventos. Con el DOM, puedes crear experiencias de usuario dinámicas e interactivas en tus páginas web.
+
+-->

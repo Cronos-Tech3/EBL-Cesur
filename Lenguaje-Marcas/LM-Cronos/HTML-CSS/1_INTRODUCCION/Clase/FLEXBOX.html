@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #superior {
+            display: flex; /* Activa Flexbox */
+            flex-direction: row; /* Alinea elementos en fila (horizontal) */
+            justify-content: space-around; /* Distribuye espacio alrededor de los elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+
+        #superior article {
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            text-align: center;
+            align-content: center; /* Centra el texto verticalmente */
+        }
+
+        #inferior {
+            display: flex; /* Activa Flexbox */
+            flex-direction: row;  /* Alinea elementos en fila (horizontal) */
+            justify-content: space-around; /* Distribuye espacio alrededor de los elementos */
+            border: 1px solid #ccc;
+            flex-wrap: wrap;
+        }
+
+        #inferior article {
+            width: 400px;
+            height: 100px;
+            margin: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            text-align: center;
+            align-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>MANEJANDO FLEXBOX</h1>
+
+    <section id="superior">
+        <article>elemento 1</article>
+        <article>elemento 2</article>
+        <article>elemento 3</article>
+        <article>elemento 4</article>
+    </section>
+    
+    <section id="inferior">
+        <article>elemento 1</article>
+        <article>elemento 2</article>
+        <article>elemento 3</article>
+        <article>elemento 4</article>
+        <article>elemento 5</article>
+        <article>elemento 6</article>
+        <article>elemento 7</article>
+        <article>elemento 8</article>
+        <article>elemento 9</article>
+        <article>elemento 10</article>
+        <article>elemento 11</article>
+        <article>elemento 12</article>
+        <article>elemento 13</article>
+        <article>elemento 14</article>
+    </section>
+
+</body>
+
+</html>

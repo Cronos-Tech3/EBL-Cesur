@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SELECCIONES</title>
+    </head>
+ 
+    <body>
+        <p id="salida"></p>
+        <div id="salida2"></div>
+ 
+ 
+ 
+        <script>
+            //el método de seleción más rápido es getElementById
+            let parrafo = document.getElementById("salida") //se pone let y no var porque es más seguro, con var pueden inyectarme variables desde fuera en el navegador, y cons (completar)
+           
+            parrafo.innerHTML="<h1>Aquí estamos</h1>"
+ 
+            //parrafo.innerText="<h1>Seguimos</h1>"   //la diferencia entre html y text es conceptual, con html es indicar que inyectas etiquetas html (y las reconoce y aplica) y texto; text inyecta contenido (que si hay etiquetas las inyecta literalmente como texto)
+ 
+ 
+        </script>
+    </body>
+</html>

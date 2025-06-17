@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTENIDO</title>
+    <style>
+        #contenedor {
+            /*Damos formato al id contenedor, el cual ira incluido todo nuestro contenido*/
+            display: flex;
+            /*display flex para que el contenido crezca y decrezca en su contenedor */
+            flex-direction: row;
+            /*la dirección del flex en fila*/
+            flex-wrap: wrap;
+            /*especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas*/
+            /*wrap permite la dirección a que cambien uno encima de otro*/
+            justify-content: space-around;
+            /*contenido ajustado que se reparte alrededor del espacio*/
+            width: 100%;
+            /*ancho visual*/
+            height: 100%;
+            /*alto visual*/
+            align-content: center;
+            /*contenido alineado al centro*/
+            align-items: center;
+            /*items alineados al centro*/
+            margin: auto;
+            /*margenes automaticos dentro del contenedor*/
+        }
+
+        header {
+            /*hedaer hacemos referencia al header, la parte de arriba del body*/
+            border-bottom: 2px solid black;
+            /*borde de la parte inferior del header*/
+            border-top: 2px solid black;
+            /*borde de la parte superior del header*/
+            width: 100%;
+            /*ancho visual del header*/
+            margin: auto;
+            /*margen auto para que este centrado*/
+            margin-top: 2%;
+            /*separacion del margen de arriba*/
+            background-color: aqua;
+            /*color del fondo del header*/
+            padding: 10px;
+            /*margen interior, de dentro del contenido hacia fuera*/
+        }
+
+        #menu>a {
+            /*menu>a hacemos referencia a la etiqueta a (enlace)*/
+            margin: 10px;
+            /*le damos su margen para centrarlo en su interio*/
+            color: rgb(203, 212, 22);
+            /*color de la letra*/
+            font-size: 30px;
+            /*tamaño de la letra*/
+            border-radius: 10%;
+            /*le damos curvatura al borde*/
+            border: 1px solid black;
+            /*le damos un borde solido con color negro y tamaño 1px*/
+            text-align: center;
+            /*texto alianeado al centro*/
+            text-decoration: none;
+            /*text-decoration none nos quita el subratado del enlace */
+            background-color: rgb(34, 164, 164);
+            /*color del fondo del enlace*/
+            padding: 10px;
+            /*margen interior del enlace a*/
+        }
+
+        #menu>a:hover {
+            /*hover para el enlace a, al pasar el raton es cuando se activa*/
+            transition: 1s;
+            /*tiempo de activación*/
+            background-color: darkorange;
+            /*color del fondo una vez activo*/
+        }
+
+        #superior,
+        #inferior {
+            /*formato para el id superior e inferior*/
+            display: flex;
+            /*display flex, ver como crece o decrece dentro del contenedor, en relación a los demás*/
+            flex-direction: column;
+            /*dirección del flex en columnas, una debajo de otra*/
+            align-items: center;
+            /*alineación de los items al centro del contenedor*/
+            justify-content: center;
+            /*se utiliza para alinear y distribuir los elementos flexibles (o el contenido) a lo largo del eje principal de un contenedor flexible*/
+            width: 100%;
+            /*ancho visual de la sección*/
+            height: 500px;
+            /*alto visual de la sección*/
+            margin: auto;
+            /*margen auto para centrarlo en la página*/
+            padding: 10px;
+            /*margen interno*/
+            align-content: center;
+            /*alineación del contenido centrado*/
+        }
+
+        #superior>#box1 {
+            /*hacemos referencia a la id box1 dentro de id superior, en este caso al texto que incluye un h2*/
+            background-image: url(imagenes/best-travel-desktop-8imayiwrluek2ad0.jpg);
+            /*imagen dentro del box1*/
+            background-repeat: no-repeat;
+            /*que no se repìta la imagen*/
+            background-size: 1000px;
+            /*tamaño de la imagen*/
+            background-position: 50% 40%;
+            /*posición de la imagen*/
+            width: 80%;
+            /*ancho visual del box1*/
+            height: 500px;
+            /*alto visual del box1*/
+            display: flex;
+            /*display-flex contenido responsive*/
+            align-items: center;
+            /*alineación de los items centrada*/
+            justify-content: center;
+            /*alineación justificada, igual de margenes para ambis lados*/
+        }
+
+        #inferior>#box2 {
+            /*hacemos referencia a la id box2 dentro de id inferior, en este caso al texto que incluye un h2*/
+            background-image: url(imagenes/best-travel-desktop-8imayiwrluek2ad0.jpg);
+            /*imagen dentro del box2*/
+            background-repeat: no-repeat;
+            /*que no se repìta la imagen*/
+            background-size: 1000px;
+            /*tamaño de la imagen*/
+            background-position: 50% 40%;
+            /*posición de la imagen*/
+            width: 80%;
+            /*ancho visual del box2*/
+            height: 500px;
+            /*alto visual del box2*/
+            display: flex;
+            /*display-flex contenido responsive*/
+            align-items: center;
+            /*alineación de los items centrada*/
+            justify-content: center;
+            /*alineación justificada, igual de margenes para ambis lados*/
+        }
+
+        h2 {
+            /*hace referencia a la etiqueta h2*/
+            font-family: Arial, Helvetica, sans-serif;
+            /*tipo de letra*/
+            font-weight: bold;
+            /*letra en negrita*/
+            text-align: center;
+            /*texto alineado center*/
+            align-items: center;
+            /*alineación de los items centrada*/
+            display: flex;
+            /*contenido responsive*/
+            font-size: large;
+            /*tamaño de letra*/
+        }
+
+        p {
+            /*hace referencia al parrafo que esta dentro de aritcle debajo de box1 y box2*/
+            border: 1px solid black;
+            /*borde para el parrafo*/
+            width: 66%;
+            /*ancho visual para su contenedor*/
+            margin: auto;
+            /*margenes automaticos para que este centrado en su contenedor*/
+            padding: 10px;
+            /*margen interno*/
+        }
+
+        .copyright {
+            /*hace referencia a la clase del ultimo parrafo abajo del todo*/
+            margin-top: auto;
+            /* Empuja esta sección hacia la parte baja */
+            text-align: center;
+            /* Centra el texto horizontalmente */
+            color: rgb(5, 3, 3);
+            /*color de la letra*/
+            padding: 10px 0;
+            /* Espaciado vertical */
+            font-family: Arial, sans-serif;
+            /*tipo de letra*/
+            font-size: 14px;
+            /*tamño de letra*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <!-- div id contenedor donde entrará todo el body en responsive -->
+
+        <header>
+            <!-- la parte de arriba del body -->
+            <div id="menu">
+                <!-- el menu/nav  -->
+                <!-- a*3  poner un enlace, la etiqueta es "a"-->
+                <!-- target="_black" para que al pinchar nos abra una nueva pestaña -->
+                <a href="index.html" target="_blank">INICIO</a>
+                <a href="contenido.html" target="_blank">CONTENIDO</a>
+                <a href="contacto.html" target="_blank">CONTACTO</a>
+            </div>
+        </header>
+        <br>
+        <!-- br salto de linea -->
+
+        <section id="superior">
+            <!-- primera sección con id superior, haciendo referencia a la parte de arriba despues de header -->
+
+            <div id="box1">
+                <!--div id box1 que contiene el h2 -->
+                <h2>ASIA INFINITA </h2>
+            </div>
+            <article class="box1_texto">
+                <!-- article id box1_texto -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit dui. Maecenas commodo
+                    ornare
+                    lectus, sed
+                    mollis justo venenatis vel. Nam at varius purus. Phasellus id nibh vitae ligula aliquam iaculis
+                    in
+                    sed
+                    ligula. Curabitur
+                    posuere vehicula lacus id elementum. Maecenas non erat sed neque dapibus lacinia. Duis dapibus
+                    rhoncus.
+                </p>
+            </article>
+
+        </section>
+        <br>
+        <section id="inferior">
+            <div id="box2">
+                <h2>ASIA INFINITA </h2>
+            </div>
+            <article class="box2_texto">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit dui. Maecenas commodo ornare
+                    lectus, sed
+                    mollis justo venenatis vel. Nam at varius purus. Phasellus id nibh vitae ligula aliquam iaculis in
+                    sed
+                    ligula. Curabitur
+                    posuere vehicula lacus id elementum. Maecenas non erat sed neque dapibus lacinia. Duis dapibus
+                    rhoncus.
+                </p>
+            </article>
+        </section>
+
+        <p class="copyright" style="align-content: center;">&copy; COPYRIGHT 2022</p>
+        <!-- parte final del body -->
+    </div>
+    <!-- se cierra contenedor -->
+</body>
+
+</html>

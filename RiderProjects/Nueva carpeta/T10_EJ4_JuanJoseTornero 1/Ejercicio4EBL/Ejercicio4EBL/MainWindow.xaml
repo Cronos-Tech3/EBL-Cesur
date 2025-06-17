@@ -1,0 +1,19 @@
+﻿<Window x:Class="Ejercicio4Persistencia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio4Persistencia" 
+        mc:Ignorable="d"
+        Title="Ejercicio 4 - Persistencia MySQL por Usuario"
+        Height="450" Width="800"
+        Loaded="Window_Loaded"  
+        Closing="Window_Closing"> 
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Ingresa tu nombre de usuario:" Margin="5"/>
+            <TextBox x:Name="txtUsuario" Width="200" Margin="5"/>
+            <TextBlock Text="Ajusta la ventana y ciérrala. Al abrir de nuevo con el mismo usuario, se restaurará." TextAlignment="Center" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

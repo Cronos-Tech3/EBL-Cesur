@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        #contenedor {
+            width: 80%;
+            margin: auto;
+
+        }
+        
+        table {
+            width: 100%;
+            font-family: Arial;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        td {
+            text-align: right;
+        }
+
+        .grey {
+            background-color: grey;
+        }
+
+        th {
+            color: blue;
+        }
+
+        tr {
+            height: 15%;
+        }
+
+        .izquierda {
+            text-align: left;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+
+        <table>
+            <tr>
+                <th >Departamentos</th>
+                <th >Beneficios</th>
+                <th >Costes</th>
+                <th >Personal</th>
+                
+            </tr>
+
+            <tr class="grey">
+                <td class="izquierda">Informática</td>
+                <td >1000</td>
+                <td >8000</td>
+                <td >15000</td>
+            </tr>
+
+            <tr>
+                <td class="izquierda">Operaciones</td>
+                <td >2000</td>
+                <td >10000</td>
+                <td >22000</td>
+            </tr>
+
+            <tr >
+                <td class="izquierda">Marketing</td>
+                <td class="grey">1500</td>
+                <td class="grey">20000</td>
+                <td class="grey">43000</td>
+            </tr>
+
+            
+
+
+
+
+        </table>
+
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!--
+
+¿Qué es la Asincronía?
+La asincronía permite que ciertas operaciones se realicen en segundo plano, sin bloquear la ejecución del resto del código. Esto es especialmente útil para tareas que pueden tardar en completarse, como solicitudes a servidores, operaciones de lectura/escritura de archivos, o temporizadores.
+
+Callbacks
+Un callback es una función que se pasa como argumento a otra función y se ejecuta después de que la operación asincrónica haya terminado.
+
+function hacerAlgo(callback) {
+  setTimeout(() => {
+    console.log("Tarea completada");
+    callback();
+  }, 1000);
+}
+
+function despuesDeHacerAlgo() {
+  console.log("Esto se ejecuta después de la tarea");
+}
+
+hacerAlgo(despuesDeHacerAlgo);
+Promesas
+Las promesas son una forma más moderna y manejable de trabajar con operaciones asincrónicas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
+
+let promesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Tarea completada");
+  }, 1000);
+});
+
+promesa.then((mensaje) => {
+  console.log(mensaje);
+}).catch((error) => {
+  console.error(error);
+});
+Async/Await
+async y await son palabras clave que simplifican el uso de promesas, haciendo que el código asincrónico se vea y se comporte de manera más sincrónica.
+
+async function hacerAlgo() {
+  try {
+    let mensaje = await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("Tarea completada");
+      }, 1000);
+    });
+    console.log(mensaje);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+hacerAlgo();
+Ejemplo Práctico
+Imagina que quieres obtener datos de una API y luego procesarlos. Aquí tienes un ejemplo usando fetch con async/await:
+
+async function obtenerDatos() {
+  try {
+    let respuesta = await fetch('https://api.example.com/datos');
+    let datos = await respuesta.json();
+    console.log(datos);
+  } catch (error) {
+    console.error("Error al obtener los datos:", error);
+  }
+}
+
+obtenerDatos();
+En este ejemplo, fetch realiza una solicitud HTTP y devuelve una promesa. Usamos await para esperar a que la promesa se resuelva y obtener la respuesta.
+
+Ventajas de la Asincronía
+Mejora la Experiencia del Usuario: Las aplicaciones no se bloquean mientras esperan que se completen las operaciones largas.
+Eficiencia: Permite que el navegador realice otras tareas mientras espera que se completen las operaciones asincrónicas.
+
+
+
+-->

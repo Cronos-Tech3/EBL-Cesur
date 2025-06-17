@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <style>
+        /* Estilos generales para el cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Estilos para el contenido principal */
+        main {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+
+        /* Estilos para la sección de productos */
+        #products {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Estilos para la sección del carrito */
+        #cart {
+            width: 25%;
+        }
+
+        /* Estilos para los productos y el carrito */
+        .product, #cart {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para las imágenes de los productos */
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para la disposición de los productos */
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilos para los títulos de los productos */
+        .product h2 {
+            margin: 0.5rem 0;
+        }
+
+        /* Estilos para las descripciones de los productos */
+        .product p {
+            margin: 0.5rem 0;
+        }
+
+        /* Estilos para los botones */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        /* Estilos para los botones al pasar el ratón */
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para el texto del carrito */
+        #cart p {
+            font-weight: bold;
+        }
+
+        /* Estilos para los elementos del carrito */
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Estilos para los botones dentro del carrito */
+        .cart-item button {
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda en Línea</h1>
+    </header>
+    <main>
+        <section id="products">
+            <!-- Producto: Smartphone -->
+            <div class="product">
+                <h2>Smartphone</h2>
+                <img src="C:\Users\Kike\CRONOSH\Proyectos-Cron\VisualStudioCodeProjects\LM-Cronos\JavaScript\Proyectos\CarritoTienda\imagenes\oneplus-11.png" alt="Smartphone">
+                <p>Último modelo de smartphone con características avanzadas.</p>
+                <p>Precio: €699</p>
+                <button onclick="addToCart('Smartphone', 699)">Añadir al carrito</button>
+            </div>
+            <!-- Producto: Auriculares -->
+            <div class="product">
+                <h2>Auriculares</h2>
+                <img src="C:\Users\Kike\CRONOSH\Proyectos-Cron\VisualStudioCodeProjects\LM-Cronos\JavaScript\Proyectos\CarritoTienda\imagenes\Auriculares.jpg" alt="Auriculares">
+                <p>Auriculares inalámbricos con cancelación de ruido.</p>
+                <p>Precio: €199</p>
+                <button onclick="addToCart('Auriculares', 199)">Añadir al carrito</button>
+            </div>
+            <!-- Producto: Reloj Inteligente -->
+            <div class="product">
+                <h2>Reloj Inteligente</h2>
+                <img src="https://via.placeholder.com/150" alt="Reloj Inteligente">
+                <p>Reloj inteligente con monitoreo de salud y fitness.</p>
+                <p>Precio: €299</p>
+                <button onclick="addToCart('Reloj Inteligente', 299)">Añadir al carrito</button>
+            </div>
+            <!-- Producto: Tablet -->
+            <div class="product">
+                <h2>Tablet</h2>
+                <img src="https://via.placeholder.com/150" alt="Tablet">
+                <p>Tablet con pantalla de alta resolución y gran capacidad.</p>
+                <p>Precio: €499</p>
+                <button onclick="addToCart('Tablet', 499)">Añadir al carrito</button>
+            </div>
+            <!-- Producto: Portátil -->
+            <div class="product">
+                <h2>Portátil</h2>
+                <img src="https://via.placeholder.com/150" alt="Portátil">
+                <p>Portátil ligero y potente para todas tus necesidades.</p>
+                <p>Precio: €999</p>
+                <button onclick="addToCart('Portátil', 999)">Añadir al carrito</button>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: €<span id="total-price">0</span></p>
+            <button onclick="emptyCart()">Vaciar Carrito</button>
+            <button onclick="purchase()">Comprar</button>
+        </section>
+    </main>
+    <script>
+        let cart = [];
+
+        /**
+         * Añade un producto al carrito.
+         * @param {string} product - Nombre del producto.
+         * @param {number} price - Precio del producto.
+         */
+        function addToCart(product, price) {
+            const existingProduct = cart.find(item => item.name === product);
+            if (existingProduct) {
+                existingProduct.quantity++;
+                existingProduct.totalPrice += price;
+            } else {
+                cart.push({ name: product, price: price, quantity: 1, totalPrice: price });
+            }
+            updateCart();
+        }
+
+        /**
+         * Elimina una unidad de un producto del carrito.
+         * @param {string} product - Nombre del producto.
+         */
+        function removeFromCart(product) {
+            const productIndex = cart.findIndex(item => item.name === product);
+            if (productIndex > -1) {
+                cart[productIndex].quantity--;
+                cart[productIndex].totalPrice -= cart[productIndex].price;
+                if (cart[productIndex].quantity === 0) {
+                    cart.splice(productIndex, 1);
+                }
+            }
+            updateCart();
+        }
+
+        /**
+         * Elimina completamente un producto del carrito.
+         * @param {string} product - Nombre del producto.
+         */
+        function removeProduct(product) {
+            cart = cart.filter(item => item.name !== product);
+            updateCart();
+        }
+
+        /**
+         * Vacía el carrito.
+         */
+        function emptyCart() {
+            cart = [];
+            updateCart();
+        }
+
+        /**
+         * Actualiza la visualización del carrito.
+         */
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.className = 'cart-item';
+                listItem.innerHTML = `
+                    ${item.name} - €${item.price} x ${item.quantity} = €${item.totalPrice}
+                    <button onclick="removeFromCart('${item.name}')">-</button>
+                    <button onclick="addToCart('${item.name}', ${item.price})">+</button>
+                    <button onclick="removeProduct('${item.name}')">Eliminar</button>
+                `;
+                cartItems.appendChild(listItem);
+                totalPrice += item.totalPrice;
+            });
+
+            document.getElementById('total-price').textContent = totalPrice;
+        }
+
+        /**
+         * Realiza la compra de los productos en el carrito.
+         */
+        function purchase() {
+            if (cart.length === 0) {
+                alert('El carrito está vacío.');
+                return;
+            }
+
+            alert('Compra realizada con éxito. ¡Gracias por su compra!');
+            emptyCart();
+        }
+    </script>
+</body>
+</html>

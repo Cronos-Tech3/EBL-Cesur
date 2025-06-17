@@ -1,0 +1,107 @@
+<!--
+
+JavaScript tiene muchas funciones importantes que son fundamentales para el desarrollo web y la programación en general. Aquí te presento algunas de las más importantes y comúnmente utilizadas:
+
+Funciones de Manipulación de Arrays
+forEach: Ejecuta una función para cada elemento del array.
+
+let numeros = [1, 2, 3, 4, 5];
+numeros.forEach(function(numero) {
+    console.log(numero);
+});
+map: Crea un nuevo array con los resultados de aplicar una función a cada elemento del array original.
+
+let numeros = [1, 2, 3, 4, 5];
+let dobles = numeros.map(function(numero) {
+    return numero * 2;
+});
+console.log(dobles); // Salida: [2, 4, 6, 8, 10]
+filter: Crea un nuevo array con todos los elementos que pasen una prueba (función).
+
+let numeros = [1, 2, 3, 4, 5];
+let pares = numeros.filter(function(numero) {
+    return numero % 2 === 0;
+});
+console.log(pares); // Salida: [2, 4]
+reduce: Aplica una función a un acumulador y a cada elemento del array (de izquierda a derecha) para reducirlo a un solo valor.
+
+let numeros = [1, 2, 3, 4, 5];
+let suma = numeros.reduce(function(acumulador, numero) {
+    return acumulador + numero;
+}, 0);
+console.log(suma); // Salida: 15
+find: Devuelve el primer elemento del array que cumpla con una condición.
+
+let numeros = [1, 2, 3, 4, 5];
+let encontrado = numeros.find(function(numero) {
+    return numero > 3;
+});
+console.log(encontrado); // Salida: 4
+Funciones de Manipulación de Cadenas
+charAt: Devuelve el carácter en una posición específica.
+
+let texto = "Hola, mundo!";
+console.log(texto.charAt(0)); // Salida: H
+concat: Combina dos o más cadenas.
+
+let saludo = "Hola";
+let mundo = "mundo";
+let frase = saludo.concat(", ", mundo, "!");
+console.log(frase); // Salida: Hola, mundo!
+includes: Determina si una cadena contiene otra cadena.
+
+let texto = "Hola, mundo!";
+console.log(texto.includes("mundo")); // Salida: true
+split: Divide una cadena en un array de subcadenas.
+
+let texto = "Hola, mundo!";
+let palabras = texto.split(" ");
+console.log(palabras); // Salida: ["Hola,", "mundo!"]
+toUpperCase y toLowerCase: Convierte una cadena a mayúsculas o minúsculas.
+
+let texto = "Hola, mundo!";
+console.log(texto.toUpperCase()); // Salida: HOLA, MUNDO!
+console.log(texto.toLowerCase()); // Salida: hola, mundo!
+Funciones de Manipulación de Objetos
+Object.keys: Devuelve un array con las claves de un objeto.
+
+let persona = { nombre: "Juan", edad: 30 };
+console.log(Object.keys(persona)); // Salida: ["nombre", "edad"]
+Object.values: Devuelve un array con los valores de un objeto.
+
+let persona = { nombre: "Juan", edad: 30 };
+console.log(Object.values(persona)); // Salida: ["Juan", 30]
+Object.entries: Devuelve un array de pares clave-valor de un objeto.
+
+let persona = { nombre: "Juan", edad: 30 };
+console.log(Object.entries(persona)); // Salida: [["nombre", "Juan"], ["edad", 30]]
+Object.assign: Copia las propiedades de uno o más objetos a un objeto destino.
+
+let objeto1 = { a: 1 };
+let objeto2 = { b: 2 };
+let combinado = Object.assign({}, objeto1, objeto2);
+console.log(combinado); // Salida: { a: 1, b: 2 }
+Object.freeze: Congela un objeto, impidiendo que se le añadan, eliminen o modifiquen propiedades.
+
+let persona = { nombre: "Juan", edad: 30 };
+Object.freeze(persona);
+persona.edad = 31; // No tiene efecto
+console.log(persona.edad); // Salida: 30
+Funciones de Temporización
+setTimeout: Ejecuta una función después de un retraso especificado.
+
+setTimeout(function() {
+    console.log("Hola después de 2 segundos");
+}, 2000);
+setInterval: Ejecuta una función repetidamente con un retraso fijo entre cada llamada.
+
+let contador = 0;
+let intervalo = setInterval(function() {
+    contador++;
+    console.log("Contador: " + contador);
+    if (contador === 5) {
+        clearInterval(intervalo);
+    }
+}, 1000);
+Estas son algunas de las funciones más importantes y útiles en JavaScript. Cada una de ellas tiene su propio propósito y puede ser extremadamente poderosa cuando se usa correctamente.
+-->

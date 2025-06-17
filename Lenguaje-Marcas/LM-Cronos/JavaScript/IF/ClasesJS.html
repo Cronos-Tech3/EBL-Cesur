@@ -1,0 +1,69 @@
+<!--
+
+Las clases en JavaScript son una forma de crear objetos y manejar la herencia de una manera más clara y estructurada. Aquí tienes una introducción básica:
+
+Definición de una Clase
+Puedes definir una clase usando la palabra clave class. Aquí tienes un ejemplo simple:
+
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`);
+  }
+}
+
+const persona1 = new Persona('Juan', 30);
+persona1.saludar(); // Hola, mi nombre es Juan y tengo 30 años.
+Herencia
+Las clases también pueden heredar de otras clases usando la palabra clave extends. Aquí tienes un ejemplo:
+
+class Estudiante extends Persona {
+  constructor(nombre, edad, grado) {
+    super(nombre, edad);
+    this.grado = grado;
+  }
+
+  estudiar() {
+    console.log(`${this.nombre} está estudiando en el grado ${this.grado}.`);
+  }
+}
+
+const estudiante1 = new Estudiante('Ana', 22, 'Ingeniería');
+estudiante1.saludar(); // Hola, mi nombre es Ana y tengo 22 años.
+estudiante1.estudiar(); // Ana está estudiando en el grado Ingeniería.
+Métodos Estáticos
+Los métodos estáticos son aquellos que se pueden llamar en la clase sin necesidad de crear una instancia de la misma. Se definen usando la palabra clave static:
+
+class Calculadora {
+  static sumar(a, b) {
+    return a + b;
+  }
+}
+
+console.log(Calculadora.sumar(5, 3)); // 8
+Propiedades y Métodos Privados
+A partir de ECMAScript 2022, puedes definir propiedades y métodos privados usando el prefijo #:
+
+class Banco {
+  #saldo = 0;
+
+  depositar(cantidad) {
+    this.#saldo += cantidad;
+  }
+
+  obtenerSaldo() {
+    return this.#saldo;
+  }
+}
+
+const cuenta = new Banco();
+cuenta.depositar(100);
+console.log(cuenta.obtenerSaldo()); // 100
+console.log(cuenta.#saldo); // Error: propiedad privada
+
+
+-->

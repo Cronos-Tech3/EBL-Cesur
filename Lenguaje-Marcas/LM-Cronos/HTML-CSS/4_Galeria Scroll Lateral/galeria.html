@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+
+    <style>
+        #menu {
+            background-color: aqua;
+            width: 100%;
+            top: 50;
+            position: fixed;
+
+
+
+
+        }
+
+        #menu>a {
+            display: block;
+            float: left;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+
+        }
+
+        #menu>a:hover {
+            transition: 1s;
+            background-color: brown;
+
+        }
+
+        img {
+            width: 700px;
+            height: 500px;
+            padding: 5px;
+        }
+
+        #galeria {
+            overflow: auto;
+            white-space: nowrap;
+            padding: 5px;
+            scrollbar-color: transparent transparent;
+
+        }
+        article {
+            width: 700px;
+            height: 650px;
+            background-color: brown;
+            top: 50;
+            font-size: 15px;
+            float: right;
+            position:relative;
+            border: 2px solid;
+
+        }
+
+        article>img {
+            width: 600px;
+            height: 600px;
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <!-- a*3  poner un enlace, la etiqueta es "a"-->
+        <a href="#">INICIO</a>
+        <a href="#">RUTAS</a>
+        <a href="#">VIAJES</a>
+
+
+    </div>
+
+
+    <div id="contenido">
+        <div id="galeria">
+            <img src="Imagenes/Business-OpenAI-Dall-E-3-heart.png">
+            <img src="Imagenes/images.png">
+            <img src="Imagenes/kiwi.png">
+            <img src="Imagenes/retrato-abstracto-ojo-elegancia-mujeres-jovenes-generado-ai_188544-9712.png">
+
+        </div>
+        <article>
+            <img src="Imagenes/DALL·E-2023-10-16-10.41.49-Illustration-depicting-a-humanoid-robot-with-half-of-its-face-transparent-revealing-intricate-circuits-and-gears-inside.-The-robot-is-holding-a-light.png" alt="">
+            Esto es un Articulo Xpecial con X
+
+        </article>
+        <div id="galeria">
+            <img src="Imagenes/Business-OpenAI-Dall-E-3-heart.png">
+            <img src="Imagenes/images.png">
+            <img src="Imagenes/kiwi.png">
+            <img src="Imagenes/retrato-abstracto-ojo-elegancia-mujeres-jovenes-generado-ai_188544-9712.png">
+
+        </div>
+
+        <div id="galeria">
+            <img src="Imagenes/Business-OpenAI-Dall-E-3-heart.png">
+            <img src="Imagenes/images.png">
+            <img src="Imagenes/kiwi.png">
+            <img src="Imagenes/retrato-abstracto-ojo-elegancia-mujeres-jovenes-generado-ai_188544-9712.png">
+
+        </div>
+
+        
+
+
+    </div>
+
+    
+
+
+
+
+</body>
+
+</html>

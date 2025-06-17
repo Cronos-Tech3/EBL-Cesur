@@ -1,0 +1,79 @@
+<!--
+
+Manejar errores en JavaScript es crucial para crear aplicaciones robustas y evitar que fallos inesperados interrumpan la ejecución del código. Aquí tienes una explicación detallada de cómo se manejan los errores en JavaScript:
+
+Tipos de Errores
+Errores de Sintaxis: Ocurren cuando hay un error en la estructura del código, como un paréntesis faltante o una palabra clave mal escrita.
+
+console.log("Hola, mundo!); // Error de sintaxis: falta una comilla
+Errores en Tiempo de Ejecución: Ocurren cuando el código se ejecuta, como intentar acceder a una propiedad de undefined.
+
+let obj;
+console.log(obj.propiedad); // Error en tiempo de ejecución: obj es undefined
+Errores Lógicos: Ocurren cuando el código no produce el resultado esperado debido a un error en la lógica del programa.
+
+let resultado = 2 + 2; // Error lógico si esperabas que el resultado fuera 5
+Manejo de Errores con try...catch
+El bloque try...catch es la forma más común de manejar errores en JavaScript. Permite capturar y manejar excepciones sin detener la ejecución del programa.
+
+Sintaxis Básica
+try {
+    // Código que puede lanzar una excepción
+} catch (error) {
+    // Código para manejar la excepción
+}
+Ejemplo
+try {
+    let resultado = 2 + 2;
+    console.log("El resultado es: " + resultado);
+    // Simula un error
+    throw new Error("Algo salió mal");
+} catch (error) {
+    console.error("Se ha producido un error:", error.message);
+}
+throw new Error("Algo salió mal"): Lanza una excepción con un mensaje de error.
+catch (error): Captura la excepción y permite manejarla.
+Bloque finally
+El bloque finally se ejecuta siempre, independientemente de si se lanzó una excepción o no. Es útil para realizar tareas de limpieza.
+
+Ejemplo con finally
+try {
+    let resultado = 2 + 2;
+    console.log("El resultado es: " + resultado);
+    throw new Error("Algo salió mal");
+} catch (error) {
+    console.error("Se ha producido un error:", error.message);
+} finally {
+    console.log("Este bloque se ejecuta siempre");
+}
+Manejo de Errores en Funciones Asíncronas
+Para manejar errores en funciones asíncronas, puedes usar try...catch junto con async y await.
+
+Ejemplo Asíncrono
+async function obtenerDatos() {
+    try {
+        let respuesta = await fetch('https://api.example.com/datos');
+        if (!respuesta.ok) {
+            throw new Error('Error en la solicitud');
+        }
+        let datos = await respuesta.json();
+        console.log(datos);
+    } catch (error) {
+        console.error("Error al obtener los datos:", error);
+    }
+}
+
+obtenerDatos();
+Manejo de Errores Globales
+Puedes manejar errores globales utilizando window.onerror para capturar errores no manejados en el navegador.
+
+Ejemplo de Manejo Global
+window.onerror = function(mensaje, fuente, linea, columna, error) {
+    console.error("Error global:", mensaje, "en", fuente, "línea", linea, "columna", columna);
+    return true; // Previene que el error se propague
+};
+Resumen
+Manejar errores en JavaScript es esencial para crear aplicaciones robustas y evitar interrupciones inesperadas. Utilizando try...catch, finally, y técnicas de manejo de errores globales, puedes capturar y manejar excepciones de manera efectiva, asegurando que tu código sea más seguro y confiable.
+
+
+-->

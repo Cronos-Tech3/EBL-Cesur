@@ -1,0 +1,82 @@
+Las cabeceras HTTP son una parte fundamental del protocolo HTTP (Hypertext Transfer Protocol) y se utilizan para transmitir información adicional entre el cliente (como un navegador web) y el servidor. Las cabeceras HTTP permiten a los clientes y servidores intercambiar metadatos sobre la solicitud o la respuesta. Aquí tienes una explicación detallada:
+
+Tipos de Cabeceras HTTP
+Las cabeceras HTTP se dividen en varias categorías según su propósito:
+
+Cabeceras Generales: Se aplican tanto a las solicitudes como a las respuestas, pero no están relacionadas con los datos del cuerpo del mensaje.
+Cabeceras de Solicitud: Proporcionan información adicional sobre la solicitud enviada por el cliente.
+Cabeceras de Respuesta: Proporcionan información adicional sobre la respuesta enviada por el servidor.
+Cabeceras de Entidad: Proporcionan información sobre el cuerpo del mensaje, como el tipo de contenido y la longitud.
+Cabeceras Generales
+Cache-Control: Especifica directivas para el almacenamiento en caché.
+
+Cache-Control: no-cache
+Connection: Controla las opciones de la conexión.
+
+Connection: keep-alive
+Date: Indica la fecha y hora en que se originó el mensaje.
+
+Date: Wed, 21 Oct 2020 07:28:00 GMT
+Cabeceras de Solicitud
+Accept: Indica los tipos de medios que el cliente puede procesar.
+
+Accept: text/html, application/json
+Accept-Encoding: Indica los tipos de codificación que el cliente puede procesar.
+
+Accept-Encoding: gzip, deflate
+Authorization: Contiene credenciales para autenticar al cliente con el servidor.
+
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+User-Agent: Contiene información sobre el agente de usuario que realiza la solicitud.
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3
+Cabeceras de Respuesta
+Access-Control-Allow-Origin: Especifica qué orígenes tienen permiso para acceder al recurso.
+
+Access-Control-Allow-Origin: *
+Content-Type: Indica el tipo de medio del cuerpo de la respuesta.
+
+Content-Type: application/json
+Set-Cookie: Envía cookies desde el servidor al cliente.
+
+Set-Cookie: sessionId=abc123; Path=/; HttpOnly
+WWW-Authenticate: Define el método de autenticación que debe usar el cliente para acceder a un recurso.
+
+WWW-Authenticate: Basic realm="Access to the staging site"
+Cabeceras de Entidad
+Content-Length: Indica la longitud del cuerpo del mensaje en bytes.
+
+Content-Length: 348
+Content-Encoding: Indica la codificación utilizada en el cuerpo del mensaje.
+
+Content-Encoding: gzip
+Content-Language: Indica el idioma del cuerpo del mensaje.
+
+Content-Language: en
+Last-Modified: Indica la fecha y hora en que el recurso fue modificado por última vez.
+
+Last-Modified: Tue, 15 Nov 1994 12:45:26 GMT
+Ejemplo de Solicitud y Respuesta HTTP
+Solicitud HTTP
+GET /index.html HTTP/1.1
+Host: www.example.com
+Accept: text/html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3
+Respuesta HTTP
+HTTP/1.1 200 OK
+Date: Wed, 21 Oct 2020 07:28:00 GMT
+Content-Type: text/html
+Content-Length: 138
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo</title>
+</head>
+<body>
+    <h1>Hola, mundo!</h1>
+</body>
+</html>
+Resumen
+Las cabeceras HTTP son esenciales para la comunicación entre clientes y servidores en la web. Proporcionan metadatos importantes sobre las solicitudes y respuestas, permitiendo una interacción más rica y controlada. Entender y utilizar correctamente las cabeceras HTTP es crucial para el desarrollo web y la creación de aplicaciones seguras y eficientes.

@@ -1,0 +1,26 @@
+﻿<Window x:Class="Practica_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Practica_4.Controls"
+        Title="Mini Aplicación" Height="350" Width="525">
+    <Grid>
+        <!-- Definición de las columnas del Grid -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- ListView para mostrar la lista de productos -->
+        <ListView ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Plantilla para mostrar el nombre de cada producto -->
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!-- Control personalizado para mostrar los detalles del producto seleccionado -->
+        <controls:ProductCard Grid.Column="1" DataContext="{Binding SelectedProduct}"/>
+    </Grid>
+</Window>

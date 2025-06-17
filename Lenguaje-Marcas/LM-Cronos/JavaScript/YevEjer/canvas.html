@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS</title>
+</head>
+
+<body>
+    <canvas id="dibujo" width="600" height="400" style="border: 1px solid black;"></canvas>
+
+    <script>
+        const canvas = document.getElementById('dibujo'); //guarda el objeto de canvas
+        let ctx = canvas.getContext('2d')//gemnera conexto en 2d(donde yo voy a dibujar)
+        let x = 50; //posicion en el eje x
+        let y = 50; //posicion en el eje y
+        let velx = 5; //suma 5 pixeles cada vez que se mueva en el eje x
+        let vely = 5; //suma 5 pixeles cada vez que se mueva en el eje y
+
+        function dibujarMovimiento() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); //borra todo el canvas. si no se borra, dibuja el recorrido 
+            ctx.beginPath(); //comienza el dibujo
+            ctx.arc(x, y, 25, 0, 2 * Math.PI); //comienza el arco (x,y, radio,0, longitud(2*pi*r))
+            ctx.fillStyle = "Orange";
+            ctx.fill();
+            //movimiento en los ejes
+            x+=velx;
+            y+=vely;
+            //colisiones con los laterales
+            if(x+25>canvas.width||x-25<0){ //se suma y resta el radio de la esfera para que no se meta para dentro de las paredes
+                velx=-velx;//cambia de dirección
+            }
+            if(y+25>canvas.height||y-25<0){
+                vely=-vely;
+            }
+            requestAnimationFrame(dibujarMovimiento); //recursividad, hace que todo se repita en bucle
+        };
+
+        /*
+        ctx.fillStyle="Red"; //para cambiar el color de los rectángulos
+        ctx.fillRect(50,50,80,10); //dibujar un rectángulo (x,y,ancho,alto)
+        ctx.fillStyle="Blue";
+        ctx.fillRect(140,50,150,200);
+        ctx.fillStyle="Orange";
+        ctx.fillRect(300,80,100,150);
+        */
+        dibujarMovimiento();
+    </script>
+</body>
+
+</html>
+
+<!--
+    canvas = para generar lienzos de dibujo donde generar movimiento 
+        --punto 0 esta en la esquiza superior izquierda
+        EJES
+        Y
+          |
+          | 
+          ----- X                                                     
+        --el tamaño siempre se pone en pixeles
+    Construct 3
+    Phases
+-->

@@ -1,0 +1,70 @@
+<!--
+
+Vamos a crear un ejercicio detallado sobre herencia en JavaScript. En este ejercicio, vamos a modelar un sistema de vehículos con clases y herencia.
+
+Paso 1: Definir la Superclase
+Primero, definimos una superclase Vehiculo que tendrá propiedades y métodos comunes a todos los vehículos.
+
+class Vehiculo {
+  constructor(marca, modelo, año) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.año = año;
+  }
+
+  mostrarDetalles() {
+    console.log(`Marca: ${this.marca}, Modelo: ${this.modelo}, Año: ${this.año}`);
+  }
+}
+Paso 2: Crear Subclases
+Ahora, creamos subclases que hereden de Vehiculo. Vamos a crear dos subclases: Coche y Motocicleta.
+
+class Coche extends Vehiculo {
+  constructor(marca, modelo, año, puertas) {
+    super(marca, modelo, año); // Llama al constructor de la superclase
+    this.puertas = puertas;
+  }
+
+  mostrarDetalles() {
+    super.mostrarDetalles(); // Llama al método de la superclase
+    console.log(`Puertas: ${this.puertas}`);
+  }
+}
+
+class Motocicleta extends Vehiculo {
+  constructor(marca, modelo, año, tipo) {
+    super(marca, modelo, año);
+    this.tipo = tipo;
+  }
+
+  mostrarDetalles() {
+    super.mostrarDetalles();
+    console.log(`Tipo: ${this.tipo}`);
+  }
+}
+Paso 3: Crear Instancias y Probar
+Finalmente, creamos instancias de Coche y Motocicleta y llamamos a sus métodos para ver cómo funciona la herencia.
+
+const miCoche = new Coche('Toyota', 'Corolla', 2020, 4);
+miCoche.mostrarDetalles();
+// Salida:
+// Marca: Toyota, Modelo: Corolla, Año: 2020
+// Puertas: 4
+
+const miMoto = new Motocicleta('Yamaha', 'MT-07', 2021, 'Deportiva');
+miMoto.mostrarDetalles();
+// Salida:
+// Marca: Yamaha, Modelo: MT-07, Año: 2021
+// Tipo: Deportiva
+Explicación Detallada
+Superclase Vehiculo: Esta clase tiene un constructor que inicializa las propiedades marca, modelo y año. También tiene un método mostrarDetalles que imprime estos detalles.
+
+Subclase Coche: Hereda de Vehiculo y añade una propiedad adicional puertas. Sobrescribe el método mostrarDetalles para incluir la información de las puertas, pero también llama al método mostrarDetalles de la superclase usando super.mostrarDetalles().
+
+Subclase Motocicleta: Similar a Coche, hereda de Vehiculo y añade una propiedad tipo. También sobrescribe el método mostrarDetalles para incluir el tipo de motocicleta.
+
+Instancias: Creamos instancias de Coche y Motocicleta y llamamos a sus métodos mostrarDetalles para ver la salida completa.
+
+Este ejercicio muestra cómo usar la herencia para crear una jerarquía de clases en JavaScript, permitiendo la reutilización de código y la extensión de funcionalidades de manera estructurada.
+
+-->

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superheroes</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+
+        }
+
+        .row {
+            text-align: center;
+            align-content: center;
+            color: white;
+            font-size: 50px;
+            background-position: center;
+        }
+
+        hr {
+            height: 3px;
+            background-color: black;
+        }
+
+        #imagenes {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: 0.6s;
+        }
+
+        #delante,
+        #detras {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        #delante {
+            transform: rotateY(0deg);
+        }
+
+        #detras {
+            transform: rotateY(180deg);
+        }
+
+        #contenedor-imagenes:hover #imagenes {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoplay >
+        <source src="marvel.mp3" type="audio/mpeg">
+    </audio>
+    <div class="contenedor">
+        <div class="row" id="marvel"
+            style="height: 200px; background-image: url(https://7185630.fs1.hubspotusercontent-na1.net/hubfs/7185630/dc%20vs%20marvel%20quien%20fue%20primero.png);">
+            <div class="col alert alert-primary text-center fs-1">
+                MARVEL-DC
+            </div>
+        </div>
+        <br>
+        <a href="starwars.html" style="text-decoration: none;">
+            <div url="starwars.html" class="row" id="starwars"
+                style="height: 100px; background-image: url(https://wallpapers.com/images/featured/star-wars-plzcoaffexgf4h81.jpg);">
+                <div class="col alert alert-primary text-center fs-1">
+                    STARWARS
+                </div>
+            </div>
+        </a>
+        <br>
+        <h2>MARVEL</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div class="row " id="fotosMarvel"
+                    style=" align-content:center;gap: 20px; display:flex; justify-content: center; flex-wrap: wrap;">
+                    <!--PERSONAJES DE MARVEL-->
+                </div>
+            </div>
+        </div>
+        <br>
+        <h2>DC</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div class="row " id="fotosDC"
+                    style=" align-content:center; gap: 30px; display:flex; justify-content: center; flex-wrap: wrap;">
+                    <!--PERSONAJES DE DC-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function cambiarPagina(id) {
+            if (id == 1) {
+                window.location.href = "ironman.html";
+            } else if (id == 2) {
+                window.location.href = "thor.html";
+            }else if(id==3){
+                window.location.href = "cyborg.html";
+            }else if(id==4){
+                window.location.href = "hulk.html";
+            }else if(id==5){
+                window.location.href = "superman.html";
+            }else if(id==6){
+                window.location.href = "wonderwoman.html";
+            }else if(id==7){
+                window.location.href = "capitanamerica.html";
+            }else if(id==8){
+                window.location.href = "ojodehalcon.html";
+            }else if(id==9){
+                window.location.href = "flask.html";
+            }else if(id==10){
+                window.location.href = "batman.html";
+            }else if(id==11){
+                window.location.href = "aquaman.html";
+            }else if(id==12){
+                window.location.href = "capitanamarvel.html";
+            }else if(id==13){
+                window.location.href = "vision.html";
+            }else if(id==14){
+                window.location.href = "linternaverde.html";
+            }else if(id==15){
+                window.location.href = "brujaescarlata.html";
+            }
+        }
+
+        async function lecturaJSON() {
+            const respuesta = await fetch('superhero.json');
+            const datos = await respuesta.json();
+
+            datos.forEach(dato => {
+                if (dato.grupo == 'marvel') {
+
+                    document.getElementById("fotosMarvel").innerHTML +=
+                        `
+                        <div class="col" id="contenedor-imagenes" style=" width: 450px;  height: 500px; perspective: 1000px; ">
+                            <h2 style="color: black; font-size:20px">${dato.nombre}</h2>
+                            <div class="col" id="imagenes">
+                                <div class="col" id="delante"  style=" height: 400px;"">
+                                    <img src="${dato.imagen1}" style="width:400px; height: 400px; " >
+                                </div>
+                                
+                                <div class="col" id="detras" style="height: 400px; background-color:#00008B; text-align:center; align-content:center; display:flex; flex-direction: column; align-items: center; justify-content: center;" >
+                                    <p style="font-size:12px; color:white; text-align:center; align-content:center; width:400px;">${dato.resumen}</p>
+                                    <button onclick="cambiarPagina(${dato.id})">MAS INFORMACIÓN</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            datos.forEach(dato => {
+                if (dato.grupo == 'dc') {
+
+                    document.getElementById("fotosDC").innerHTML +=
+                        `
+                        <div class="col" id="contenedor-imagenes" style=" width: 450px;  height: 500px; perspective: 1000px; ">
+                            <h2 style="color: black; font-size:20px">${dato.nombre}</h2>
+                            <h3 style="color: black; font-size:20px">${dato.precio}</h3>
+                            <div class="col" id="imagenes">
+                                <div class="col" id="delante"  style=" height: 400px;"">
+                                    <img src="${dato.imagen1}" style="width:400px; height: 400px; " >
+                                </div>
+                                
+                                <div class="col" id="detras" style="height: 400px; background-color:#00008B; text-align:center; align-content:center; display:flex; flex-direction: column; align-items: center; justify-content: center;" >
+                                    <p style="font-size:12px; color:white; text-align:center; align-content:center; width:400px;">${dato.resumen}</p>
+                                    <button onclick="cambiarPagina(${dato.id})">MAS INFORMACIÓN</button>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    `;
+                }
+            });
+
+        };
+        lecturaJSON();
+    </script>
+</body>
+
+</html>
+
+<!--
+-->

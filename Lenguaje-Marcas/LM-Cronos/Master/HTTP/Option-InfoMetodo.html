@@ -1,0 +1,54 @@
+<!--
+
+El método HTTP OPTIONS es una herramienta poderosa que permite a los clientes descubrir las opciones de comunicación permitidas para un recurso específico en un servidor12. Aquí tienes una explicación detallada:
+
+¿Qué es el Método OPTIONS?
+El método OPTIONS solicita las opciones de comunicación permitidas para un recurso específico en un servidor. Esto puede ser útil para:
+
+Verificar qué métodos HTTP (como GET, POST, PUT, DELETE, etc.) están permitidos por el servidor antes de realizar una solicitud.
+Determinar si una solicitud sería exitosa cuando se realiza una solicitud preflight en CORS (Cross-Origin Resource Sharing).
+Características del Método OPTIONS
+Seguro: No modifica el estado del servidor.
+Idempotente: Múltiples solicitudes OPTIONS tienen el mismo efecto que una sola solicitud.
+No Cacheable: Las respuestas a las solicitudes OPTIONS no deben ser almacenadas en caché.
+No Permitido en Formularios HTML: No se puede usar en formularios HTML.
+Sintaxis
+La sintaxis para realizar una solicitud OPTIONS es simple y directa. Puedes especificar una URL o usar un asterisco (*) para referirte a todo el servidor.
+
+OPTIONS /recurso HTTP/1.1
+Host: www.example.com
+O para todo el servidor:
+
+OPTIONS * HTTP/1.1
+Host: www.example.com
+Ejemplo de Uso
+Identificando Métodos Permitidos
+Para saber qué métodos soporta un servidor, puedes usar la herramienta de línea de comandos curl:
+
+curl -X OPTIONS https://example.org -i
+La respuesta contendrá una cabecera Allow que incluye los métodos permitidos:
+
+HTTP/1.1 204 No Content
+Allow: OPTIONS, GET, HEAD, POST
+Cache-Control: max-age=604800
+Date: Thu, 13 Oct 2016 11:45:00 GMT
+Server: EOS (lax004/2813)
+Solicitudes Preflight en CORS
+En las solicitudes CORS, una solicitud preflight se envía con el método OPTIONS para que el servidor pueda responder si es aceptable enviar la solicitud. Esto es crucial para la seguridad y la funcionalidad de las aplicaciones web modernas.
+
+Ejemplo de Solicitud Preflight
+OPTIONS /resources/post-here/ HTTP/1.1
+Host: bar.example
+Origin: https://foo.example
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: content-type,x-pingother
+El servidor puede responder indicando si acepta la solicitud bajo las circunstancias especificadas:
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Resumen
+El método HTTP OPTIONS es esencial para descubrir las opciones de comunicación permitidas en un servidor y para manejar solicitudes preflight en CORS. Su uso adecuado puede mejorar significativamente la seguridad y la funcionalidad de las aplicaciones web12.
+
+-->

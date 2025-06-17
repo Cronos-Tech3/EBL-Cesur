@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "XAML_C_JuanJoseTornero/1.0.0": {
+        "runtime": {
+          "XAML_C_JuanJoseTornero.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "XAML_C_JuanJoseTornero/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

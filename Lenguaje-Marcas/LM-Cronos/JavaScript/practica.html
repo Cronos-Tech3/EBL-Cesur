@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica</title>
+</head>
+<body>
+    <p ondblclick="this.innerHTML='HOLA'" onmouseover="this.innerHTML='ADIOS'">PULSA</p> <!--inserta en el html hola-->
+    <p id="salida"></p>
+    <button onclick="sacar()">MOSTRAR</button> <!--acceder a la funcion sacar-->
+    <label>NOMBRE</label>
+    <input type="text" id="nom">
+    <button onclick="mostrar()">ENVIAR </button>
+    <h1 id="datos"></h1> <!--variable contenedor-->
+    <script>
+        function sacar(){
+            document.getElementById('salida').innerHTML="<strong>"+"HOLA AMIGOS"+"<\strong>";
+            console.log('Esto va a la consola');
+            document.getElementById('salida').style.color="red"; //para acceder al style y poder cambiar el aspecto del texto
+        };
+
+        function mostrar(){
+            document.getElementById('datos').innerHTML= 'Bienvenido a la página '+ document.getElementById('nom').value.toUpperCase() + "<i style= 'font-size:60px;'>"+" PÁGINA"+"<\i>"; //abrimos cajon y metemos datos
+        };
+        //sacar();
+    </script>
+</body>
+</html>
+
+<!--
+    onclick: para botones
+    ondblclick: en doble click
+    onmouseover: cuando el curso esté encima
+    document: objeto más grande del doom
+    getElementById: seleccionar elemento según su id
+    function: para crear funciones
+    console.log: para imprimir por consola
+    label: etiqueta
+    +=: añade algo 
+    toUpperCase: todp lo que se escriba en el input va a salir en mayúsculas
+-->

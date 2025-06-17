@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(13, 63, 63);
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .webpage {
+            height: 1400px;
+        }
+
+        header {
+            width: 100%;
+            height: 400px;
+            background-color: aquamarine;
+            background-image: url(primer-fondo.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            align-content: center;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+           
+            
+
+            .h1{
+                color: rgb(45, 39, 136);
+                font-size: xx-large; 
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 3rem;
+                
+            }
+
+        }
+
+        header ul {
+
+            height: 50px;
+            list-style-type: none;
+            background-color: rgb(36, 39, 59);
+            margin-top: 3rem;
+                
+            
+
+
+        }
+
+        li {
+            color: white;
+            width: 150px;
+            height: 100%;
+            font-size: 20px;
+            float: right;
+            text-align: center;
+            align-content: center;
+            cursor: pointer;
+
+        }
+
+        li:hover {
+            background-color: rgb(26, 26, 71);
+            padding-top: 8px;
+            transition: 1s;
+            border-radius: 15px;
+        }
+
+
+        article {
+            width: 30%;
+            margin: 10px;
+            height: 400px;
+            float: left;
+            border: 3px solid black;
+        }
+
+        .imagenesSeccion1{
+            width: 100%;
+            height: 300px;
+        }
+
+        h2 {
+            background-color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*PARTE INTERMEDIA*/
+
+        .seccion1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .separador {
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+
+        }
+
+        .separador__texto {
+            margin-left: 65rem;
+            font-size: 1.5rem;
+        }
+
+        .imagenesSeccion2{
+            width: 50%;
+            
+        }
+
+        /*PARTE FINAL*/
+
+        /* #final {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+       
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            width: 150px;
+            height: 50px;
+            padding: 1rem;
+            border: 1px solid black;
+            text-align: center;
+
+            display: flex;
+            gap: 1rem;
+
+        }
+            */
+
+        #primero {
+            height: 500px;
+            min-width: 500px;
+        }
+        #fotos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        #primero{
+            display: flex;
+            flex-direction:row;
+            height: 250px;
+            width: 700px;
+            gap: 1rem;
+
+            p{
+                text-align: center;
+            }
+
+        }
+
+        .primeroReverso{
+            display: flex;
+            flex-direction: row-reverse !important;
+        }
+
+
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <div class="webpage">
+
+        <header>
+            <h1 class="h1" >
+                !!!CONOCIENDO EL MUNDO¡¡¡
+            </h1>
+
+            <ul>
+                <a href="">
+                    <li>INICIO</li>
+                </a>
+                <a href="">
+                    <li>CONTACTO</li>
+                </a>
+                <a href="">
+                    <li>CONTENIDO</li>
+                </a>
+            </ul>
+
+
+        </header>
+
+        <section class="seccion1">
+            <article>
+                <img class="imagenesSeccion1" src="lugares.jpeg">
+                <h2>LUGARES</h2>
+            </article>
+            <article>
+                <img class="imagenesSeccion1" src="rutas.jpg">
+                <h2>RUTAS</h2>
+            </article>
+            <article>
+                <img class="imagenesSeccion1" src="viajes.jpg">
+                <h2>VIAJES</h2>
+
+            </article>
+        </section>
+
+        <div class="separador">
+            <h3 class="separador__texto">Destacados</h3>
+        </div>
+
+        <section id="final">
+
+            <!--
+
+            <div class="primeras2Cajas">
+
+                <div class="box1">
+                    <div class="box1__box1.1">Foto</div>
+                    <div class="box1__box1.2">Egipto</div>
+                </div>
+
+                <div class="box2">
+                    <div class="box2__box2.1">Canada</div>
+                    <div class="box2__box2.2">Foto</div>
+                </div>
+
+            </div>
+
+            <div class="3y4Cajas">
+                <div class="box3">
+                    <div class="box3__box3.1">india</div>
+                    <div class="box3__box3.2">texto</div>
+                </div>
+
+                <div class="box4">
+                    <div class="box4__box4.1">texto</div>
+                    <div class="box4__box4.2">china</div>
+                </div>
+            </div>
+            -->
+            <div id="fotos">
+
+                <article id="primero">
+                    <img class="imagenesSeccion2" src="egipto.jpg">
+                    <p>Egipto, país que une el noreste de África con Medio Oriente, data del período de los faraones.
+                        Tiene monumentos de milenios de antigüedad ubicados junto al fértil valle del río Nilo,
+                        incluidas las colosales pirámides de Guiza y la Gran Esfinge, al igual que las tumbas del Valle
+                        de los Reyes y el Templo de Karnak bordeado de jeroglíficos en Luxor. En la capital, El Cairo,
+                        hay monumentos otomanos, como la mezquita de Muhammad Alí y el Museo Egipcio, un tesoro de
+                        antigüedades.</p>
+
+                </article>
+                <article id="primero" class="primeroReverso">
+                    <img class="imagenesSeccion2" src="canada.jpg">
+                    <p>Canadá es el país norteamericano que se extiende desde los Estados Unidos en el sur hasta el
+                        círculo polar ártico en el norte. Las ciudades principales incluyen la enorme Toronto,
+                        Vancouver, el centro cinematográfico de la costa oeste, las ciudades de habla francesa Montreal
+                        y Quebec, y la capital Ottawa. Las vastas franjas de naturaleza de Canadá incluyen el Parque
+                        Nacional Banff ubicado en un lago en las Montañas Rocosas. También incluye las cataratas del
+                        Niágara, un famoso grupo de enormes cascadas.</p>
+
+                </article>
+                <article id="primero" class="primeroReverso">
+                    <img class="imagenesSeccion2" src="india.webp">
+                    <p>Egipto, país que une el noreste de África con Medio Oriente, data del período de los faraones.
+                        Tiene monumentos de milenios de antigüedad ubicados junto al fértil valle del río Nilo,
+                        incluidas las colosales pirámides de Guiza y la Gran Esfinge, al igual que las tumbas del Valle
+                        de los Reyes y el Templo de Karnak bordeado de jeroglíficos en Luxor. En la capital, El Cairo,
+                        hay monumentos otomanos, como la mezquita de Muhammad Alí y el Museo Egipcio, un tesoro de
+                        antigüedades.</p>
+
+                </article>
+                <article id="primero">
+                    <img class="imagenesSeccion2" src="china.jpg">
+                    <p>Egipto, país que une el noreste de África con Medio Oriente, data del período de los faraones.
+                        Tiene monumentos de milenios de antigüedad ubicados junto al fértil valle del río Nilo,
+                        incluidas las colosales pirámides de Guiza y la Gran Esfinge, al igual que las tumbas del Valle
+                        de los Reyes y el Templo de Karnak bordeado de jeroglíficos en Luxor. En la capital, El Cairo,
+                        hay monumentos otomanos, como la mezquita de Muhammad Alí y el Museo Egipcio, un tesoro de
+                        antigüedades.</p>
+
+                </article>
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

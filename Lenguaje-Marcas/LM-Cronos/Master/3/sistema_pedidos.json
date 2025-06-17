@@ -1,0 +1,21 @@
+{
+    "Cliente": {
+        "Nombre": "Juan Perez",
+        "Direccion": "123 Calle Principal",
+        "Telefono": "555-1234"
+    },
+    "Pedidos": [
+        {
+            "ID": 1,
+            "Producto": "Laptop",
+            "Cantidad": 1,
+            "Precio": 1000
+        },
+        {
+            "ID": 2,
+            "Producto": "Mouse",
+            "Cantidad": 2,
+            "Precio": 25
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+<!--
+
+
+Las sentencias de decisión en JavaScript permiten ejecutar diferentes bloques de código en función de ciertas condiciones. Aquí tienes una explicación detallada de las principales sentencias de decisión en JavaScript:
+
+1. if y else
+La sentencia if se utiliza para ejecutar un bloque de código si una condición es verdadera. La sentencia else se utiliza para ejecutar un bloque de código alternativo si la condición es falsa.
+
+Sintaxis:
+if (condición) {
+    // Código a ejecutar si la condición es verdadera
+} else {
+    // Código a ejecutar si la condición es falsa
+}
+Ejemplo:
+let edad = 18;
+
+if (edad >= 18) {
+    console.log("Eres mayor de edad.");
+} else {
+    console.log("Eres menor de edad.");
+}
+2. else if
+La sentencia else if se utiliza para especificar una nueva condición si la primera condición es falsa. Puedes encadenar múltiples else if para manejar varias condiciones.
+
+Sintaxis:
+if (condición1) {
+    // Código a ejecutar si condición1 es verdadera
+} else if (condición2) {
+    // Código a ejecutar si condición2 es verdadera
+} else {
+    // Código a ejecutar si ninguna de las condiciones anteriores es verdadera
+}
+Ejemplo:
+let nota = 85;
+
+if (nota >= 90) {
+    console.log("Sobresaliente");
+} else if (nota >= 80) {
+    console.log("Notable");
+} else if (nota >= 70) {
+    console.log("Aprobado");
+} else {
+    console.log("Suspenso");
+}
+3. switch
+La sentencia switch se utiliza para ejecutar uno de varios bloques de código en función del valor de una expresión. Cada caso en el switch se compara con la expresión y, si coincide, se ejecuta el bloque de código correspondiente.
+
+Sintaxis:
+switch (expresión) {
+    case valor1:
+        // Código a ejecutar si expresión === valor1
+        break;
+    case valor2:
+        // Código a ejecutar si expresión === valor2
+        break;
+    // Puedes tener tantos casos como necesites
+    default:
+        // Código a ejecutar si ninguno de los casos coincide
+}
+Ejemplo:
+let dia = 3;
+let nombreDia;
+
+switch (dia) {
+    case 1:
+        nombreDia = "Lunes";
+        break;
+    case 2:
+        nombreDia = "Martes";
+        break;
+    case 3:
+        nombreDia = "Miércoles";
+        break;
+    case 4:
+        nombreDia = "Jueves";
+        break;
+    case 5:
+        nombreDia = "Viernes";
+        break;
+    case 6:
+        nombreDia = "Sábado";
+        break;
+    case 7:
+       Dia = "Domingo";
+        break;
+    default:
+        nombreDia = "Día inválido";
+}
+
+console.log(nombreDia); // Salida: Miércoles
+4. Operador Ternario
+El operador ternario es una forma concisa de escribir una sentencia if...else. Se utiliza para evaluar una expresión y devolver un valor si la expresión es verdadera y otro valor si es falsa.
+
+Sintaxis:
+condición ? expresión1 : expresión2;
+Ejemplo:
+let edad = 20;
+let mensaje = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+console.log(mensaje); // Salida: Eres mayor de edad
+5. try...catch
+Aunque no es una sentencia de decisión en el sentido tradicional, try...catch se utiliza para manejar excepciones y ejecutar diferentes bloques de código en función de si se produce un error.
+
+Sintaxis:
+try {
+    // Código que puede lanzar una excepción
+} catch (error) {
+    // Código a ejecutar si se lanza una excepción
+} finally {
+    // Código a ejecutar siempre, independientemente de si se lanza una excepción o no
+}
+Ejemplo:
+try {
+    let resultado = 2 + 2;
+    console.log("El resultado es: " + resultado);
+    throw new Error("Algo salió mal");
+} catch (error) {
+    console.error("Se ha producido un error:", error.message);
+} finally {
+    console.log("Este bloque se ejecuta siempre");
+}
+Resumen
+Las sentencias de decisión en JavaScript, como if, else, else if, switch, y el operador ternario, permiten controlar el flujo de ejecución del código en función de condiciones específicas. Estas herramientas son esenciales para escribir código dinámico y adaptable.
+
+-->

@@ -1,0 +1,103 @@
+<!--
+
+Los ciclos (o bucles) en JavaScript permiten ejecutar un bloque de código varias veces, lo que es útil para tareas repetitivas. Aquí tienes una explicación detallada de los diferentes tipos de ciclos en JavaScript:
+
+1. for
+El ciclo for es uno de los más comunes y se utiliza cuando conoces de antemano cuántas veces necesitas ejecutar un bloque de código.
+
+Sintaxis:
+for (inicialización; condición; actualización) {
+    // Código a ejecutar en cada iteración
+}
+Ejemplo:
+for (let i = 0; i < 5; i++) {
+    console.log(i); // Salida: 0, 1, 2, 3, 4
+}
+Inicialización: Se ejecuta una vez al comienzo del ciclo. Generalmente se utiliza para declarar e inicializar una variable de control.
+Condición: Se evalúa antes de cada iteración. Si es verdadera, el ciclo continúa; si es falsa, el ciclo termina.
+Actualización: Se ejecuta al final de cada iteración. Generalmente se utiliza para actualizar la variable de control.
+2. while
+El ciclo while se utiliza cuando no conoces de antemano cuántas veces necesitas ejecutar un bloque de código y la condición se evalúa antes de cada iteración.
+
+Sintaxis:
+while (condición) {
+    // Código a ejecutar en cada iteración
+}
+Ejemplo:
+let i = 0;
+while (i < 5) {
+    console.log(i); // Salida: 0, 1, 2, 3, 4
+    i++;
+}
+Condición: Se evalúa antes de cada iteración. Si es verdadera, el ciclo continúa; si es falsa, el ciclo termina.
+3. do...while
+El ciclo do...while es similar al ciclo while, pero la condición se evalúa después de cada iteración, lo que garantiza que el bloque de código se ejecute al menos una vez.
+
+Sintaxis:
+do {
+    // Código a ejecutar en cada iteración
+} while (condición);
+Ejemplo:
+let i = 0;
+do {
+    console.log(i); // Salida: 0, 1, 2, 3, 4
+    i++;
+} while (i < 5);
+Condición: Se evalúa después de cada iteración. Si es verdadera, el ciclo continúa; si es falsa, el ciclo termina.
+4. for...in
+El ciclo for...in se utiliza para iterar sobre las propiedades enumerables de un objeto.
+
+Sintaxis:
+for (variable in objeto) {
+    // Código a ejecutar en cada iteración
+}
+Ejemplo:
+let persona = { nombre: "Juan", edad: 30, ciudad: "Madrid" };
+for (let propiedad in persona) {
+    console.log(`${propiedad}: ${persona[propiedad]}`);
+}
+// Salida:
+// nombre: Juan
+// edad: 30
+// ciudad: Madrid
+variable: Una variable que se asigna a cada propiedad del objeto en cada iteración.
+objeto: El objeto cuyas propiedades se están iterando.
+5. for...of
+El ciclo for...of se utiliza para iterar sobre los valores de objetos iterables, como arrays, cadenas de texto, mapas y conjuntos.
+
+Sintaxis:
+for (variable of iterable) {
+    // Código a ejecutar en cada iteración
+}
+Ejemplo:
+let numeros = [1, 2, 3, 4, 5];
+for (let numero of numeros) {
+    console.log(numero); // Salida: 1, 2, 3, 4, 5
+}
+variable: Una variable que se asigna a cada valor del iterable en cada iteración.
+iterable: Un objeto que es iterable, como un array o una cadena de texto.
+6. break y continue
+Las sentencias break y continue se utilizan para controlar el flujo de los ciclos.
+
+break: Termina el ciclo inmediatamente.
+
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break;
+    }
+    console.log(i); // Salida: 0, 1, 2, 3, 4
+}
+continue: Salta a la siguiente iteración del ciclo.
+
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue;
+    }
+    console.log(i); // Salida: 0, 1, 2, 3, 4, 6, 7, 8, 9
+}
+Resumen
+Los ciclos en JavaScript, como for, while, do...while, for...in, y for...of, permiten ejecutar bloques de código repetidamente bajo ciertas condiciones. Las sentencias break y continue proporcionan un control adicional sobre el flujo de los ciclos. Conocer y utilizar estos ciclos te permitirá escribir código más eficiente y manejable.
+
+
+
+-->

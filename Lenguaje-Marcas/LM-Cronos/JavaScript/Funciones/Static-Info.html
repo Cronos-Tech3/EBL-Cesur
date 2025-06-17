@@ -1,0 +1,40 @@
+<!--
+
+La palabra clave static en JavaScript se utiliza para definir métodos estáticos en una clase. Los métodos estáticos son aquellos que se pueden llamar directamente en la clase sin necesidad de crear una instancia de la misma. Estos métodos suelen ser útiles para funciones que no dependen de los datos de una instancia específica.
+
+Ejemplo de Método Estático
+Aquí tienes un ejemplo de cómo se utiliza static:
+
+class Calculadora {
+  static sumar(a, b) {
+    return a + b;
+  }
+
+  static restar(a, b) {
+    return a - b;
+  }
+}
+
+console.log(Calculadora.sumar(5, 3)); // 8
+console.log(Calculadora.restar(5, 3)); // 2
+En este ejemplo, sumar y restar son métodos estáticos de la clase Calculadora. Puedes llamarlos directamente en la clase sin crear una instancia de Calculadora.
+
+Características de los Métodos Estáticos
+No Acceden a Propiedades de Instancia: Los métodos estáticos no pueden acceder a las propiedades de instancia de la clase. Solo pueden acceder a otras propiedades y métodos estáticos.
+Útiles para Funciones Utilitarias: Son ideales para funciones que realizan tareas generales y no necesitan acceder a datos específicos de una instancia.
+Ejemplo con Propiedades Estáticas
+También puedes definir propiedades estáticas en una clase:
+
+class MiClase {
+  static miPropiedad = 'Hola, mundo';
+
+  static miMetodo() {
+    return `El valor de miPropiedad es: ${MiClase.miPropiedad}`;
+  }
+}
+
+console.log(MiClase.miPropiedad); // Hola, mundo
+console.log(MiClase.miMetodo()); // El valor de miPropiedad es: Hola, mundo
+En este caso, miPropiedad es una propiedad estática y miMetodo es un método estático que accede a esa propiedad.
+
+-->

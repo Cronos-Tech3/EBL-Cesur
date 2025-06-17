@@ -1,0 +1,56 @@
+Los códigos de estado HTTP son códigos numéricos que el servidor devuelve al cliente para indicar el resultado de una solicitud HTTP. Estos códigos ayudan a identificar si una solicitud fue exitosa, si hubo un error, o si se requiere alguna acción adicional. Aquí tienes una explicación detallada de cómo funcionan:
+
+Categorías de Códigos de Estado HTTP
+Los códigos de estado HTTP se dividen en cinco categorías principales, cada una representada por el primer dígito del código:
+
+1xx: Informativos: Indican que la solicitud fue recibida y el proceso continúa.
+2xx: Éxito: Indican que la solicitud fue recibida, entendida y aceptada con éxito.
+3xx: Redirección: Indican que se deben tomar acciones adicionales para completar la solicitud.
+4xx: Error del Cliente: Indican que hubo un error en la solicitud del cliente.
+5xx: Error del Servidor: Indican que el servidor falló al cumplir con una solicitud aparentemente válida.
+Códigos de Estado Comunes
+1xx: Informativos
+100 Continue: El servidor ha recibido los encabezados de la solicitud y el cliente debe proceder a enviar el cuerpo de la solicitud.
+101 Switching Protocols: El servidor acepta cambiar el protocolo según lo solicitado por el cliente.
+2xx: Éxito
+200 OK: La solicitud fue exitosa y el servidor devolvió los datos solicitados.
+201 Created: La solicitud fue exitosa y se creó un nuevo recurso.
+204 No Content: La solicitud fue exitosa, pero no hay contenido que devolver.
+3xx: Redirección
+301 Moved Permanently: El recurso solicitado ha sido movido permanentemente a una nueva URL.
+302 Found: El recurso solicitado se encuentra temporalmente en una URL diferente.
+304 Not Modified: El recurso no ha sido modificado desde la última solicitud, por lo que el cliente puede usar la versión en caché.
+4xx: Error del Cliente
+400 Bad Request: La solicitud no pudo ser entendida o estaba mal formada.
+401 Unauthorized: La solicitud requiere autenticación del usuario.
+403 Forbidden: El servidor entendió la solicitud, pero se niega a autorizarla.
+404 Not Found: El recurso solicitado no fue encontrado en el servidor.
+5xx: Error del Servidor
+500 Internal Server Error: El servidor encontró una condición inesperada que le impidió cumplir con la solicitud.
+502 Bad Gateway: El servidor, actuando como puerta de enlace o proxy, recibió una respuesta inválida del servidor de origen.
+503 Service Unavailable: El servidor no está disponible temporalmente, generalmente debido a mantenimiento o sobrecarga.
+Ejemplo de Uso
+Cuando realizas una solicitud HTTP, el servidor responde con un código de estado que indica el resultado de la solicitud. Aquí tienes un ejemplo de una solicitud y respuesta HTTP:
+
+Solicitud HTTP
+GET /index.html HTTP/1.1
+Host: www.example.com
+Respuesta HTTP
+HTTP/1.1 200 OK
+Date: Wed, 21 Oct 2020 07:28:00 GMT
+Content-Type: text/html
+Content-Length: 138
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo</title>
+</head>
+<body>
+    <h1>Hola, mundo!</h1>
+</body>
+</html>
+En este ejemplo, el servidor responde con un código de estado 200 OK, indicando que la solicitud fue exitosa y devolviendo el contenido solicitado.
+
+Resumen
+Los códigos de estado HTTP son esenciales para la comunicación entre clientes y servidores en la web. Proporcionan información sobre el resultado de una solicitud y ayudan a identificar y resolver problemas. Entender estos códigos es crucial para el desarrollo web y la creación de aplicaciones robustas y eficientes.

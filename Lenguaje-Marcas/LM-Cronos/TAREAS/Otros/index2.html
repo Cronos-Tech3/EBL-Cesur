@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIAJA</title>
+    <style>
+        body {
+            /*Damos formato al body, con su fondo de color, margen y padding(es el margen hacia dentro del texto)*/
+            background-color: #2480ab;
+            /**/
+            margin: 0%;
+            /**/
+            padding: 0%;
+            /**/
+
+        }
+
+        #contenedor {
+            /*Damos formato al id contenedor, el cual ira incluido todo nuestro contenido*/
+            display: flex;
+            /*Display flex */
+            flex-direction: row;
+            /**/
+            flex-wrap: wrap;
+            /**/
+            justify-content: space-around;
+            width: 100%;
+            /**/
+            height: 100%;
+            /**/
+            align-content: center;
+            /**/
+            align-items: center;
+            /**/
+            margin: auto;
+            /**/
+
+
+        }
+
+        header {
+            width: 100%;
+            height: 30vh;
+            background-image: url(imagenes/1704226643846.png);
+            background-color: burlywood;
+            align-content: center;
+            /* Centra el contenido del header al medio, en este caso el div de su interior */
+
+        }
+
+        #header {
+            width: 50vw;
+            /*Estamos dando el ancho visual al div de header */
+            height: 30%;
+            /*Estamos dando el alto visual del div de header*/
+            opacity: 50px;
+            background-color: rgb(74, 112, 145);
+            /*Da color de fondo al div del interior de header */
+            text-align: center;
+            /* Centra el texto dentro del div de header*/
+            align-content: center;
+            /*Centra el contenido del div en el centro del header*/
+            font-style: oblique;
+            /*Con esto estamos dando cursiva a la letra*/
+            color: aliceblue;
+
+            margin: auto;
+            /*damos margen auto para el ajustar el div, sin ello se nos iría a la izquierda*/
+
+        }
+
+        #menu {
+            background-color: rgb(55, 89, 183);
+            width: 100%;
+
+
+            margin-left: 60%;
+            padding: 10px;
+        }
+
+
+        #menu>a {
+
+
+            margin: 10px;
+            /*margin le estamos dando un margen que va hacia fuera de ese contenido*/
+            color: rgb(203, 212, 22);
+            /*color estamos dando color a esas letras*/
+            font-size: 30px;
+            /*font-size le damos tamaño a la letra*/
+            border-radius: 10%;
+            /*border-radius mete radio a las esquinas del borde*/
+            border: 1px solid black;
+            /*border solid nos muestra un borde a ese contenido */
+            text-decoration: none;
+            /*text-decoration none nos quita el subratado del enlace */
+            text-align: center;
+            /*text-align nos alinea el contenido al centro, si el contenedor es mas grande habria que añadir un align-content para alinear ese contenido al centro de su contenedor/div*/
+
+
+            background-color: rgb(34, 164, 164);
+            padding: 10px;
+
+
+        }
+
+        #menu>a:hover {
+            transition: 1s;
+            background-color: darkorange;
+
+        }
+
+
+
+
+        #superior {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            height: 30%;
+            width: 100%;
+            align-content: center;
+            align-items: center;
+            float: left;
+            background-color: antiquewhite;
+
+
+
+
+        }
+
+        #superior>article {
+            width: 30%;
+            height: 70%;
+            border: 1px solid black;
+            text-align: center;
+            align-content: center;
+            margin: 10px;
+            background-color: blueviolet;
+
+        }
+
+
+
+        #superior>article>img {
+            width: 100%;
+            height: 250px;
+            align-content: center;
+            align-items: center;
+            margin: auto;
+
+        }
+
+        .menu2 {
+            width: 100%;
+
+            padding: 10px;
+            margin-top: 0%;
+            background-color: aquamarine;
+
+            font-size: 40px;
+
+            display: flex;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+        }
+
+        .destacados {
+
+            margin-left: 60rem;
+
+        }
+
+
+
+        #inferior {
+            margin: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-around;
+            background-color: rgb(34, 85, 188);
+
+
+
+        }
+
+        #inferior>article {
+            width: 40%;
+            height: 300px;
+            background-color: burlywood;
+            margin: auto;
+            border: 1px solid black;
+
+
+        }
+
+
+
+        #inferior>article>.izquierda {
+            width: 50%;
+            height: 100%;
+            float: left;
+
+        }
+
+        #inferior>article>.derecha {
+            float: right;
+            width: 50%;
+            height: 100%;
+        }
+
+
+
+
+        .parrafo1 {
+            float: right;
+            position: relative;
+            top: 50%;
+            left: -15%;
+            margin: auto;
+            font-size: 30px;
+
+        }
+
+        .parrafo2 {
+            float: left;
+            position: relative;
+            margin: auto;
+            font-size: 30px;
+            top: 50%;
+            left: 15%;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="contenedor">
+
+        <header>
+            <div id="header">
+                <h1>El Mundo es Tuyo</h1>
+            </div>
+        </header>
+
+        <div id="menu">
+            <!-- a*3  poner un enlace, la etiqueta es "a"-->
+            <a href="index.html" target="_blank">INICIO</a>
+            <!--target blank nos sirve para cuando se pinche el enlace nos abra una nueva pestaña-->
+            <a href="contenido.html">CONTENIDO</a>
+            <a href="contacto.html">CONTACTO</a>
+        </div>
+
+        <section id="superior">
+
+            <article>
+                <img src="imagenes/istockphoto-1165547251-612x612.jpg">
+                <p><b>RUTAS</b></p>
+
+            </article>
+
+            <article>
+                <img src="imagenes/depositphotos_12390723-stock-illustration-airplane-travel.jpg">
+                <p><b>VIAJES</b></p>
+
+            </article>
+
+            <article>
+                <img src="imagenes/photo5jpg.jpg">
+                <P><b>LUGARES</b></P>
+
+            </article>
+
+
+        </section>
+
+        <div class="menu2">
+            <P class="destacados">DESTACADOS</P>
+        </div>
+
+        <section id="inferior">
+
+            <article>
+                <img class="izquierda" src="imagenes/egipto_3e5ac79e_800x800.jpg">
+                <p class="parrafo1"><b>EGIPTO</b></p>
+            </article>
+
+            <article>
+                <img class="derecha" src="imagenes/india.png">
+                <p class="parrafo2"><b>INDIA</b></p>
+            </article>
+
+            <article>
+                <img class="derecha"
+                    src="imagenes/pourquoi-le-canada-est-une-destination-prisee-pour-les-amateurs-de-plein-air-02.jpg">
+                <p class="parrafo2"><b>CANADA</b></p>
+            </article>
+
+            <article>
+                <img class="izquierda" src="imagenes/danza-dragon-puerta-del-sol-riccardocuppini.jpg">
+                <p class="parrafo1"><b>CHINA</b></p>
+            </article>
+
+
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!--
+
+Las funciones asíncronas en JavaScript son una característica poderosa que permite manejar operaciones asincrónicas de manera más sencilla y legible. Aquí tienes una explicación detallada:
+
+¿Qué es una Función Asíncrona?
+Una función asíncrona es una función que permite el uso de la palabra clave await dentro de ella, lo que facilita trabajar con promesas y operaciones asincrónicas. Las funciones asíncronas se declaran utilizando la palabra clave async.
+
+Declaración de Funciones Asíncronas
+Para declarar una función asíncrona, simplemente añade async antes de la declaración de la función:
+
+async function miFuncionAsincrona() {
+    // Código asíncrono aquí
+}
+Uso de await
+Dentro de una función asíncrona, puedes usar await para esperar a que una promesa se resuelva. Esto hace que el código parezca sincrónico, aunque en realidad sigue siendo asincrónico.
+
+Ejemplo Básico
+async function obtenerDatos() {
+    let respuesta = await fetch('https://api.example.com/datos');
+    let datos = await respuesta.json();
+    console.log(datos);
+}
+
+obtenerDatos();
+await fetch('https://api.example.com/datos'): Espera a que la promesa de fetch se resuelva y devuelve la respuesta.
+await respuesta.json(): Espera a que la promesa de json() se resuelva y devuelve los datos en formato JSON.
+Manejo de Errores
+Puedes manejar errores en funciones asíncronas utilizando try...catch:
+
+async function obtenerDatos() {
+    try {
+        let respuesta = await fetch('https://api.example.com/datos');
+        let datos = await respuesta.json();
+        console.log(datos);
+    } catch (error) {
+        console.error("Error al obtener los datos:", error);
+    }
+}
+
+obtenerDatos();
+try...catch: Captura cualquier error que ocurra durante la ejecución de la función asíncrona.
+Ejemplo Completo
+Aquí tienes un ejemplo completo que combina varios conceptos:
+
+async function procesarDatos() {
+    try {
+        let respuesta = await fetch('https://api.example.com/datos');
+        if (!respuesta.ok) {
+            throw new Error('Error en la solicitud');
+        }
+        let datos = await respuesta.json();
+        console.log('Datos obtenidos:', datos);
+
+        // Procesar los datos
+        let resultado = await procesar(datos);
+        console.log('Resultado del procesamiento:', resultado);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+async function procesar(datos) {
+    // Simula una operación asincrónica
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Procesamiento completado');
+        }, 2000);
+    });
+}
+
+procesarDatos();
+fetch: Realiza una solicitud HTTP para obtener datos.
+procesar: Simula una operación asincrónica que procesa los datos.
+await: Espera a que las promesas se resuelvan antes de continuar con la ejecución del código.
+Ventajas de las Funciones Asíncronas
+Legibilidad: El código es más fácil de leer y entender en comparación con el uso de promesas y callbacks.
+Manejo de Errores: try...catch proporciona una forma clara y concisa de manejar errores.
+Flujo Sincrónico: Aunque el código es asincrónico, se escribe de manera similar al código sincrónico, lo que facilita su comprensión.
+Resumen
+Las funciones asíncronas en JavaScript simplifican el manejo de operaciones asincrónicas, haciendo que el código sea más legible y fácil de mantener. Utilizando async y await, puedes escribir código que parece sincrónico pero que aprovecha las ventajas de la asincronía.
+
+-->

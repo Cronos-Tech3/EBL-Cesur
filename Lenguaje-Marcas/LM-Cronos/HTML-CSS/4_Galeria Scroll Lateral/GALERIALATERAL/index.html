@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALERIA LATERAL</title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: arial;
+        }
+
+        #menu {
+            background-color: #333;
+            width: 100%;
+            top: 0;
+            position: fixed;
+        }
+
+        #menu a {
+            display: block;
+            float: left;
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        #menu a:hover {
+            background: #ddd;
+            color: black;
+            transition: 2s;
+        }
+
+        #contenido {
+            padding: 16px;
+            margin-top: 30px;
+        }
+
+        img {
+            width: 700px;
+            height: 500px;
+            margin: 5px;
+        }
+
+        #galeria {
+            overflow: auto;
+            white-space: nowrap;
+            padding: 5px;
+            scrollbar-color: transparent transparent;
+        }
+
+        #cuadrofijo {
+            background-color: red;
+            align-content: center;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 65%;
+            width: 350px;
+            height: 200px;
+            border-radius: 10%;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <a href="#">INICIO</a>
+        <a href="#">RUTAS</a>
+        <a href="#">NOSOTROS</a>
+    </div>
+    <div id="contenido">
+        <div id="galeria">
+            <img src="astronauta.avif" alt="">
+            <img src="iss.jpg" alt="">
+            <img src="planetas.webp" alt="">
+            <img src="tierra.jpg" alt="">
+        </div>
+        <div id="galeria">
+            <img src="astronauta.avif" alt="">
+            <img src="iss.jpg" alt="">
+            <img src="planetas.webp" alt="">
+            <img src="tierra.jpg" alt="">
+        </div>
+        <div id="galeria">
+            <img src="astronauta.avif" alt="">
+            <img src="iss.jpg" alt="">
+            <img src="planetas.webp" alt="">
+            <img src="tierra.jpg" alt="">
+        </div>
+        <div id="galeria">
+            <img src="astronauta.avif" alt="">
+            <img src="iss.jpg" alt="">
+            <img src="planetas.webp" alt="">
+            <img src="tierra.jpg" alt="">
+        </div>
+    </div>
+    <div id="cuadrofijo">
+        <h3>CUADRO FIJADO</h3>
+    </div>
+</body>
+
+</html>

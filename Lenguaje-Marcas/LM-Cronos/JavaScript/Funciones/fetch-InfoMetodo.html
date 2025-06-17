@@ -1,0 +1,104 @@
+<!--
+
+El método fetch es una función nativa de JavaScript que se utiliza para realizar solicitudes HTTP de manera asíncrona. Es una alternativa moderna y más poderosa al antiguo objeto XMLHttpRequest. Aquí tienes una explicación detallada:
+
+¿Qué es fetch?
+fetch es una API basada en promesas que permite realizar solicitudes HTTP para obtener recursos de la red. Puede manejar una variedad de tipos de solicitudes, como GET, POST, PUT, DELETE, entre otras.
+
+Sintaxis Básica
+La sintaxis básica de fetch es:
+
+fetch(url, opciones)
+  .then(response => {
+    // Manejar la respuesta
+  })
+  .catch(error => {
+    // Manejar el error
+  });
+url: La URL a la que se realiza la solicitud.
+opciones: Un objeto opcional que contiene configuraciones adicionales para la solicitud, como el método, los encabezados, el cuerpo, etc.
+Ejemplo de Solicitud GET
+Una solicitud GET es la más común y se utiliza para obtener datos de un servidor.
+
+fetch('https://api.example.com/datos')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error en la solicitud');
+    }
+    return response.json(); // Convierte la respuesta a JSON
+  })
+  .then(datos => {
+    console.log(datos); // Maneja los datos obtenidos
+  })
+  .catch(error => {
+    console.error('Error:', error); // Maneja los errores
+  });
+response.json(): Convierte la respuesta en un objeto JSON.
+response.ok: Verifica si la respuesta fue exitosa (código de estado 200-299).
+Ejemplo de Solicitud POST
+Una solicitud POST se utiliza para enviar datos al servidor.
+
+fetch('https://api.example.com/datos', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    nombre: 'Juan',
+    edad: 30
+  })
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error en la solicitud');
+    }
+    return response.json();
+  })
+  .then(datos => {
+    console.log('Datos enviados:', datos);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+method: 'POST': Especifica el método HTTP.
+headers: Define los encabezados de la solicitud, como el tipo de contenido.
+body: Contiene los datos que se envían en la solicitud, convertidos a una cadena JSON.
+Manejo de Errores
+Es importante manejar los errores que pueden ocurrir durante la solicitud. Esto incluye errores de red y respuestas no exitosas del servidor.
+
+fetch('https://api.example.com/datos')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error en la solicitud');
+    }
+    return response.json();
+  })
+  .then(datos => {
+    console.log(datos);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+Uso de async y await
+Puedes simplificar el manejo de promesas utilizando async y await.
+
+async function obtenerDatos() {
+  try {
+    let response = await fetch('https://api.example.com/datos');
+    if (!response.ok) {
+      throw new Error('Error en la solicitud');
+    }
+    let datos = await response.json();
+    console.log(datos);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+obtenerDatos();
+await: Espera a que la promesa se resuelva antes de continuar con la ejecución del código.
+Resumen
+El método fetch es una herramienta poderosa y flexible para realizar solicitudes HTTP en JavaScript. Su uso de promesas y su integración con async y await lo hacen ideal para manejar operaciones asincrónicas de manera clara y eficiente.
+
+
+-->

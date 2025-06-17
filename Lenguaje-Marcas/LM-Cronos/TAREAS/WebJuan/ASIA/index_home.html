@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        header {
+            background-image: url(un\ paisaje\ de\ japon.png);
+            background-size: 135%;
+            height: 255px;
+            align-content: center;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        nav {
+            padding: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav li a {
+            color: white;
+            display: block;
+            text-decoration: none;
+            padding: .7em 5em;
+        }
+
+        nav li a:hover {
+            background: beige;
+            color: black;
+        }
+
+        #superior {
+            display: flex;
+            overflow: auto;
+            white-space: nowrap;
+            padding: 5px;
+            scrollbar-color: blue;
+
+        }
+
+        div.gallery {
+            border: 1px solid #ccc;
+
+
+        }
+
+        div.gallery:hover {
+            border: 1px solid black;
+            background-color: blanchedalmond;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 30%;
+        }
+
+        .menu2 {
+            width: 100%;
+            padding: 3px;
+            margin-top: 0%;
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        .destacados {
+            margin-left: 60%;
+        }
+
+        #bloqueDestacados {
+            margin: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+
+        #bloqueDestacados>article {
+            width: 40%;
+            height: 300px;
+            background-color: antiquewhite;
+            margin-bottom: 5%;
+            margin-left: 5%;
+            border: 1px solid black;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .izquierda {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .derecha {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            float: right;
+            width: 50%;
+            height: 100%;
+        }
+
+        .parrafo1>p {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            text-align: center;
+            align-content: center;
+            margin-top: 5%;
+            font-size: 1em;
+        }
+
+        .parrafo2>p {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            text-align: center;
+            align-content: center;
+            margin-top: 5%;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>WORLD TRAVELS</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="file:///C:/Users/Nitropc/OneDrive%20-%20Cesur-GCoremsa/Asignaturas/LENGUAJE%20DE%20MARCAS/LM/ASIA/index_home.html">Inicio</a></li>
+            <li><a href="file:///C:/Users/Nitropc/OneDrive%20-%20Cesur-GCoremsa/Asignaturas/LENGUAJE%20DE%20MARCAS/LM/ASIA/Contenido.html">Servicios</a></li>
+            <li><a href="file:///C:/Users/Nitropc/OneDrive%20-%20Cesur-GCoremsa/Asignaturas/LENGUAJE%20DE%20MARCAS/LM/ASIA/Contacto.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <div id="superior">
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Rutas.jpg" width="400" height="300">
+
+                <div class="desc">RUTAS</div>
+            </div>
+        </div>
+
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Viajes.jpg" width="400" height="300">
+
+                <div class="desc">VIAJE</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Lugares.jpg" width="400" height="300">
+
+                <div class="desc">LUGARES</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Lugares.jpg" width="400" height="300">
+
+                <div class="desc">LUGARES</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Lugares.jpg" width="400" height="300">
+
+                <div class="desc">LUGARES</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <img src="Lugares.jpg" width="400" height="300">
+
+                <div class="desc">LUGARES</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="menu2">
+        <P class="destacados">DESTACADOS</P>
+    </div>
+
+
+    <section id="bloqueDestacados">
+
+        <article>
+            <img class="izquierda" src="Egipto.jpg">
+            <div>
+                <p class="parrafo1"><b>EGIPTO</b></p>
+                <p>Un lugar antaño donde se hacian piramides de gran magnitud</p>
+            </div>
+        </article>
+
+
+
+        <article>
+            <img class="derecha" src="India.jpg">
+            <p class="parrafo2"><b>INDIA</b></p>
+            <p>Un lugar antaño donde se hacian piramides de gran magnitud</p>
+        </article>
+
+        <article>
+            <img class="derecha" src="Canada.jpg">
+            <p class="parrafo2"><b>CANADA</b></p>
+            <p>Un lugar antaño donde se hacian piramides de gran magnitud</p>
+        </article>
+
+        <article>
+            <img class="izquierda" src="China.jpg">
+            <p class="parrafo1"><b>CHINA</b></p>
+            <p>Un lugar antaño donde se hacian piramides de gran magnitud</p>
+        </article>
+
+    </section>
+
+
+</body>
+
+</html>
